@@ -1,0 +1,15 @@
+*.dvi
+*.xdv
+*.out
+*.aux
+*_temp*
+*.bak
+*.sav
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.bbl
+*.toc
+*.pdf
