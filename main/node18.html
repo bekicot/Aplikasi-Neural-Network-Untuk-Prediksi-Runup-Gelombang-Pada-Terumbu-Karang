@@ -1,0 +1,24 @@
+
+<H2><A ID="SECTION00035000000000000000">
+Flowchart Sistem Utama</A>
+</H2>
+
+<P>
+Sistem utama merupakan pengatur dari komponen-komponen yang ada pada sistem TA ini. Komponen-komponen tersebut termasuk: Pembacaan Data, Transformasi Data, Pembagian Data, Inisialisasi Epoch Dan Learning Rate, Melakukan Training, dan Melakukan Testing. Alur kerja lebih lanjut dapat dilihat pada gambar <A HREF=<tex2html_cr_mark>#fig:flowchart_sistem#781><tex2html_cr_mark></A>.
+
+<P>
+Sistem utama dimulai dengan membaca data. Pembacaan data dibagi menjadi 2. Pembacaan data training dan pembacaan data testing. Data training mencakup 80 persen dari seluruh data observasi, sedangkan data training mencakup 20 persen. Hal ini sejalan dengan Fan et al (#fan2008liblinear#<tex2html_cite_par_mark>##), dimana beliau menggunakan rasio 80/20 untuk training dan testing. Setelah melakukan pembacaan data, sistem akan melakukan transformasi data. Mengubah data csv, menjadi matriks dengan panjang kolom 4, yang mewakili <SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_inline3739#</SPAN>, <SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_inline3741#</SPAN>, <SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_inline3743#</SPAN>, dan <SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_inline3745#</SPAN>. Komponen selanjutnya adalah inisialisasi <SPAN  CLASS="textit">epoch</SPAN> dan <SPAN  CLASS="textit">learning rate</SPAN>. <SPAN  CLASS="textit">Epoch</SPAN> adalah representasi dari keseluruhan data yang digunakan pada training. Sedangkan <SPAN  CLASS="textit">learning rate</SPAN> adalah besaran dari suatu langkah pembelajaran. Nilai dari <SPAN  CLASS="textit">learning rate</SPAN> dan <SPAN  CLASS="textit">epoch</SPAN> selanjutnya akan dimasukan ke dalam fungsi training.
+
+<P>
+
+<DIV class="CENTER"><A ID="fig:sistem"><tex2html_anchor_mark></A><A ID="fig:flowchart_sistem"><tex2html_anchor_mark></A><A ID="790"><tex2html_anchor_mark></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG><#3746#><SPAN  CLASS="textbf">Gambar</SPAN><#3746#> 7:</STRONG>
+<#3748#>Flowchart Sistem Utama<#3748#></CAPTION>
+<TR><TD><tex2html_image_mark>#figure789#</TD></TR>
+</TABLE>
+</DIV>
+
+
+
+<P>

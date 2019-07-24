@@ -10,166 +10,216 @@
   
   %Nama authors
    \begin{center}
-     \bf \Author$^1$, Pemb 1 tanpa gelar$^2$, Pemb 2 tanpa gelar$^3$, Pemb 3 tanpa gelar$^4$ 
+     \bf \Author$^1$, Didit Adytia$^2$
   \end{center}
-  
   
   %Afiliasi dan email
    \begin{center}
      $^{1,2,3}$Fakultas Informatika, Universitas Telkom, Bandung\\
-$^4$Divisi Digital Service PT Telekomunikasi Indonesia\\
-$^1$mhs@students.telkomuniversity.ac.id, $^2$pembimbing1@telkomuniversity.ac.id,\\ $^3$pembimbing2@telkomuniversity.ac.id, $^4$pembimbingluar@telkom.co.id 
+$^1$siswanto@students.telkomuniversity.ac.id, $^2$adytia@telkomuniversity.ac.id
   \end{center}
   
    
- %%% Abstrak Indonesia %%%%%%%%%%  
+ %%% Abstrak Indonesia %%%%%%%%%%
    
 {\bf \parindent0pt \noindent\rule{\textwidth}{1pt}
 Abstrak
 
-Dokumen ini merupakan panduan penulisan jurnal Tugas Akhir (TA) di lingkungan Fakultas Informatika Universitas Telkom. Meskipun demikian, dimungkinan/dipersilahkan untuk pembimbing TA menggunakan struktur penulisan yang tidak sama persis dengan yang ada di dokumen ini. Panjang abstrak tidak lebih dari 200 kata dan diketik dalam ukuran huruf 10 pts. TA sebagai salah satu sarana latihan penulisan akademik dan memperjelas tulisan, abstrak dibagi menjadi empat paragraf atau sub-bagian. Setiap sub bagian bisa diberi judul yang digaris bawahi. Abstrak berisi apa, mengapa, bagaimana, dan hasil utama (kesimpulan).\\
+Prediksi \emph{runup} gelombang dapat dijadikan sebagai acuan bagi masyarakat yang berada di sekitar pesisiran pantai untuk melakukan mitigasi. Ketika gelombang mencapai ketinggian tertentu dapat membahayakan nyawa manusia dan menyebabkan kerusakan atau kerugian bagi manusia. Dengan adanya terumbu karang yang berada di pinggiran pantai energi dari gelombang teredam, sehingga . Dalam penelitian ini akan dilakukan prediksi tinggi \emph{runup} gelombang di atas terumbu karang dengan menggunakan metode pembelajaran mesin \emph{Multi Layer Perceptron (MLP)} dengan q \emph{hidden layer}, 4 jumlah neuron. Data yang digunakan adalah data dari hasil eksperimen yang dilakukan oleh Demirbilek pada tahun 2007 yang dilakukan pada laboratorium dinamika untuk meneliti redaman gelombang oleh terumbu karang. Berdasarkan hasil ujicoba, pada data training mendapatkan \emph{Mean Squared Error (MSE)} sebesar 0.0186 sedangkan untuk data testing dihasilkan MSE sebesar 0.0213.\\
 
-\underline{\textit{Apa permasalahan pada topik}}. Yang juga menjelaskan latar belakang permasalahan topik. Sebaiknya tuliskan juga apa masukan dan keluaran secara sangat singkat. \\
-
-\underline{\textit{Mengapa topik menarik atau penting}}. Sebisa mungkin tuliskan contohnya secara sangat singkat. Pada bagian ini sebaiknya ditulis juga \textit{apa masalah/kekurangan yang terjadi unt kondisi saat ini} (gap antara kondisi sekarang dengan yang diharapkan)? \\
-
-\underline{\textit{Bagaimana solusinya}}. Jelaskan secara garis besar sistem solusi yang telah dilakukan. Biasanya penjelasan solusi ini merupakan yang terpanjang pada abstrak. \\
-
-\underline{\textit{Hasil utama}}. Hasil utama dari eksperimen ditulis singkat dua-tiga kalimat. Akan lebih baik (optional), kalau dituliskan secara eksplisit kontribusi yang telah dihasilkan. Kontribusi bisa dituliskan diantara bagian solusi dan hasil eksperimen. \\
-
-Pastikan abstrak pada jurnal TA tidak copas dari abstrak proposal TA. Pada abstrak proposal kadang ada kata \textit{akan}, seperti misalnya \textit{yang akan dilakukan}; sedangkan pada abstrak Jurnal TA tidak ada kata \textit{akan} spt itu. Tidak boleh ada sitasi pada abstrak. Pada abstrak tidak menggunakan penamaan, simbol atau istilah yang teknis, misalnya \textit{minsup} untuk menyatakan nilai support minimal.
-
- \bigskip
-Kata kunci : merupakan kata-kata kunci yang menjelaskan isi tulisan, biasanya bisa diambil dari judul dan abstrak. Maksimal enam buah dan ditulis dengan huruf kecil, kecuali singkatan
-
-
+Kata kunci : Mitigasi, \emph{Runup}, \emph{Artificial Neural Network}, \emph{Multilayer perceptron}, Percobaan guam.
 
 %%% Abstrak English %%%%%%%%%%  
-
-
 
 \noindent\rule{\textwidth}{1pt}
 Abstract
 
-The abstract should state briefly the general aspects of the subject and the main concolusions.  The length of abstract should bo no more than 200 word and  should be typed be with 10 pts.
+Fringing reef is a nearshore ecosystem that is consist of variety of coral. Beside a nearshore ecosystem, fringing reef is also has a function to slowing down waves. The methods for predicting runup height using machine learning is new and has room for improvements. The widely used methods for predicting runup height is divided by 2, a classic apporach, by experiment and observation, and then finding the mathematic models. The other methods is by using machine learning. This paper is using machine learning to predict runup height. The data used in this paper is the laboratorium data from University of Michigan. The method used in this paper is $Multi Layer Perceptron(MLP)$ with 4 hidden neuron.
 
  \bigskip
-Keywords: keyword should be chosen that they best describe the contents of the paper and should be typed in lower-case, except abbreviation. Keyword should be no more than 6 word 
+Keywords: Mitigation, Runup, Artificial Neural Network, Multilayer perceptron, Guam experiment
 
 \noindent\rule{\textwidth}{1pt} }
-   
-
 
 %%%%%% isi paper %%%%
 
 \section{Pendahuluan}
-
-Naskah jurnal ditulis di kertas berukuran standar A4 (21 cm $\times$ 29.7 cm) dalam empat sampai delapan halaman. Naskah ditulis dalam format satu spasi. Tambahkan satu spasi untuk setiap antar-bagian (antara judul dan penulis, antara penulis dan abstrak, antara abstrak dan kata kunci, antara sub-bab dan isi). Semua margin atas, margin bawah, margin kiri, dan margin kanan 25 mm. Margin untuk header dan footer 15 mm. Naskah tidak perlu diberi header dan footer. 
-
-Jurnal TA berisi abstrak, pendahuluan, studi terkait (\textit{related works}) atau studi pustaka (\textit{literature review}), sistem yang dibangun,  evaluasi, dan kesimpulan. Setiap bagian Jurnal TA dijelaskan secara rinci di bagian bawah bab ini.
-Judul TA dalam kalimat lengkap yang  singkat, spesifik, dan jelas memberi gambaran tentang isi TA. Jika pada judul menyatakan sistem/algoritma/pendekatan yang digunakan, maka pada isi (dimulai pada abstrak) berilah justifikasi mengapa sistem tersebut dipilih.
-
-Untuk nama penulis, tuliskan nama lengkapnya. \textbf{Mahasiswa sebagai penulis pertama (\textit{author})}, sedangan pembimbing sebagai \textit{co-author} (penulis dua dan tiga). Diperkenankan ada penambahan co-author yang namanya tidak tercantum dalam SK TA tetapi memberikan kontribusi terhadap makalah ilmiah tersebut. Jumlah penulis maksimal empat orang. Tuliskan nama dan gelar pembimbing dengan benar. Untuk institusi bagi mahasiswa dan dosen pembimbing dari Fakultas Informatika dituliskan afiliasi ‘Fakultas Informatika’ (bukan nama program studi). Untuk email, tuliskan email institusi untuk mahasiswa dan dosen yaitu @student.telkomuniversity.ac.id dan @telkomuniversity.ac.id. Sedangkan untuk pembimbing dari luar kampus dituliskan afiliasi dan alamat email sesuai institusi yang bersangkutan.
-
-Isi bagian Pendahuluan pada prinsipnya merupakan penjelasan lebih detil dari abstrak (utamanya menerangkan \textit{apa} dan \textit{mengapa}), dengan beberapa revisi (tidak \textit{copy paste} dari abstrak).  Isi Pendahuluan terutama menjelaskan latar belakang, penjelasan/identifikasi topik/masalah dan batasannya, tujuan, dan metode penelitian. Isi bagian Pendahuluan diakhiri dengan sistematika/organisasi penulisan. Berbeda dengan bagian Abstrak, pada bagian Pendahuluan ini penjelasan tentang \textit{bagaimana} solusi yang dilakukan, tidak terdapat pada bagian Pendahuluan, namun dijelaskan pada bagian tersendiri.
-
-Panjang bagian Pendahuluan pada jurnal TA antara satu setengah hingga dua halaman untuk jurnal delapan halaman. Beberapa bagian Pendahuluan pada jurnal TA diambil dari Bab Pendahuluan pada proposal TA. Namun, penjelasan-penjelasan pada Bab Pendahuluan proposal TA tersebut perlu diupdate dulu sebelum digunakan. Perbedaan antara bagian pendahuluan dengan yang ada pada proposal TA adalah sebagai berikut. Pertama, Pendahuluan pada jurnal TA lebih pendek dibandingkan yang ada pada proposal. Kedua, pada proposal ada bagian Rencana Kegiatan, sedangkan pada jurnal TA menjelaskan metodologi penyelesaian masalah. Ketiga, pada jurnal TA ada tambahan  sistematika/organisasi tulisan. Keempat, pada jurnal TA tidak ada jadwal kegiatan.
-
-Pada banyak jurnal untuk penelitian, bagian Pendahuluan hanya terdiri dari satu bagian (\textit{section}) tidak dibagi bagi lagi menjadi sub-bagian. Namun, sebagaimana pada Abstrak jurnal TA, sebagai salah satu sarana latihan penulisan akademik dan memperjelas tulisan, bagian Pendahuluan pada jurnal TA dibagi menjadi beberapa paragraf atau sub-bagian. Setiap sub bagian bisa diberi judul yang dengan font tebal atau digaris bawahi. Sebagai contoh berikut ini.\\
-
-\noindent\textbf{Latar Belakang}
-
-Pada sub-bagian ini tuliskan secara singkat tuliskan apa topik yang dikerjakan (mirip dengan yang teklah ditulis di abstrak). Nanti permasalahan akan dijelaskan secara lebih detil di sub-bagian Perumusan Masalah. Kembangkan penjelasan dengan membuat secara lebih detil yang sudah ada di abstrak tentang dua hal berikut. Pertama, mengapa topik yang dipilih menarik dan/atau penting dan/atau sesuai untuk dikerjakan sebagai TA. Kedua, bagaimana dengan kekurangan kondisi saat ini unt topik tersebut (gap/kesenjangan antara kondisi saat ini dengan kondisi yang diharapkan).
-
-Jika pada judul TA dituliskan menggunakan suatu pendekatan/metode/algoritma tertentu, jelaskan secara singkat alasan pemilihannya.\\
-
-\noindent\textbf{Topik dan Batasannya}
-
-Sub-bagian ini bisa juga dinamakan Perumusan Masalah atau Identifikasi Masalah. Untuk nama dalam Bahasa Inggris nama yang populer adalah \textit{Problem Statement} atau \textit{Problem Identification.}
-
-Sub-bagian ini mempunyai fungsi sebagai penjelasan tentang topik TA yaitu apa isu/permasalahan yang akan dikerjakan. Untuk lebih memperjelas bisa juga disampaikan definisi atau pengertian. Penyampaian definisi dan penjelasan pada sub-bagian ini sebaiknya dilakukan dalam tulisan naratif dan informal (tanpa formula matematis) apa topik permasalahan yang telah dikerjakan untuk TA. Untuk mempermudah dalam menuliskan sub-bagian ini, dapat dipandang membuat penjelasan kata-kata kunci (pada abstrak) dan judul TA. Dengan penjelasan di sub-bagian ini, maka topiknya menjadi jelas bagi pembaca. Kalau digambarkan dalam sebuah algoritma, maka salah satu materi utama pada sub-bagian ini menjelaskan apa input dan output dari algoritma tersebut. Oleh karena itu, sangat dianjurkan untuk menerangkan apa input dan output, serta sebuah contoh kasusnya secara sangat singkat.
-
-Sebutkan batasan pekerjaan yang ada. Batasan adalah kondisi-kondisi penyederhaan permasalahan, sehingga membuat pekerjaan semakin jauh dari ideal. Batasan masalah berisi pembatasan-pembatasan permasalahan agar menjadi lebih sederhana sehingga bisa/layak dikerjakan sebagai TA yang empat SKS dalam satu semester. Batasan diperlukan karena keterbatasan sumber daya saat pengerjaa TA, misalnya keterbatasan waktu pengerjaan yang hanya satu semester, keterbatasan data pendukung (misalnya tidak tersedianya korpus pengetahuan yang diperlukan) dan keterbatas kemampuan (misalnya untuk implementasi algoritma yang kompleks, dalam implementasinya diimplementasikan bentuk penyederhanaan). Salah satu ciri batasan yang bisa dipakai adalah bila bisa digunakan pada sub-bagian Saran (pada bagian Kesimpulan) agar TA berikutnya melonggarkan atau meniadakan batasan tersebut. Penyederhanaan yang dituliskan untuk batasan, antara lain meliputi data yang ditangani/digunakan, misalnya  jumlah data yang digunakan relatif sedikit, dan proses yang dikerjakan, misalnya ada satu subproses yang dikerjakan secara manual. Sebaiknya setiap batasan diberi alasan, misalnya jumlah data yang digunakan hanya 500 buah (relatif sedikit dibandingkan banyak penilitian unt topik sejenis) karena keterbatasan kemampuan komputer yang tersedia. Contoh lain, misalnya proses pelabelan peran semantik pada kalimat Bahasa Indonesia dilakukan secara manual, karena saat ini belum ditemukan alat bantu otomatis unt pelabelan peran semantik untuk Bahasa Indonesia yang efektif. Contoh batasan masalah yang tidak perlu misalnya sudah jelas tercerminkan pada judul.\\
-
-\noindent\textbf{Tujuan}
-
-Sub-bagian Tujuan ini menerangkan kondisi apa yang hendak dicapai atau pertanyaan yang hendak dicari jawabannya. Sebisa mungkin tuliskan kondisi yang hendak dicapai yang terukur (bisa diukur dengan metrik evaluasi yang ditetapkan).  
-Penulisan diupayakan dalam bentuk narasi (bukan berupa poin-poin).
-
-Tujuan-tujuan yang ditetapkan menjadi bahan untuk menentukan skenario eksperimen yang dilakukan. atau dengan kata lain eksperimen dilakukan sesuai dengan tujuannya. Kemudian, kesimpulan pada jurnal TA harus selaras dengan tujuan. Hal ini bisa diilustrasikan pada Gambar 1 atau Tabel 1.
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=0.30]{Tujuan.png}
-\caption{\textbf{Keterkaitan antara tujuan, pengujian dan kesimpulan}}
-\label{fig:tujuan}
-\end{figure}
-
-\begin{table}[h!]
-\caption{\textbf{Keterkaitan antara tujuan, pengujian dan kesimpulan}}
-\label{table:1}%\bigskip
-\centering
-\begin{tabular}{| c | c  | c | c |} 
- \hline
- \textbf{No} & \textbf{Tujuan} & \textbf{Pengujian} & \textbf{Kesimpulan} \\ [0.5ex] 
- \hline
- 1 & Tujuan 1 & Pengujian 1 & Kesimpulan 1 \\ 
- 2 & Tujuan 2 & Pengujian 2 & Kesimpulan 2 \\ 
- 3 & Tujuan 3 & Pengujian 3 & Kesimpulan 3 \\  [1ex] 
- \hline
-\end{tabular}
-
-\end{table}
-
-\noindent \textbf{Organisasi Tulisan}
-
-Pada sub-bagian ini dituliskan bagian-bagian selanjutnya (setelah Pendahuluan) pada jurnal TA ini, disertai penjelasan sangat singkat.
+\input{Pendahuluan}
 
 \section{Studi Terkait}
-Bagian ini berisi teori/studi/literatur yang mendukung (terkait erat) dengan topik TA yang dikerjakan. Bagian ini bisa bernama Tinjauan Pustaka atau Landasan Teori. Dalam bahasa Inggris disebut sebagai  \textit{Related Work} atau \textit{Literature Revie}w. Studi Terkait dapat dituliskan pada bagian terpisah seperti contoh ini atau digabungkan dengan bagian Pendahuluan. Materi yang dijelaskan pada bagian ini adalah yang benar-benar terkait erat dengan topik TA, meskipun tidak digunakan pada TA yang dikerjakan. 
-
-Semua studi atau teori yang dipaparkan mengacu pada sumber pustaka. Pustaka yang digunakan sebagai sumber informasi adalah dari sumber yang kredibel. Apakah sebuah sumber kredibel atau tidak, bisa dikonsultasikan dengan pembimbing. Pustaka biasanya dari jurnal dan konferensi  yang mempunyai reputasi yang bagus, sebagai tambahan bisa juga dari buku teks. Hindari sebisa mungkin sumber yang tidak direview dengan ketat misalnya Wikipedia, blog, dan materi kuliah,  meskipun materi-materi pada sumber-sumber tersebut membantu mahasiswa dalam memahami topik yang dikerjakan (sebagai bibliografi\footnote{Bibliografi adalah semua sumber yang digunakan dalam proses pengerjaan baik diacu maupun tidak dalam tulisan, sedangkan referensi adalah daftar sumber yang diacu dalam tulisan.}).   Untuk referensi berupa TA mahasiswa, sebaiknya juga tidak dipakai, kecuali untuk yang spesifik misalnya tentang database yang dibangun oleh TA mahasiswa yang telah selesai.
-
-Disamping penjelasan tentang teori, bagian ini juga bisa berisi metrik pengukuran dan data yang digunakan pada permasalahan topik TA. 
-
-Panjang bagian ini sekitar setengah halaman (maksimal satu setengah halaman) untuk jurnal yang berjumlah total delapan halaman.
-
-Semua sitasi yang dibuat pada jurnal, harus tercantum pada Daftar Pustaka jurnal. Demikian juga sebaliknya, semua pustaka dan ditulis pada Daftar Pustaka. Penulisan sitasi dengan angka urutan pustaka dalam kurung siku, sebagai contoh \citep{ochoa2003hybrid} dan \citep{van2002fundamentals,Budi}. Nomor urut pustaka bisa dengan mengurutkan kemunculan di tulisan ataupun dengan mengurutkan abjad penulis.
+\input{Kajian-Pustaka}
 
 \section{Sistem yang Dibangun}
 
-Setelah bagian Pendahuluan dan bagian Studi Terkait, dijelaskan rancangan dan sistem atau produk yang dihasilkan. Penjelasan rancangan dan sistem/produk dituliskan dalam satu atau lebih bagian. Judul untuk bagian-bagian ini bisa menyesuaikan dengan topik TA. Bagian-bagian di sini tidak memuat teori secara umum, namun berisi rancangan dan sistem yang benar-benar telah dibuat atau dipakai. 
-
-Sebaiknya judul tidak generik, seperti misalnya Sistem yang Dibangun; namun spesifik sesuai dengan topiknya. Contohnya untuk topik seputar deteksi plagiat, judul bagian-bagian ini misalnya bagian Praproses dan bagian Seeding, Extension dan Filtering. 
-
-Uraikan data yang digunakan, sebaiknya disertai sampel data. Jelaskan juga metrik evaluasi yang dipakai serta alasan mengapa menggunakan/memilih metrik tersebut.
-
-Bila diperlukan, informasi lebih detil tentang sistem atau produk yang dibangun bisa disampaikan pada lampiran. 
+\input{Metodologi}
 
 \section{Evaluasi}
 
-Bagian ini berisi dua sub-bagian, yaitu Hasil Pengujian dan Analisis Hasil Pengujian. Pengujian dan analisis yang dilakukan selaras dengan tujuan TA sebagaimana dinyatakan dalam Pendahuluan.
+Bagian ini berisi dua sub-bagian yaitu Hasil Pengujian dan Analisis Hasil Pengujian. Pengujian dan analisis yang dilakukan selaras dengan tujuan TA sebagaimana dinyatakan dalam Pendahuluan.
 
 \subsection{Hasil Pengujian}
+\begin{table}[h]
+  \begin{center}
+    \begin{tabular}{lrrrr}
+      \toprule
+      {} &        Wave1; &        Wave2; &        Wave3; &        Wave9; \\
+      \midrule
+      count &  18000.000000 &  18000.000000 &  18000.000000 &  18000.000000 \\
+      mean  &     -0.187642 &     -0.099445 &     -0.056901 &      0.787389 \\
+      std   &      2.052794 &      1.940509 &      1.953062 &      0.818523 \\
+      min   &     -8.662451 &     -8.224868 &     -7.996433 &     -1.365062 \\
+      max   &      9.107983 &      7.837847 &      7.996613 &      4.829746 \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
 
-Pertama, tampilkan hasil pengujian yang paling utama. Kemudian hasil-hasil yang lebih detil ditampilkan setelah hasil yang utama. Mengingat tinggi atau rendah, baik atau jeleknya hasil pengujian bersifat relatif, maka sangat dianjurkan ada pembanding (baseline) yang membandingkan dengan algoritma atau pendekatan yang dipilih untuk TA. Pembanding dijalankan pada lingkungan (termasuk data set) yang sama.
+  \caption{Deskripsi data pada "test-18.dat" yang dihasilkan oleh applikasi pandas \cite{mckinney-proc-scipy-2010}}.
+  \label{Tab:deskripsi_data}
+\end{table}
 
-Pilih tabel atau jenis diagram yang sesuai untuk menampilkan hasil pengujian. 
+Sistem diuji terhadap data percobaan nomor 18. Data tersebut berada dalam file dengan nama "test-18.dat". Pada data tersebut sensor 1 memiliki nama kolom "Wave1", sensor 2 memiliki nama kolom "Wave2", dan sensor 3 memiliki nama kolom "Wave3". Untuk target prediksi digunakan kolom "Wave9". Masing-masing data memiliki 18000 sampel dapat dilihat pada tabel.\ref{Tab:deskripsi_data}.
 
+Dari hasil pengujian didapat nilai MSE sebesar $0.0186$ untuk data training dan MSE $0.0220$ untuk data testing. Perkembangan nilai $MSE$ pada data training bisa di lihat secara lengkap di gambar.\ref{fig:perkembangan_nilai_mse} dan tabel.\ref{Tab:perkembangan_mse} (pada lampiran).
+
+\begin{figure}
+  \begin{center}
+    % \include{plots/test-18-4-neuron-45-epoch-sgd-16000.pgf}
+    \resizebox{\linewidth}{!}{\input{plots/test-18-4-neuron-45-epoch-sgd-16000.pgf}}
+  \end{center}
+  \caption{Perkembangan nilai $MSE$ pada training.}
+  \label{fig:perkembangan_nilai_mse}
+\end{figure}
+
+Untuk data testing, digunakan sampel 1000 data terakhir, yakni data r 17000 hingga data nomor 18000. Hasil testing mendapatkan nilai $MSE$ "0.0213". Plot hasil prediksi bisa dilihat di gambar.10
+
+\begin{figure}[h]
+  \begin{center}
+    % \resizebox{{1\linewidth}}{}
+  \end{center}
+  \label{fig:hasil}
+\end{figure}
 
 \subsection{Analisis Hasil Pengujian}
- Analisis merupakan salah satu bagian yang penting untuk TA. Pada TA S1 tidak dituntut untuk mendapatkan hasil performasi yang lebih bagus dibandingkan dengan baseline yang populer, yang dituntut adalah membuat analisis yang lengkap. Menganalisis pengaruh kondisi-kondisi yang berbeda (seperti parameter, jenis data, threshold, dan sub-sistem) yang digunakan. 
- 
- Cara sitasi adalah sebagai berikut: \citep{van2002fundamentals} untuk buku, \citep{ochoa2003hybrid} untuk \textit{paper}, dan \citep{Budi} untuk website.
-   
-   
-\section{Kesimpulan}
- \noindent Bagian Kesimpulan memuat kesimpulan dan Saran (\textit{Future Work}), bisa dituliskan dalam poin-poin ataupun paragraf-paragraf. Semua poin kesimpulan diambil dari hasil pengujian dan analisis hasil pengujian sehingga tidak ada kesimpulan dari teori ataupun nalar semata. Sebagaimana sudah disebutkan pada bagian sebelumnya, pengujian dan analisis harus sesuai dengan tujuan TA. Jadi kesimpulan-kesimpulan yang dituliskan selaras dengan seluruh tujuan TA. 
- 
+Model diuji pada data testing, dengan besaran 15 persen dari total data. Dari running prediksi pada data testing, sistem menunjukan overfitting pada pada epoch ke 300.
+% Pada tahun 2002 Marcel Zijlema\cite{Zijlema_2012} melakukan pemodelan terhadap transformasi gelombang dengan menggunakan swash \cite{zijlema}. Hasil dari pemodelan Zijlema dapat di gambar "Hasil dari model SWASH" \ref{fig:percobaan_zijlema}.
 
+% \begin{figure}
+%   \begin{center}
+%     \includegraphics[scale=0.7]{images/model-zijlema.png}
+%   \end{center}
+%   \caption{Hasil dari model Zijlema. Perbandingan observasi dan prediksi. Biru adalah observasi dan merah adalah prediksi.}
+%   \label{fig:percobaan_zijlema}
+% \end{figure}
+% \FloatBarrier
+
+% Bila dibandingkan dengan hasil pengujian yang sama dengan model yang dibuat pada TA ini, hasil pemodelan Zijlema \cite{Zijlema_2012} jauh lebih baik. Hal ini dikarenakan pada model $MLP$ yang dipakai di TA ini tidak menggunakan parameter lain seperti nilai sensor pada $T - 1$ (waktu sebelumnya). Sedangkan feature penting untuk mencari perubahan bentuk dari waktu ke waktu (rates of change). Dimana nilai saat ini, dipengaruhi oleh nilai sebelumnya. Ini adalah kelemahan dari \emph{feedforward} $MLP$. \emph{Feedforward} $MLP$ tidak mengingat hasil sebelumnya untuk digunakan dalam komputasi output.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[scale=0.27]{plots/test-18-perbandingan.png}
+  \end{center}
+  \caption{Hasil dari prediksi MLP. Merah adalah hasil prediksi dan biru adalah observasi}
+  \label{fig:perbandingan}
+\end{figure}
+\FloatBarrier
+
+\section{Kesimpulan}
+Proses optimasi hyperparameter pada prediksi runup gelombang sangat penting untuk membangun model pada TA ini. Pada proses itu menghasilkan output model yang optimal dari parameter-parameter yang sudah ditentukan sebelumnya. Model yang optimal pada proses optimasi hyperparameter (dengan batasan-batasan yang sudah ditentukan) adalah model dengan konfigurasi:
+
+\begin{table}[h]
+  \caption*{Tabel konfigurasi ANN}
+  \begin{center}
+    \begin{tabular}{lrrrr}
+      \toprule
+      Parameter &        Interval Nilai \\
+      \midrule
+      Hidden Layer            & 5    \\
+      Neuron per Layer        & 3    \\
+      Prediktor               & 1    \\
+      Epoch                   & 100, 500, 1000  \\
+      Model Prediktor         & Time Series \\
+      LookBack (Time Series)  & 10 Detik \\
+      % Stationary?
+
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  {tab:modelOptimal}
+\end{table}
+
+% hasil dari penelitian ini masih 
+% Hasil dari pemodel machine learning dalam penelitian ini masih belum mengalahkan pemodelan numerik dari sisi akurasi. Namun demikian, masih tersedia ruang untuk pengembangan yang sangat besar. Mengingat waktu komputasi proses prediksi machine learning lebih cepat dari pada metode lainnya.  
+
+% \subsection{Saran}
+% Ada jenis lain dari \emph{neural network} yang mampu mengingat output dari $T - 1$ dan memasukannya sebagai parameter untuk komputasi output saat ini, disebut dengan $Recurent Neural Network (RNN)$ \cite{werbos1990backpropagation}.
+% Dan pada tahun 1997, Sepp Hochreiter dan Jürgen Schmidhuber mempblikasikan paper tentang \emph{Long Short-term Memory}\cite{lstm1997}, yang bisa dijadikan alternative solusi dari masalah \emph{Vanishing Gradient dan Decaying Gradient} yang terkadang timbul dalam pengaplikasian model $RNN$.
 
 \bibliographystyle{abbrv}
 \bibliography{references}
-
+\pagebreak
 \section*{Lampiran}
 
-\noindent Lampiran dapat berupa detil data dan contoh lebih lengkapnya, data-data pendukung, detail hasil pengujian, analisis hasil pengujian, detail hasil survey, surat pernyataan dari tempat studi kasus, screenshot tampilan sistem, hasil kuesioner dan lain-lain.
+\begin{figure}
+  \includepdf{plots/sensor-1-9-test18.pdf}
+  \label{fig:plots_semua_sensor_test18}
+  \caption{Plot sensor 1 hingga sensor 10.}
+\end{figure}
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{lrr}
+      \toprule
+      epoch &  val\_loss &      loss \\
+      \midrule
+      1  &  1.351153 &  1.612585 \\
+      2  &  1.074336 &  1.271676 \\
+      3  &  0.833380 &  1.006217 \\
+      4  &  0.623319 &  0.773660 \\
+      5  &  0.444484 &  0.571795 \\
+      6  &  0.299844 &  0.402605 \\
+      7  &  0.191346 &  0.269063 \\
+      8  &  0.116986 &  0.171560 \\
+      9  &  0.070712 &  0.106245 \\
+      10  &  0.044566 &  0.066046 \\
+      11 &  0.031083 &  0.043108 \\
+      12 &  0.024793 &  0.030821 \\
+      13 &  0.022173 &  0.024564 \\
+      14 &  0.021282 &  0.021482 \\
+      15 &  0.021124 &  0.020005 \\
+      16 &  0.021233 &  0.019311 \\
+      17 &  0.021408 &  0.018988 \\
+      18 &  0.021575 &  0.018838 \\
+      19 &  0.021705 &  0.018768 \\
+      20 &  0.021799 &  0.018735 \\
+      21 &  0.021869 &  0.018718 \\
+      22 &  0.021913 &  0.018709 \\
+      23 &  0.021950 &  0.018703 \\
+      24 &  0.021977 &  0.018699 \\
+      25 &  0.021993 &  0.018695 \\
+      26 &  0.022000 &  0.018692 \\
+      27 &  0.022003 &  0.018689 \\
+      28 &  0.022007 &  0.018686 \\
+      29 &  0.022008 &  0.018683 \\
+      30 &  0.022007 &  0.018681 \\
+      31 &  0.022004 &  0.018678 \\
+      32 &  0.022002 &  0.018675 \\
+      33 &  0.021998 &  0.018672 \\
+      34 &  0.021997 &  0.018670 \\
+      35 &  0.021995 &  0.018667 \\
+      36 &  0.021990 &  0.018664 \\
+      37 &  0.021989 &  0.018661 \\
+      38 &  0.021986 &  0.018658 \\
+      39 &  0.021987 &  0.018655 \\
+      40 &  0.021985 &  0.018653 \\
+      41 &  0.021980 &  0.018650 \\
+      42 &  0.021980 &  0.018647 \\
+      43 &  0.021981 &  0.018644 \\
+      44 &  0.021976 &  0.018641 \\
+      45 &  0.021977 &  0.018639 \\
+      \bottomrule
+      \end{tabular}
+      
+  \end{center}
+  \caption{Perkembangan MSE}
+  \label{Tab:perkembangan_mse}
+\end{table}

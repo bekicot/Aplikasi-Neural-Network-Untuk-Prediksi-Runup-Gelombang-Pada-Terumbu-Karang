@@ -1,0 +1,37 @@
+ 
+   <tex2html_comment_mark>24
+\setstretch<<286>>1<<286>><tex2html_comment_mark>25
+\begin<<287>>center<<287>>
+      \textbf<<288>>\begin<<332>>tex2html_deferred<<332>>\large\end<<333>>tex2html_deferred<<333>>\Title<<288>>\\ 
+      \begin<<334>>tex2html_deferred<<334>>\bigskip\end<<335>>tex2html_deferred<<335>>
+  \end<<289>>center<<289>>
+\begin<<336>>tex2html_deferred<<336>>\par\end<<337>>tex2html_deferred<<337>>
+\begin<<290>>center<<290>>
+     \begin<<338>>tex2html_deferred<<338>>\bf\end<<339>>tex2html_deferred<<339>>\Author\begin<<310>>tex2html_wrap_inline<<310>>$^1$\end<<311>>tex2html_wrap_inline<<311>>, Pemb 1 tanpa gelar\begin<<312>>tex2html_wrap_inline<<312>>$^2$\end<<313>>tex2html_wrap_inline<<313>>, Pemb 2 tanpa gelar\begin<<314>>tex2html_wrap_inline<<314>>$^3$\end<<315>>tex2html_wrap_inline<<315>>, Pemb 3 tanpa gelar\begin<<316>>tex2html_wrap_inline<<316>>$^4$\end<<317>>tex2html_wrap_inline<<317>> 
+  \end<<291>>center<<291>>
+\begin<<340>>tex2html_deferred<<340>>\par\end<<341>>tex2html_deferred<<341>>
+\begin<<292>>center<<292>>
+     \begin<<318>>tex2html_wrap_inline<<318>>$^<<293>>1,2,3<<293>>$\end<<319>>tex2html_wrap_inline<<319>>Fakultas Informatika, Universitas Telkom, Bandung\\ 
+\begin<<320>>tex2html_wrap_inline<<320>>$^4$\end<<321>>tex2html_wrap_inline<<321>>Divisi Digital Service PT Telekomunikasi Indonesia\\ 
+\begin<<322>>tex2html_wrap_inline<<322>>$^1$\end<<323>>tex2html_wrap_inline<<323>>mhs@students.telkomuniversity.ac.id, \begin<<324>>tex2html_wrap_inline<<324>>$^2$\end<<325>>tex2html_wrap_inline<<325>>pembimbing1@telkomuniversity.ac.id,\\  \begin<<326>>tex2html_wrap_inline<<326>>$^3$\end<<327>>tex2html_wrap_inline<<327>>pembimbing2@telkomuniversity.ac.id, \begin<<328>>tex2html_wrap_inline<<328>>$^4$\end<<329>>tex2html_wrap_inline<<329>>pembimbingluar@telkom.co.id 
+  \end<<294>>center<<294>>
+\begin<<342>>tex2html_deferred<<342>>\par\end<<343>>tex2html_deferred<<343>>
+<<309>>\begin<<344>>tex2html_deferred<<344>>\bf\end<<345>>tex2html_deferred<<345>>\parindent0pt \noindent\rule<<295>>\textwidth<<295>><<296>>1pt<<296>>
+Abstrak
+\begin<<346>>tex2html_deferred<<346>>\par\end<<347>>tex2html_deferred<<347>>
+Terumbu karang adalah ekosistem bawah laut yang terbentuk dari sekumpulan karang. Selain berfungsi sebagai ekosistem di bawah laut, terumbu karang juga berfungsi sebagai pemecah gelombang. Selama ini metode yang ada untuk memprediksi tinggi gelombang \emph<<297>>runup<<297>> pada terumbu karang dengan menggunakan Pembelajaran Mesin masih tergolong baru. Metode yang saat ini digunakan dibagi menjadi 2. Metode pertama dilakukan dengan pendekatan klasik, yakni dengan melakukan eksperimen dan observasi, lalu dicari model matematisnya. Sedangkan model yang kedua dilakukan dengan pendekatan \emph<<298>>soft computing<<298>>. Pada Tugas Akhir ini, digunakan Pembelajaran Mesin untuk memprediksi \emph<<299>>runup<<299>> gelombang di atas terumbu karang. Data yang digunakan adalah data dari hasil eksperimen yang dilakukan oleh Demirbilek (2007) \cite<<300>>DemirbilekReport<<300>> yang dilakukan pada laboratorium dinamika untuk meneliti redaman gelombang oleh terumbu karang. Metode yang digunakan adalah \emph<<301>>Multi Layer Perceptron (MLP)<<301>> dengan q \emph<<302>>hidden layer<<302>>. Jumlah neuron yang digunakan pada adalah 4. Berdasarkan hasil ujicoba, pada data training meraih \emph<<303>>Mean Squared Error (MSE)<<303>> sebesar 0.0186. Sedangkan untuk data testing dihasilkan MSE sebesar 0.0213.
+\begin<<348>>tex2html_deferred<<348>>\par\end<<349>>tex2html_deferred<<349>>
+\begin<<350>>tex2html_deferred<<350>>\bigskip\end<<351>>tex2html_deferred<<351>>
+Kata kunci : runup, ANN, multi layer perceptron, percobaan guam
+\begin<<352>>tex2html_deferred<<352>>\par\end<<353>>tex2html_deferred<<353>>
+\noindent\rule<<304>>\textwidth<<304>><<305>>1pt<<305>>
+Abstract
+Fringing reef is a nearshore ecosystem that is consist of variety of coral. Beside a nearshore ecosystem, fringing reef is also has a function to slowing down waves. The methods for predicting runup height using machine learning is new and has room for improvements. The widely used methods for predicting runup height is divided by 2, a classic apporach, by experiment and observation, and then finding the mathematic models. The other methods is by using machine learning. This paper is using machine learning to predict runup height. The data used in this paper is the laboratorium data from University of Michigan. The method used in this paper is \begin<<330>>tex2html_wrap_inline<<330>>$Multi Layer Perceptron(MLP)$\end<<331>>tex2html_wrap_inline<<331>>\space with 4 hidden neuron.
+\begin<<354>>tex2html_deferred<<354>>\par\end<<355>>tex2html_deferred<<355>>
+\begin<<356>>tex2html_deferred<<356>>\bigskip\end<<357>>tex2html_deferred<<357>>
+Keywords: runup, ANN, multi layer perceptron, guam experiment
+\begin<<358>>tex2html_deferred<<358>>\par\end<<359>>tex2html_deferred<<359>>
+\noindent\rule<<306>>\textwidth<<306>><<307>>1pt<<307>> <<309>>
+\begin<<360>>tex2html_deferred<<360>>\par\end<<361>>tex2html_deferred<<361>>
+\begin<<362>>tex2html_deferred<<362>>\pagebreak\end<<363>>tex2html_deferred<<363>>\begin<<364>>tex2html_deferred<<364>>\par\end<<365>>tex2html_deferred<<365>>
+\section<<308>>Pendahuluan<<308>>

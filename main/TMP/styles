@@ -1,0 +1,27 @@
+article 10pt,
+inputenc utf8
+geometry a4paper, margin=2.51cm
+mathptmx 
+array 
+setspace 
+hyperref 
+titlesec compact
+natbib 
+graphicx 
+babel bahasa
+todonotes 
+amsmath 
+multirow 
+hhline 
+placeins 
+float 
+upgreek 
+pgfplotstable 
+pgfplots 
+booktabs 
+pdfpages 
+graphicx 
+tikz 
+sectsty 
+indentfirst 
+caption 

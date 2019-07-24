@@ -1,0 +1,108 @@
+<tex2html_file>#./Kajian-Pustaka.tex#
+Pembelajaran mesin sudah banyak dipakai di berbagai bidang keilmuan. Mulai dari Pemrosesan Citra seperti yang di lakukan oleh Lawrence et al (2007)\cite<<426>>lawrence1997face<<426>>. Dalam papernya dia menggunakan \emph<<427>>neural network<<427>> dengan tipe \emph<<428>>Convolutional Neural Network<<428>> untuk mendeteksi wajah. Van Gent et al (2007) \cite<<429>>van2007neural<<429>>, dia menggunakan \emph<<430>>Neural Network<<430>> untuk menganalisa \emph<<431>>overtopping<<431>> gelombang pada struktur di wilayah pantai. Yau et al (2012)\cite<<432>>YAO201230<<432>>, dalam papernya dia menggunakan model \emph<<433>>Boussinesq<<433>> 1 dimensi untuk memodelkan transformasi gelombang ketika melewati terumbu karang. Pada bab ini dijelaskan model \emph<<434>>runup<<434>> gelombang pada terumbu karang menggunakan Pembelajaran Mesin.\\ 
+\begin<<634>>tex2html_deferred<<634>>\par\end<<635>>tex2html_deferred<<635>>
+\subsection<<435>>Runup Gelombang<<435>>
+\begin<<636>>tex2html_deferred<<636>>\par\end<<637>>tex2html_deferred<<637>>
+Runup gelombang adalah jarak vertikal maksimum dari kenaikan gelombang pada pantai atau struktur di atas \emph<<436>>SWL<<436>> \cite<<437>>sorensen2005basic<<437>>. Pada TA ini, data ovservasi ketinggian \emph<<438>>runup<<438>> gelombang diukur mulai ketinggian \emph<<439>>swl<<439>>, hingga maksimum ketinggian air di daratan. Penjelasan lebih lanjut tentang pengambilan data dijelaskan pada bagian \nameref<<440>>kondisiEksperimen<<440>>. Runup gelombang dapat diilustrasikan pada gambar \ref<<441>>fig:runup<<441>>.
+\begin<<638>>tex2html_deferred<<638>>\par\end<<639>>tex2html_deferred<<639>>
+\FloatBarrier
+\begin<<640>>tex2html_deferred<<640>>\par\end<<641>>tex2html_deferred<<641>>
+\begin<<442>>figure<<442>>
+    \begin<<443>>center<<443>>
+        \includegraphics[scale=0.7]<<444>>./images/runup_gelombang.jpg<<444>>
+    \end<<445>>center<<445>>
+    \begin<<642>>tex2html_deferred<<642>>\caption<<557>>Ilustrasi \emph<<446>>Runup<<446>> gelombang oleh Mike Swenson, Coastal Morphology, University of Wisconsin-Madison \cite<<447>>MikeSwenson:WaveRunup<<447>>.<<557>>\end<<643>>tex2html_deferred<<643>>
+    \label<<448>>fig:runup<<448>>
+\end<<449>>figure<<449>>
+\begin<<644>>tex2html_deferred<<644>>\par\end<<645>>tex2html_deferred<<645>>
+\FloatBarrier
+\begin<<646>>tex2html_deferred<<646>>\par\end<<647>>tex2html_deferred<<647>>
+Pada gambar \ref<<450>>fig:runup<<450>>, \emph<<451>>SWL (Sea Water Level)<<451>> adalah ketinggian Air Normal ketika tidak ada gelombang. Wilayah Pantai (\emph<<452>>Foreshore<<452>>), dimulai dari titik \emph<<453>>SWL<<453>> yang berpotongan dengan daratan. Wilayah lautan (\emph<<454>>Nearshore<<454>>), dimulai dari titik \emph<<455>>SWL<<455>> yang berpotongan dengan air. Ketika titik potong air dengan daratan berada di atas \emph<<456>>SWL<<456>>, maka kondisi tersebut dinamakan dengan \emph<<457>>runup<<457>>. Ketinggian \emph<<458>>runup<<458>> dinotasikan dengan \begin<<564>>tex2html_wrap_inline<<564>>$R$\end<<565>>tex2html_wrap_inline<<565>>. Simbol \begin<<566>>tex2html_wrap_inline<<566>>$\upbeta$\end<<567>>tex2html_wrap_inline<<567>>\space melambangkan kemiringan bibir pantai.
+\begin<<648>>tex2html_deferred<<648>>\par\end<<649>>tex2html_deferred<<649>>
+\subsection<<459>>Pembelajaran Mesin<<459>>
+\begin<<650>>tex2html_deferred<<650>>\par\end<<651>>tex2html_deferred<<651>>
+Pembelajaran mesin adalah bidang studi yang memberikan kemampuan komputer untuk belajar, tanpa harus di program secara khusus \cite<<460>>arthur_l_samuel_1959<<460>>. Mesin dikatakan belajar dari pengalaman (\begin<<568>>tex2html_wrap_inline<<568>>$E$\end<<569>>tex2html_wrap_inline<<569>>) terhadap tugas (\begin<<570>>tex2html_wrap_inline<<570>>$T$\end<<571>>tex2html_wrap_inline<<571>>) dan ukuran kinerja (\begin<<572>>tex2html_wrap_inline<<572>>$P$\end<<573>>tex2html_wrap_inline<<573>>), jika kinerja pada tugas (\begin<<574>>tex2html_wrap_inline<<574>>$T$\end<<575>>tex2html_wrap_inline<<575>>), yang di ukur berdasarkan (\begin<<576>>tex2html_wrap_inline<<576>>$P$\end<<577>>tex2html_wrap_inline<<577>>), berkembang berdasarkan pengalaman (\begin<<578>>tex2html_wrap_inline<<578>>$E$\end<<579>>tex2html_wrap_inline<<579>>). Dalam TA ini, akan dibuat suatu program yang dapat belajar dari data gelombang hasil observasi (\begin<<580>>tex2html_wrap_inline<<580>>$T$\end<<581>>tex2html_wrap_inline<<581>>). Lalu dievaluasi hasilnya dengan menggunakan \begin<<582>>tex2html_wrap_inline<<582>>$MSE$\end<<583>>tex2html_wrap_inline<<583>>\space (\begin<<584>>tex2html_wrap_inline<<584>>$P$\end<<585>>tex2html_wrap_inline<<585>>), sehingga dapat di lihat seberapa besar galatnya. Lalu diperkecil galatnya dengan metode optimasi.
+\begin<<652>>tex2html_deferred<<652>>\par\end<<653>>tex2html_deferred<<653>>
+\subsubsection<<461>>Supervised Learning<<461>>
+\begin<<654>>tex2html_deferred<<654>>\par\end<<655>>tex2html_deferred<<655>>
+Sebelum data dimasukan ke dalam program, data tersebut diberikan label. Label tersebut bisa berupa \emph<<462>>input<<462>>, yakni \begin<<586>>tex2html_wrap_inline<<586>>$H$\end<<587>>tex2html_wrap_inline<<587>>\space (\emph<<463>>Significant Height<<463>> Gelombang), \begin<<588>>tex2html_wrap_inline<<588>>$T$\end<<589>>tex2html_wrap_inline<<589>>\space (\emph<<464>>Spectral Peak Periods<<464>>), dan \begin<<590>>tex2html_wrap_inline<<590>>$WL$\end<<591>>tex2html_wrap_inline<<591>>\space (\emph<<465>>Wave Length<<465>>). Dan label untuk \emph<<466>>output<<466>>. Karna pada TA kali ini, akan digunakan regresi linear. Maka tidak ada label untuk \emph<<467>>output<<467>>. Parameter \emph<<468>>input<<468>> yang berpasangan dengan \emph<<469>>output<<469>> tertentu, selanjutnya dinamakan contoh. Pembelajaran Mesin yang demikian dinamakan \emph<<470>>Supervised Learning<<470>>. \emph<<471>>Supervised Learning<<471>> Merupakan bagian dari pembelajaran mesin yang memetaan \emph<<472>>input<<472>> ke \emph<<473>>output<<473>> yang berdasar pada contoh pasangan \emph<<474>>input<<474>> dan \emph<<475>>output<<475>>\cite<<476>>AIPeterNorvig<<476>>. 
+\begin<<656>>tex2html_deferred<<656>>\par\end<<657>>tex2html_deferred<<657>>
+\subsubsection<<477>>Neural Network<<477>>
+\begin<<658>>tex2html_deferred<<658>>\par\end<<659>>tex2html_deferred<<659>>
+Selanjutnya data tersebut dimasukan kedalam suatu sistem untuk belajar. Pada TA ini, sistem yang digunakan untuk pembelajaran adalah \emph<<478>>Neural Network<<478>>.
+Model \emph<<479>>neural network<<479>> sederhana di definisikan oleh McCulloch-Pitts \cite<<480>>McCulloch1943<<480>>. Dimana persamaan memiliki \begin<<592>>tex2html_wrap_inline<<592>>$M$\end<<593>>tex2html_wrap_inline<<593>>\space himpunan \emph<<481>>Input<<481>> (\begin<<594>>tex2html_wrap_inline<<594>>$I$\end<<595>>tex2html_wrap_inline<<595>>) (\emph<<482>>input neuron<<482>>), dan satu \emph<<483>>output<<483>> (\begin<<596>>tex2html_wrap_inline<<596>>$y$\end<<597>>tex2html_wrap_inline<<597>>), dengan \begin<<598>>tex2html_wrap_inline<<598>>$y$\end<<599>>tex2html_wrap_inline<<599>>\space merupakan bagian dari \begin<<600>>tex2html_wrap_inline<<600>>$\{0,1\}$\end<<601>>tex2html_wrap_inline<<601>>. Atau dengan kata lain, \begin<<602>>tex2html_wrap_inline<<602>>$y$\end<<603>>tex2html_wrap_inline<<603>>\space adalah fungsi yang hanya memiliki \emph<<484>>output<<484>> \begin<<604>>tex2html_wrap_inline<<604>>$0$\end<<605>>tex2html_wrap_inline<<605>>\space dan \begin<<606>>tex2html_wrap_inline<<606>>$1$\end<<607>>tex2html_wrap_inline<<607>>.
+\begin<<660>>tex2html_deferred<<660>>\par\end<<661>>tex2html_deferred<<661>>
+\begin<<485>>equation<<485>>
+    y = f(z)
+\end<<486>>equation<<486>>
+dimana
+\begin<<487>>equation<<487>>
+\label<<488>>eq:mcullochNeuralNetwork<<488>>
+    z = \sum_<<489>>i=1<<489>>^N I_iW_i
+\end<<490>>equation<<490>>
+dan \begin<<608>>tex2html_wrap_inline<<608>>$I$\end<<609>>tex2html_wrap_inline<<609>>\space merupakan output dari neuron sebelumnya. Pada input layer, \begin<<610>>tex2html_wrap_inline<<610>>$I$\end<<611>>tex2html_wrap_inline<<611>>\space adalah feature yang dijadikan prediktor.
+\begin<<662>>tex2html_deferred<<662>>\par\end<<663>>tex2html_deferred<<663>>
+Di TA ini, \emph<<491>>output<<491>> yang akan dihasilkan tidak terbatas pada \begin<<612>>tex2html_wrap_inline<<612>>$0$\end<<613>>tex2html_wrap_inline<<613>>\space dan \begin<<614>>tex2html_wrap_inline<<614>>$1$\end<<615>>tex2html_wrap_inline<<615>>. Sehingga di \emph<<492>>neuron output<<492>>, fungsi aktivasi yang digunakan adalah fungsi aktivasi linear. Model \emph<<493>>Neural Network<<493>>nya dapat direpresentasikan pada gambar \ref<<494>>fig:neural_network_sederhana<<494>>
+\begin<<664>>tex2html_deferred<<664>>\par\end<<665>>tex2html_deferred<<665>>
+\begin<<495>>figure<<495>>[H]
+    
+    \begin<<497>>tikzpicture<<497>>[shorten ;SPMgt;=1pt,-;SPMgt;,draw=black!50, node distance=4cm]
+        \tikzstyle<<498>>every pin edge<<498>>=[;SPMlt;-,shorten ;SPMlt;=1pt]
+        \tikzstyle<<499>>neuron<<499>>=[circle,fill=black!25,minimum size=17pt,inner sep=0pt]
+        \tikzstyle<<500>>input neuron<<500>>=[neuron, fill=green!50];
+        \tikzstyle<<501>>output neuron<<501>>=[neuron, fill=red!50];
+        \tikzstyle<<502>>hidden neuron<<502>>=[neuron, fill=blue!50];
+        \tikzstyle<<503>>annot<<503>> = [text width=4em, text centered]
+\begin<<666>>tex2html_deferred<<666>>\par\end<<667>>tex2html_deferred<<667>>
+\foreach \name / \y in <<504>>1,...,2<<504>>
+        <tex2html_comment_mark>32
+\node[input neuron, pin=left:Input \#\y] (I-\name) at (0,-\y) <<505>><<505>>;
+\begin<<668>>tex2html_deferred<<668>>\par\end<<669>>tex2html_deferred<<669>>
+\foreach \name / \y in <<506>>1,...,2<<506>>
+            \path[yshift=0.0cm]<<507>><<507>>
+                node[hidden neuron] (H-\name) at (4cm,-\y cm) <<508>><<508>>;
+\begin<<670>>tex2html_deferred<<670>>\par\end<<671>>tex2html_deferred<<671>>
+\node[output neuron,pin=<<558>>[pin edge=<<509>>-;SPMgt;<<509>>]right:Output<<558>>, right of=H-1] (O) <<510>><<510>>;
+\begin<<672>>tex2html_deferred<<672>>\par\end<<673>>tex2html_deferred<<673>>
+\foreach \source in <<511>>1,...,2<<511>>
+            \foreach \dest in <<512>>1,...,2<<512>>
+                \path (I-\source) edge node[midway, right] <<559>>\begin<<616>>tex2html_wrap_inline<<616>>$W_<<513>>input<<513>>$\end<<617>>tex2html_wrap_inline<<617>><<559>> (H-\dest);
+\begin<<674>>tex2html_deferred<<674>>\par\end<<675>>tex2html_deferred<<675>>
+\path (H-1) edge node[midway, right] <<560>>\begin<<618>>tex2html_wrap_inline<<618>>$W_<<514>>output<<514>>$\end<<619>>tex2html_wrap_inline<<619>><<560>> (O);
+        \path (H-2) edge node[midway, right] <<561>>\begin<<620>>tex2html_wrap_inline<<620>>$W_<<515>>output<<515>>$\end<<621>>tex2html_wrap_inline<<621>><<561>> (O);
+\begin<<676>>tex2html_deferred<<676>>\par\end<<677>>tex2html_deferred<<677>>
+\node[annot,above of=H-1, node distance=1cm] (hl) <<516>>Hidden layer<<516>>;
+        \node[annot,left of=hl] <<517>>Input layer<<517>>;
+        \node[annot,right of=hl] <<518>>Output layer<<518>>;
+        \label<<519>>neuralNetworkRepresentation<<519>>
+    \end<<520>>tikzpicture<<520>>
+    \begin<<678>>tex2html_deferred<<678>>\caption<<562>>Model \emph<<521>>Neural Network<<521>> dengan 1 \emph<<522>>Hidden Layer<<522>>.<<562>>\end<<679>>tex2html_deferred<<679>>
+    \label<<523>>fig:neural_network_sederhana<<523>>
+\end<<524>>figure<<524>>
+\begin<<680>>tex2html_deferred<<680>>\par\end<<681>>tex2html_deferred<<681>>
+Pada gambar \ref<<525>>fig:neural_network_sederhana<<525>>, \begin<<622>>tex2html_wrap_inline<<622>>$W$\end<<623>>tex2html_wrap_inline<<623>>\space adalah peubah yang menyatakan berat. Masing masing \emph<<526>>input<<526>> akan dikalikan dengan \begin<<624>>tex2html_wrap_inline<<624>>$W_<<527>>input<<527>>$\end<<625>>tex2html_wrap_inline<<625>>\space \emph<<528>>hidden layer<<528>> tertentu untuk menghasilkan nilai pada \emph<<529>>hidden layer neuron<<529>> tersebut. Selanjutnya, nilai hasil aktivasi di \emph<<530>>hidden layer<<530>>, akan dikalikan dengan \begin<<626>>tex2html_wrap_inline<<626>>$W_<<531>>output<<531>>$\end<<627>>tex2html_wrap_inline<<627>>. Untuk selanjutnya menjadi \emph<<532>>output<<532>>, yakni prediksi dari runup gelombang.
+\begin<<682>>tex2html_deferred<<682>>\par\end<<683>>tex2html_deferred<<683>>
+\subsubsection<<533>>Fungsi Aktivasi<<533>>
+\begin<<684>>tex2html_deferred<<684>>\par\end<<685>>tex2html_deferred<<685>>
+Fungsi aktivasi digunakan untuk mengubah level aktivasi pada suatu neuron menjadi sebuah sinyal output \cite<<534>>KarlicOlgacPerformanceAnalysis<<534>>. Pada TA ini, terdapat 2 fungsi aktivasi yang digunakan. Pada hidden layer, digunakan fungsi aktivasi \emph<<535>>Rectified Linear Unit (RELU)<<535>>. Fungsi aktivasi \emph<<536>>RELU<<536>> didefinisikan dengan persamaan \ref<<537>>eq:aktivasi_relu<<537>> \cite<<538>>glorot2011deep<<538>>.
+\begin<<686>>tex2html_deferred<<686>>\par\end<<687>>tex2html_deferred<<687>>
+\begin<<539>>equation<<539>>
+    f(z) = max(0, z)
+    \label<<540>>eq:aktivasi_relu<<540>>
+\end<<541>>equation<<541>>
+\begin<<688>>tex2html_deferred<<688>>\par\end<<689>>tex2html_deferred<<689>>
+RELU menjadi pilihan karna memiliki performa konvergensi yang lebih baik dibanding sigmoid \cite<<542>>Krizhevsky:2012:ICD:2999134.2999257<<542>>. Untuk selanjutnya, pada neuron \emph<<543>>output<<543>>, digunakan fungsi aktivasi linear. Fungsi aktivasi linear didefinisikan dengan persamaan \ref<<544>>eq:aktivasi_linear<<544>> \cite<<545>>MLBishop<<545>>.
+\begin<<690>>tex2html_deferred<<690>>\par\end<<691>>tex2html_deferred<<691>>
+\subsubsection<<563>>Estimasi Galat / \emph<<546>>Cost / Lost Function<<546>><<563>>
+\begin<<692>>tex2html_deferred<<692>>\par\end<<693>>tex2html_deferred<<693>>
+Kalkulasi galat sangat penting untuk menentukan seberapa besar akurasi yang dimiliki model prediksi pada TA ini. Fungsi estimasi galat yang digunakan adalah \emph<<547>>Mean Square Error (MSE)<<547>>. Persamaan MSE didefinisikan dengan
+\begin<<694>>tex2html_deferred<<694>>\par\end<<695>>tex2html_deferred<<695>>
+\begin<<548>>equation<<548>>
+    \operatorname<<549>>MSE<<549>>=\frac<<550>>1<<550>><<551>>n<<551>>\sum_<<552>>i=1<<552>>^n(Y_i-\hat<<553>>Y_i<<553>>)^2,
+\end<<554>>equation<<554>>
+\begin<<696>>tex2html_deferred<<696>>\par\end<<697>>tex2html_deferred<<697>>
+dimana \begin<<628>>tex2html_wrap_inline<<628>>$Y$\end<<629>>tex2html_wrap_inline<<629>>\space adalah ketinggian gelombang hasil observasi, \begin<<630>>tex2html_wrap_inline<<630>>$\hat<<555>>Y<<555>>$\end<<631>>tex2html_wrap_inline<<631>>\space adalah ketinggian gelombang hasil prediksi, dan \begin<<632>>tex2html_wrap_inline<<632>>$n$\end<<633>>tex2html_wrap_inline<<633>>\space adalah jumlah data training.
+<tex2html_endfile>#./Kajian-Pustaka.tex#
+\begin<<698>>tex2html_deferred<<698>>\par\end<<699>>tex2html_deferred<<699>>
+\section<<556>>Sistem yang Dibangun<<556>>
+\begin<<700>>tex2html_deferred<<700>>\par\end<<701>>tex2html_deferred<<701>>

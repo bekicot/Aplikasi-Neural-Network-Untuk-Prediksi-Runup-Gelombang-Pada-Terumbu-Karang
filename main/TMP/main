@@ -1,0 +1,1337 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=2.51cm]{geometry}
+%\usepackage{multicol}
+\usepackage{mathptmx}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage[compact]{titlesec} 
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage[bahasa]{babel}
+%\bibliographystyle{agsm}
+
+% Custom Package by Yana
+\usepackage{todonotes}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{upgreek}
+\usepackage{pgfplotstable}
+\usepackage{pgfplots}
+\usepackage{booktabs}
+\usepackage{pdfpages}
+\pgfplotsset{compat=1.16}
+\usepackage{graphicx}
+\graphicspath{./images/}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\addto{\captionsbahasa}{\renewcommand{\abstractname}{ABSTRACT}}
+\addto\captionsbahasa{\renewcommand{\refname}{Daftar Pustaka}}
+\renewcommand\thesection{ \arabic{section}.}
+\renewcommand\thesubsection{\thesection\arabic{subsection}}
+
+
+\usepackage{sectsty}
+\sectionfont{\fontsize{12}{15}\selectfont}
+\subsectionfont{\fontsize{11}{15}\normalfont}
+\subsubsectionfont{\fontsize{11}{15}\normalfont}
+\setlength{\columnsep}{7mm}
+\pagenumbering{gobble}
+\usepackage{indentfirst}
+%
+\addto\captionsbahasa{\renewcommand{\tablename}{\textbf{Tabel}}}
+\addto\captionsbahasa{\renewcommand{\figurename}{\textbf{Gambar}}}
+\usepackage{caption}
+\captionsetup[figure]{labelformat=simple, labelsep=period}
+\captionsetup[table]{labelformat=simple, labelsep=period}
+
+\renewenvironment{abstract}{%
+  \centering\small
+  \textbf\abstractname
+  \list{}{\leftmargin0cm \rightmargin\leftmargin}
+  \item\relax
+}{%
+  \endlist \par\bigskip
+}
+
+%  \titleformat{\section}
+%  {\normalfont\footnotesize\selectfont}{\thesection}{1em}{}
+% \titleformat{\subsection}
+% {\normalfont\tiny\selectfont}{\thesubsection}{1em}{}
+% \titleformat{\subsubsection}
+% {\normalfont\footnotesize\selectfont}{\thesubsubsection}{1em}{}
+
+
+
+
+
+
+
+%%%% MULAI EDIT-EDIT METADATA DIBAWAH INI %%%
+
+\makeatletter
+
+\title{ Aplikasi Neural Network Untuk Prediksi Runup Gelombang Pada Terumbu Karang }\let\Title\@title
+
+\newcommand{\EngTitle}{Neural Network Application For Predicting Wave Runup On Fringing Reef}
+
+\author{Yana Agun Siswanto}\let\Author\@author
+\newcommand{\NIM}{1301150773}
+
+\newcommand{\Prodi}{Teknologi Informasi}
+
+\newcommand{\Tanggal}{9}
+\newcommand{\Bulan}{Juli}
+\newcommand{\Tahun}{2019}
+\newcommand{\PembimbingSatu}{Dr. Didit Adytia, S.Si,. M.Si.}
+\newcommand{\NIPPembimbingSatu}{16830005}
+\newcommand{\PembimbingDua}{Dr. Putu Harry Gunawan, S.Si., M.Si., M.Se.}
+\newcommand{\NIPPembimbingDua}{16860043}
+\newcommand{\Kaprodi}{Niken Dwi Cahyani, S.T., M.Kom.}
+\newcommand{\NIPKaprodi}{00750199-1}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\date{ \today}\let\Date\@date
+\makeatother
+\linespread{2}
+
+\begin{document}
+   % \linespread{2}
+    %
+%%% TEXEXPAND: INCLUDED FILE MARKER ./Cover.tex
+\begin{center}
+   
+    \vspace{-0.1cm}{\LARGE \bf \Title}
+    
+    \vspace{2cm}
+    \linespread{1.5}
+    \textbf{{\large Tugas Akhir\\
+diajukan untuk memenuhi salah satu syarat\\ memperoleh gelar sarjana\\
+dari Program Studi \Prodi \\
+Fakultas Informatika\\Universitas Telkom\\
+\vspace{1cm}
+\NIM\\
+\Author\\
+\vspace{1cm}
+\includegraphics[scale=0.18]{universitastelkom.png}
+\vspace{2cm}
+}}
+
+{\bf \Large Program Studi Sarjana \Prodi\\
+Fakultas Informatika\\
+Universitas Telkom\\
+Bandung\\
+\vspace{0.5cm}
+\Tahun
+}
+
+
+
+\end{center}  %%% TEXEXPAND: END FILE ./Cover.tex
+    \newpage
+    \linespread{1.5}
+    %
+%%% TEXEXPAND: INCLUDED FILE MARKER ./Pengesahan.tex
+{\large
+\begin{center}
+    \textbf{\LARGE LEMBAR PENGESAHAN}
+
+
+\vspace{1cm}
+\textbf{\Title}\\
+\vspace{0.5cm}
+\textbf{\textit{\EngTitle}}\\
+\vspace{1cm}
+\textbf{NIM: \NIM}\\
+\vspace{0.5cm}
+\textbf{\Author}\\
+\vspace{1cm}
+
+Tugas akhir ini telah diterima dan disahkan untuk memenuhi sebagian syarat memperoleh\\
+gelar pada Program Studi Sarjana \Prodi \\
+Fakultas Informatika \\
+Universitas Telkom\\
+
+\vspace{0.5cm}
+Bandung,  \Tanggal\quad \Bulan \quad \Tahun \\
+Menyetujui
+\end{center} 
+
+%\vspace{0.3cm}
+\begin{center}
+\begin{tabular}{  m{8cm}  m{8cm} }
+\hspace{2cm} Pembimbing I & \hspace{2cm} Pembimbing II
+\end{tabular}
+\end{center}
+
+\begin{center}
+\vspace{1.cm}
+\begin{tabular}{  m{8cm}  m{8cm} }
+\hspace{2cm}\underline{\PembimbingSatu} & \hspace{2cm}\underline{\PembimbingDua} \\ 
+\hspace{2cm}NIP: \NIPPembimbingSatu & \hspace{2cm}NIP: \NIPPembimbingDua
+\end{tabular}
+\end{center} 
+
+%\vspace{0.5cm}
+\begin{center}
+Ketua Program Studi\\
+Sarjana \Prodi,\\ %% UNTUK TA
+\vspace{2.5cm}   %% UNTUK TA
+\underline{\Kaprodi}\\ NIP: \NIPKaprodi\\  %% UNTUK TA
+
+\end{center} 
+}
+
+%%% TEXEXPAND: END FILE ./Pengesahan.tex
+    \newpage
+    %
+%%% TEXEXPAND: INCLUDED FILE MARKER ./Pernyataan.tex
+\begin{center}
+
+    \textbf{\LARGE LEMBAR PERNYATAAN}
+    \end{center}
+   { \large
+    
+    \vspace{1cm}
+    \setstretch{1.5}
+    \noindent Dengan ini saya, \Author, menyatakan sesungguhnya bahwa Tugas Akhir saya dengan judul "\textbf{\Title}" beserta dengan seluruh isinya adalah merupakan hasil karya sendiri, dan saya tidak melakukan penjiplakan yang tidak sesuai dengan etika keilmuan yang belaku dalam masyarakat keilmuan. Saya siap menanggung resiko/sanksi yang diberikan jika dikemudian hari ditemukan pelanggaran terhadap etika keilmuan dalam buku TA atau jika ada klaim dari pihak lain terhadap keaslian karya.\\
+    \vspace{2cm}
+
+\begin{flushright} 
+Bandung, \Tanggal\quad \Bulan \quad \Tahun\\
+Yang Menyatakan,
+
+
+\vspace{1cm}
+\Author
+\end{flushright} }
+%%% TEXEXPAND: END FILE ./Pernyataan.tex
+    \newpage
+    %
+%%% TEXEXPAND: INCLUDED FILE MARKER ./Paper.tex
+ 
+   %judul bisa diketik ulang
+  \setstretch{1}%\small
+  \begin{center}
+      \textbf{\large \Title}\\
+      \bigskip 
+  \end{center}
+  
+  
+  
+  %Nama authors
+   \begin{center}
+     \bf \Author$^1$, Pemb 1 tanpa gelar$^2$, Pemb 2 tanpa gelar$^3$, Pemb 3 tanpa gelar$^4$ 
+  \end{center}
+  
+  
+  %Afiliasi dan email
+   \begin{center}
+     $^{1,2,3}$Fakultas Informatika, Universitas Telkom, Bandung\\
+$^4$Divisi Digital Service PT Telekomunikasi Indonesia\\
+$^1$mhs@students.telkomuniversity.ac.id, $^2$pembimbing1@telkomuniversity.ac.id,\\ $^3$pembimbing2@telkomuniversity.ac.id, $^4$pembimbingluar@telkom.co.id 
+  \end{center}
+  
+   
+ %%% Abstrak Indonesia %%%%%%%%%%  
+   
+{\bf \parindent0pt \noindent\rule{\textwidth}{1pt}
+Abstrak
+
+Terumbu karang adalah ekosistem bawah laut yang terbentuk dari sekumpulan karang. Selain berfungsi sebagai ekosistem di bawah laut, terumbu karang juga berfungsi sebagai pemecah gelombang. Selama ini metode yang ada untuk memprediksi tinggi gelombang \emph{runup} pada terumbu karang dengan menggunakan Pembelajaran Mesin masih tergolong baru. Metode yang saat ini digunakan dibagi menjadi 2. Metode pertama dilakukan dengan pendekatan klasik, yakni dengan melakukan eksperimen dan observasi, lalu dicari model matematisnya. Sedangkan model yang kedua dilakukan dengan pendekatan \emph{soft computing}. Pada Tugas Akhir ini, digunakan Pembelajaran Mesin untuk memprediksi \emph{runup} gelombang di atas terumbu karang. Data yang digunakan adalah data dari hasil eksperimen yang dilakukan oleh Demirbilek (2007) \cite{DemirbilekReport} yang dilakukan pada laboratorium dinamika untuk meneliti redaman gelombang oleh terumbu karang. Metode yang digunakan adalah \emph{Multi Layer Perceptron (MLP)} dengan q \emph{hidden layer}. Jumlah neuron yang digunakan pada adalah 4. Berdasarkan hasil ujicoba, pada data training meraih \emph{Mean Squared Error (MSE)} sebesar 0.0186. Sedangkan untuk data testing dihasilkan MSE sebesar 0.0213.
+
+ \bigskip
+Kata kunci : runup, ANN, multi layer perceptron, percobaan guam
+
+
+
+%%% Abstrak English %%%%%%%%%%  
+
+\noindent\rule{\textwidth}{1pt}
+Abstract
+Fringing reef is a nearshore ecosystem that is consist of variety of coral. Beside a nearshore ecosystem, fringing reef is also has a function to slowing down waves. The methods for predicting runup height using machine learning is new and has room for improvements. The widely used methods for predicting runup height is divided by 2, a classic apporach, by experiment and observation, and then finding the mathematic models. The other methods is by using machine learning. This paper is using machine learning to predict runup height. The data used in this paper is the laboratorium data from University of Michigan. The method used in this paper is $Multi Layer Perceptron(MLP)$ with 4 hidden neuron.
+
+ \bigskip
+Keywords: runup, ANN, multi layer perceptron, guam experiment
+
+\noindent\rule{\textwidth}{1pt} }
+   
+
+\pagebreak
+%%%%%% isi paper %%%%
+
+\section{Pendahuluan}
+%%% TEXEXPAND: INCLUDED FILE MARKER ./Pendahuluan.tex
+\subsection{\textbf{Latar Belakang}}
+
+Terumbu karang adalah ekosistem bawah laut yang terbentuk dari sekumpulan karang. Selain berfungsi sebagai ekosistem di bawah laut, terumbu karang juga berfungsi sebagai pemecah gelombang. Sebagian besar kepulauan di wilayah pasific di kelilingi oleh terumbu karang yang tumbuh di laut dangkal yang dekat dengan pantai \cite{DemirbilekBoussinesq}.\\
+
+\begin{figure}[htp]
+    \begin{center}
+        \includegraphics[scale=0.1]{./images/hawai_coral.jpg}
+    \end{center}
+    \caption{Terumbu Karang di tepi pantai di sekitar Hawai.}
+    \label{fig:hawai_coral}
+\end{figure}
+
+Gelombang yang melewati terumbu karang akan teredam kecepatannya \cite{DemirbilekReport}. Hal ini akan mempengaruhi naiknya gelombang ke daratan di atas batas normal, atau dalam literatur lain disebut \emph{runup} gelombang \cite{nielsen1991wave}. Teredamnya kecepatan gelombang disebabkan oleh bertumbukannya dasar gelombang dengan karang. Dalam beberapa kasus, hal ini menyebabkan pecahnya gelombang \cite{DemirbilekReport}. Pada gambar \ref{fig:hawai_coral} dapat terlihat pecahnya gelombang yang terjadi di atas karang.\\
+
+Efektifitas dari terumbu karang dalam meredam gelombang masih menjadi perdebatan para peneliti. Yang selama ini dilakukan dalam mempelajari redaman dari terumbu karang adalah eksperimen di laboratorium. Seperti yang dilakukan Yau et al (2012)\cite{YAO201230}. Dalam papernya dia menggunakan model \emph{Boussinesq} 1 dimensi untuk memodelkan transformasi gelombang saat melewati terumbu karang.  Namun cara mempelajari ini tergolong mahal dan membutuhkan pemodelan matematika yang dalam untuk memodelkan pecahnya gelombang.
+
+Selama ini metode yang ada untuk memprediksi tinggi gelombang \emph{runup} pada terumbu karang menggunakan pembelajaran mesin masih tergolong baru. Metodenya sendiri terbagi menjadi 2. Metode yang pertama dilakukan dengan pendekatan klasik, dan di lakukan secara analitis. Yakni dengan melakukan eksperimen dan observasi, lalu di cari model matematika yang tepat. Model yang demikian sulit untuk dikembangkan dan beradaptasi dengan kondisi lingkungan yang berbeda. Prediksi yang didapat dari model yang demikian pun masih belum sempurna \cite{DemirbilekBoussinesq}. Sedangkan metode yang kedua dilakukan dengan pendekatan \emph{soft computing}.
+
+Pada TA ini digunakan Pembelajaran Mesin untuk memprediksi \emph{runup} gelombang. Metode yang digunakan disini adalah \emph{supervised learning}, dengan menggunakan data analisa observasi gelombang yang dilakukan oleh Demirbilek et al (2007)\cite{DemirbilekReport}. Data tersebut akan di \emph{training} dengan konfigurasi neural network. Dari proses training tersebut diharapakan mendapatkan model prediksi \emph{runup} gelombang dengan akurasi yang tinggi.
+
+\subsection{\textbf{Perumusan Masalah}}
+Rumusan masalah yang ingin diangkat pada TA ini adalah
+\begin{enumerate}
+    \item Bagaimana melakukan pemodelan supervised learning dengan data eksperimen yang dilakukan di laboratorium?
+    \item Bagaimana akurasi dari model prediksi runup gelombang yang telah dibuat?
+\end{enumerate}
+\subsection{\textbf{Tujuan}}
+Berikut adalah tujuan yang ingin dicapai pada penulisan proposal/TA.
+\begin{enumerate}
+    \item Memodelkan data hasil eksperimen di laboratorium menggunakan \emph{supervised learning}
+    \item Mengetahui akurasi Artificial Neural Network untuk prediksi \emph{runup} gelombang pada terumbu karang dengan metrik \textbf{MSE} dan \textbf{MAPE}.
+\end{enumerate}
+\subsection{\textbf{Batasan Masalah}}
+Untuk memastikan hasil yang cukup akurat. Lingkupan masalah diperkecil menjadi:
+\begin{enumerate}
+    \item Data berasal dari eksperimen pada laboratorium dinamika oleh Demerbilek (2007).
+    \item Metode yang digunakan pada eksperimen ini adalah Artificial Neural Network.
+\end{enumerate}
+%%% TEXEXPAND: END FILE ./Pendahuluan.tex
+
+\section{Studi Terkait}
+%%% TEXEXPAND: INCLUDED FILE MARKER ./Kajian-Pustaka.tex
+Pembelajaran mesin sudah banyak dipakai di berbagai bidang keilmuan. Mulai dari Pemrosesan Citra seperti yang di lakukan oleh Lawrence et al (2007)\cite{lawrence1997face}. Dalam papernya dia menggunakan \emph{neural network} dengan tipe \emph{Convolutional Neural Network} untuk mendeteksi wajah. Van Gent et al (2007) \cite{van2007neural}, dia menggunakan \emph{Neural Network} untuk menganalisa \emph{overtopping} gelombang pada struktur di wilayah pantai. Yau et al (2012)\cite{YAO201230}, dalam papernya dia menggunakan model \emph{Boussinesq} 1 dimensi untuk memodelkan transformasi gelombang ketika melewati terumbu karang. Pada bab ini dijelaskan model \emph{runup} gelombang pada terumbu karang menggunakan Pembelajaran Mesin.\\
+
+\subsection{Runup Gelombang}
+
+Runup gelombang adalah jarak vertikal maksimum dari kenaikan gelombang pada pantai atau struktur di atas \emph{SWL} \cite{sorensen2005basic}. Pada TA ini, data ovservasi ketinggian \emph{runup} gelombang diukur mulai ketinggian \emph{swl}, hingga maksimum ketinggian air di daratan. Penjelasan lebih lanjut tentang pengambilan data dijelaskan pada bagian \nameref{kondisiEksperimen}. Runup gelombang dapat diilustrasikan pada gambar \ref{fig:runup}.
+
+\FloatBarrier
+
+\begin{figure}
+    \begin{center}
+        \includegraphics[scale=0.7]{./images/runup_gelombang.jpg}
+    \end{center}
+    \caption{Ilustrasi \emph{Runup} gelombang oleh Mike Swenson, Coastal Morphology, University of Wisconsin-Madison \cite{MikeSwenson:WaveRunup}.}
+    \label{fig:runup}
+\end{figure}
+
+\FloatBarrier
+
+Pada gambar \ref{fig:runup}, \emph{SWL (Sea Water Level)} adalah ketinggian Air Normal ketika tidak ada gelombang. Wilayah Pantai (\emph{Foreshore}), dimulai dari titik \emph{SWL} yang berpotongan dengan daratan. Wilayah lautan (\emph{Nearshore}), dimulai dari titik \emph{SWL} yang berpotongan dengan air. Ketika titik potong air dengan daratan berada di atas \emph{SWL}, maka kondisi tersebut dinamakan dengan \emph{runup}. Ketinggian \emph{runup} dinotasikan dengan $R$. Simbol $\upbeta$ melambangkan kemiringan bibir pantai.
+
+\subsection{Pembelajaran Mesin}
+
+Pembelajaran mesin adalah bidang studi yang memberikan kemampuan komputer untuk belajar, tanpa harus di program secara khusus \cite{arthur_l_samuel_1959}. Mesin dikatakan belajar dari pengalaman ($E$) terhadap tugas ($T$) dan ukuran kinerja ($P$), jika kinerja pada tugas ($T$), yang di ukur berdasarkan ($P$), berkembang berdasarkan pengalaman ($E$). Dalam TA ini, akan dibuat suatu program yang dapat belajar dari data gelombang hasil observasi ($T$). Lalu dievaluasi hasilnya dengan menggunakan $MSE$ ($P$), sehingga dapat di lihat seberapa besar galatnya. Lalu diperkecil galatnya dengan metode optimasi.
+
+\subsubsection{Supervised Learning}
+
+Sebelum data dimasukan ke dalam program, data tersebut diberikan label. Label tersebut bisa berupa \emph{input}, yakni $H$ (\emph{Significant Height} Gelombang), $T$ (\emph{Spectral Peak Periods}), dan $WL$ (\emph{Wave Length}). Dan label untuk \emph{output}. Karna pada TA kali ini, akan digunakan regresi linear. Maka tidak ada label untuk \emph{output}. Parameter \emph{input} yang berpasangan dengan \emph{output} tertentu, selanjutnya dinamakan contoh. Pembelajaran Mesin yang demikian dinamakan \emph{Supervised Learning}. \emph{Supervised Learning} Merupakan bagian dari pembelajaran mesin yang memetaan \emph{input} ke \emph{output} yang berdasar pada contoh pasangan \emph{input} dan \emph{output}\cite{AIPeterNorvig}. 
+
+\subsubsection{Neural Network}
+
+Selanjutnya data tersebut dimasukan kedalam suatu sistem untuk belajar. Pada TA ini, sistem yang digunakan untuk pembelajaran adalah \emph{Neural Network}.
+Model \emph{neural network} sederhana di definisikan oleh McCulloch-Pitts \cite{McCulloch1943}. Dimana persamaan memiliki $M$ himpunan \emph{Input} ($I$) (\emph{input neuron}), dan satu \emph{output} ($y$), dengan $y$ merupakan bagian dari $\{0,1\}$. Atau dengan kata lain, $y$ adalah fungsi yang hanya memiliki \emph{output} $0$ dan $1$.
+
+\begin{equation}
+    y = f(z)
+\end{equation}
+dimana
+\begin{equation}
+\label{eq:mcullochNeuralNetwork}
+    z = \sum_{i=1}^N I_iW_i
+\end{equation}
+dan $I$ merupakan output dari neuron sebelumnya. Pada input layer, $I$ adalah feature yang dijadikan prediktor.
+
+Di TA ini, \emph{output} yang akan dihasilkan tidak terbatas pada $0$ dan $1$. Sehingga di \emph{neuron output}, fungsi aktivasi yang digunakan adalah fungsi aktivasi linear. Model \emph{Neural Network}nya dapat direpresentasikan pada gambar \ref{fig:neural_network_sederhana}
+
+\begin{figure}[H]
+    \def\layersep{4cm}
+    \begin{tikzpicture}[shorten >=1pt,->,draw=black!50, node distance=\layersep]
+        \tikzstyle{every pin edge}=[<-,shorten <=1pt]
+        \tikzstyle{neuron}=[circle,fill=black!25,minimum size=17pt,inner sep=0pt]
+        \tikzstyle{input neuron}=[neuron, fill=green!50];
+        \tikzstyle{output neuron}=[neuron, fill=red!50];
+        \tikzstyle{hidden neuron}=[neuron, fill=blue!50];
+        \tikzstyle{annot} = [text width=4em, text centered]
+
+        % Draw the input layer nodes
+        \foreach \name / \y in {1,...,2}
+        % This is the same as writing \foreach \name / \y in {1/1,2/2,3/3,4/4}
+            \node[input neuron, pin=left:Input \#\y] (I-\name) at (0,-\y) {};
+
+        % Draw the hidden layer nodes
+        \foreach \name / \y in {1,...,2}
+            \path[yshift=0.0cm]{}
+                node[hidden neuron] (H-\name) at (\layersep,-\y cm) {};
+
+        % Draw the output layer node
+        \node[output neuron,pin={[pin edge={->}]right:Output}, right of=H-1] (O) {};
+
+        % Connect every node in the input layer with every node in the
+        % hidden layer.
+        \foreach \source in {1,...,2}
+            \foreach \dest in {1,...,2}
+                \path (I-\source) edge node[midway, right] {$W_{input}$} (H-\dest);
+
+        % Connect every node in the hidden layer with the output layer
+        \path (H-1) edge node[midway, right] {$W_{output}$} (O);
+        \path (H-2) edge node[midway, right] {$W_{output}$} (O);
+
+        % Annotate the layers
+        \node[annot,above of=H-1, node distance=1cm] (hl) {Hidden layer};
+        \node[annot,left of=hl] {Input layer};
+        \node[annot,right of=hl] {Output layer};
+        \label{neuralNetworkRepresentation}
+    \end{tikzpicture}
+    \caption{Model \emph{Neural Network} dengan 1 \emph{Hidden Layer}.}
+    \label{fig:neural_network_sederhana}
+\end{figure}
+
+Pada gambar \ref{fig:neural_network_sederhana}, $W$ adalah peubah yang menyatakan berat. Masing masing \emph{input} akan dikalikan dengan $W_{input}$ \emph{hidden layer} tertentu untuk menghasilkan nilai pada \emph{hidden layer neuron} tersebut. Selanjutnya, nilai hasil aktivasi di \emph{hidden layer}, akan dikalikan dengan $W_{output}$. Untuk selanjutnya menjadi \emph{output}, yakni prediksi dari runup gelombang.
+
+\subsubsection{Fungsi Aktivasi}
+
+Fungsi aktivasi digunakan untuk mengubah level aktivasi pada suatu neuron menjadi sebuah sinyal output \cite{KarlicOlgacPerformanceAnalysis}. Pada TA ini, terdapat 2 fungsi aktivasi yang digunakan. Pada hidden layer, digunakan fungsi aktivasi \emph{Rectified Linear Unit (RELU)}. Fungsi aktivasi \emph{RELU} didefinisikan dengan persamaan \ref{eq:aktivasi_relu} \cite{glorot2011deep}.
+
+\begin{equation}
+    f(z) = max(0, z)
+    \label{eq:aktivasi_relu}
+\end{equation}
+
+RELU menjadi pilihan karna memiliki performa konvergensi yang lebih baik dibanding sigmoid \cite{Krizhevsky:2012:ICD:2999134.2999257}. Untuk selanjutnya, pada neuron \emph{output}, digunakan fungsi aktivasi linear. Fungsi aktivasi linear didefinisikan dengan persamaan \ref{eq:aktivasi_linear} \cite{MLBishop}.
+
+
+\subsubsection{Estimasi Galat / \emph{Cost / Lost Function}}
+
+Kalkulasi galat sangat penting untuk menentukan seberapa besar akurasi yang dimiliki model prediksi pada TA ini. Fungsi estimasi galat yang digunakan adalah \emph{Mean Square Error (MSE)}. Persamaan MSE didefinisikan dengan
+
+\begin{equation}
+    \operatorname{MSE}=\frac{1}{n}\sum_{i=1}^n(Y_i-\hat{Y_i})^2,
+\end{equation}
+
+dimana $Y$ adalah ketinggian gelombang hasil observasi, $\hat{Y}$ adalah ketinggian gelombang hasil prediksi, dan $n$ adalah jumlah data training.
+%%% TEXEXPAND: END FILE ./Kajian-Pustaka.tex
+
+\section{Sistem yang Dibangun}
+
+%%% TEXEXPAND: INCLUDED FILE MARKER ./Metodologi.tex
+Metode yang akan digunakan pada TA ini adalah Artificial Neural Network. Data hasil analisa Demirbilek et al (2007) \cite{DemirbilekReport} akan dibagi 2. Yakni 80 persen untuk training, dan 20 persen untuk testing. Masing masing, akan disimpan ke dalam file csv. Sistem akan membaca data training langsung dari file, lalu dimasukannya sebagai input ke dalam algoritma ANN. Setelah training, sistem akan menghasilkan suatu model dengan matriks dengan attribut $W_{input}$ dan $W_{output}$ di dalamnya. Tujuannya adalah mendapatkan suatu model yang cukup baik untuk menghasilkan prediksi yang cukup akurat.
+
+\subsection{Kondisi Eksperimen}
+
+\label{kondisiEksperimen}
+
+Eksperimen dibagi menjadi 3 bagian. Eksperimen pertama dilakukan hanya menggunakan variabel gelombang, dengan kecepatan angin 0. Eksperimen kedua, dilakukan hanya menggunakan variabel angin. Selanjutnya eksperimen ketiga adalah gabungan dari perubahan variable gelombang dan variabel angin.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[scale=0.2]{./images/instrumen_eksperimen.png}
+  \end{center}
+  \caption{Instrumen eksperimen yang digunakan oleh Demirbilek et al \cite{DemirbilekReport}.}
+  \label{fig:intrumen_demirbilek}
+\end{figure}
+\FloatBarrier
+
+Gambar \ref{fig:intrumen_demirbilek} merupakan konfigurasi yang digunakan Demirbilek et al \cite{DemirbilekReport} untuk mengamati gelombang. Pada konfigurasi tersebut ada 9 sensor gelombang, 2 sensor kecepatan angin, dan 1 sensor \emph{runup} gelombang. Wilayah penyebaran sensor gelombang dikelompokan menjadi 2. Wilayah pertama berada di atas karang dan wilayah kedua berada di laut. Wilayah karang merupakan gabungan dari wilayah karang yang datar \emph{Reef Flat} dan wilayah karang yang miring. Wilayah karang datar memiliki panjang mulai dari \emph{SWL} hingga 4.8 meter ke arah laut. Wilayah karang yang miring \emph{Reef Slope} di mulai dari bibir karang datar hingga 4.79 meter ke arah laut. Laut didefinisikan dengan wilayah dengan dasar terdalam. Untuk sensor 1, 2, dan 3 tersebar di wilayah laut, sensor 4, 5, dan 6 tersebar di wilayah \emph{reef slope}, dan untuk sensor 7, 8, dan 9 tersebar di wilayah \emph{reef flat}.
+
+\subsection{Deskripsi Data}
+\FloatBarrier
+
+Data yang digunakan dalam aplikasi neural network di TA ini adalah data dari eksperimen yang di lakukan oleh US Army Corps of Engineer pada Agustus - September 2006. Analisa dilakukan oleh Demirbilek et al. dan di tulis dalam laporan yang berjudul \emph{"Laboratory Study of Wind Effect on Runup over Fringing Reefs"}. Data berasal dari hasil percobaan yang dilakukan di Ann Arbor oleh University of Michigan\ref{TechnicalReports}. Data memiliki format \emph{tab separated value (tsv)}, header sensor berlokasi di 
+index ke 8 dari baris. Header 1 hingga 7 berisi meta informasi seputar data. Hanya meta informasi frequensi, channels, dan samples yang digunakan untuk TA ini. Masing-masing berfungsi untuk menentukan proses yang tepat dalam membaca data.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[scale=0.2]{./images/raw_data_test-18.png}
+  \end{center}
+  \caption{Raw data dengan nama file test-18.dat yang dihasilkan oleh percobaan di laboratorium.}
+  \label{fig:raw_data_18}
+\end{figure}
+
+\subsection{Model Artificial Neural Network}
+Pada TA ini, digunakan model ANN dengan 1 hidden layer (\emph{Non-deep Neural Network}). Terdapat 3 input, yang berupa vektor dengan masing-masing nilai merupakan sensor 1, sensor 2, dan sensor 3 yang terletak pada laut dalam. Model AAN ini memiliki 1 output dan merupakan model \emph{regressi linear}. Output merupakan prediksi ketinggian \emph{runup} dengan satuan $cm$. Model tersebut direpresentasikan pada gambar \ref{fig:model_ann_ta_ini}.
+
+\def\layersep{4cm}
+\begin{figure}
+  \begin{tikzpicture}[shorten >=1pt,->,draw=black!50, node distance=\layersep]
+      \tikzstyle{every pin edge}=[<-,shorten <=1pt]
+      \tikzstyle{neuron}=[circle, fill=black!25,minimum size=17pt,inner sep=0pt]
+      \tikzstyle{input neuron}=[neuron, fill=green!50];
+      \tikzstyle{output neuron}=[neuron, fill=red!50];
+      \tikzstyle{hidden neuron}=[neuron, fill=blue!50];
+      \tikzstyle{annot} = [text width=4em, text centered]
+
+      % Draw the input layer nodes
+      \node[input neuron, pin=left:Sensor 1] (I-SENSOR1) at (0,-1) {};
+      \node[input neuron, pin=left:Sensor 2] (I-SENSOR2) at (0,-2) {};
+      \node[input neuron, pin=left:Sensor 3] (I-SENSOR3) at (0,-3) {};
+
+      % Draw the hidden layer nodes
+      \path[yshift=0.0cm]{}
+          node[hidden neuron] (H-1) at (\layersep,-1 cm) {};
+      \path[yshift=0.0cm]{}
+          node[hidden neuron] (H-2) at (\layersep,-2 cm) {};
+      \path[yshift=0.0cm]{}
+          node[hidden neuron] (H-3) at (\layersep,-3 cm) {};
+      \path[yshift=0.0cm]{}
+          node[hidden neuron] (H-4) at (\layersep,-4 cm) {};
+
+      % Draw the output layer node
+      \node[output neuron,pin={[pin edge={->}]right:Prediksi Runup}, right of=H-3] (O) {};
+
+      % Connect every node in the input layer with every node in the
+      % hidden layer.
+      \foreach \source in {SENSOR1, SENSOR2, SENSOR3}
+          \foreach \dest in {1,...,4}
+              \path (I-\source) edge node[midway, right] {$W_{hidden}$} (H-\dest);
+
+      % Connect every node in the hidden layer with the output layer
+      \foreach \source in {1,...,4}
+          \path (H-\source) edge node[midway, right] {$W_{output}$} (O);
+
+      % Annotate the layers
+      \node[annot,above of=H-1, node distance=1cm] (hl) {Hidden layer};
+      \node[annot,left of=hl] {Input layer};
+      \node[annot,right of=hl] {Output layer};
+      \label{modelANNTA}
+  \end{tikzpicture}
+  \caption{Model ANN yang digunakan pada TA ini.}
+  \label{fig:model_ann_ta_ini}
+\end{figure}
+\FloatBarrier
+
+\subsection{Flowchart Sistem TA}
+
+Secara keseluruhan, terdapat bentuk hirarki dalam sistem ini. Hirarki \emph{root} (Hirarki Utama), yakni sistem itu sendiri, bertugas sebagai pengatur. \emph{Root} memiliki anak yang memiliki tugas-tugas tertentu, seperti: \emph{Membaca File}, \emph{Transformasi Data}, \emph{Membagi Data}, atau yang paling penting yakni \emph{Training Data}.
+
+\subsection{Flowchart Sistem Utama}
+
+Sistem utama merupakan pengatur dari komponen-komponen yang ada pada sistem TA ini. Komponen-komponen tersebut termasuk: Pembacaan Data, Transformasi Data, Pembagian Data, Inisialisasi Epoch Dan Learning Rate, Melakukan Training, dan Melakukan Testing. Alur kerja lebih lanjut dapat dilihat pada gambar \ref{fig:flowchart_sistem}.
+
+Sistem utama dimulai dengan membaca data. Pembacaan data dibagi menjadi 2. Pembacaan data training dan pembacaan data testing. Data training mencakup 80 persen dari seluruh data observasi, sedangkan data training mencakup 20 persen. Hal ini sejalan dengan Fan et al \cite{fan2008liblinear}, dimana beliau menggunakan rasio 80/20 untuk training dan testing. Setelah melakukan pembacaan data, sistem akan melakukan transformasi data. Mengubah data csv, menjadi matriks dengan panjang kolom 4, yang mewakili $H$, $T$, $WL$, dan $WIND$. Komponen selanjutnya adalah inisialisasi \emph{epoch} dan \emph{learning rate}. \emph{Epoch} adalah representasi dari keseluruhan data yang digunakan pada training. Sedangkan \emph{learning rate} adalah besaran dari suatu langkah pembelajaran. Nilai dari \emph{learning rate} dan \emph{epoch} selanjutnya akan dimasukan ke dalam fungsi training.
+
+\begin{figure}[ht]
+  \caption{Flowchart Sistem Utama}
+  \begin{center}
+    \tikzstyle{decision} = [diamond, draw, 
+        text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+    \tikzstyle{block} = [rectangle, draw, 
+        text width=12em, text centered, minimum height=2em]
+    \tikzstyle{circle} = [draw, ellipse, minimum height=2em, distance=4em]
+    \tikzstyle{blockTraining} = [rectangle, draw, fill=red!20, 
+        text width=12em, text centered, minimum height=2em]
+    \tikzstyle{line} = [draw, -latex']
+        
+    \begin{tikzpicture}[node distance = 1.5cm, auto]
+        \footnotesize
+        % Place nodes
+        \node [circle] (init) {Mulai};
+        \node [block, below of=init] (bacaData) {Membaca data report dari csv file};
+        \node [block, below of=bacaData] (transformasiData) {Transformasi data menjadi matrix};
+        \node [block, below of=transformasiData] (setupEpochLr) {Menentukan jumlah epoch dan learning rate};
+        \node [blockTraining, below of=setupEpochLr] (training) {Melakukan Training};
+        \node [blockTraining, below of=training] (testing) {Melakukan Testing};
+        \node [circle, below of=testing] (stop) {Stop};
+      
+        % Draw edges
+        \path [line] (init) -- (bacaData);
+        \path [line] (bacaData) -- (transformasiData);
+        \path [line] (transformasiData) -- (setupEpochLr);
+        \path [line] (setupEpochLr) -- (training);
+        \path [line] (training) -- (testing);
+        \path [line] (testing) -- (stop);
+        \label{fig:sistem}
+    \end{tikzpicture}
+  \end{center}
+  \label{fig:flowchart_sistem}
+\end{figure}
+\FloatBarrier
+
+\subsection{Flowchart Komponen Training Dan Testing}
+\label{FlowChartTraining}
+
+Pada bagian training dan testing \ref{fig:sistem}, algoritma yang digunakan adalah algoritma ANN. Untuk testing, hanya dilakukan algoritma \emph{Feed Forward}. Alur kerja ANN representasikan pada gambar \ref{fig:alur_ann}.
+
+\begin{figure}[ht]
+  \caption{Flowchart Komponen Training Dan Testing}
+  \begin{center}
+    \footnotesize
+    \tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+        text width=10em, text centered, minimum height=6em]
+    \tikzstyle{blockTraining} = [rectangle, draw, fill=red!20, 
+        text width=14em, text centered, minimum height=2em]
+    \tikzstyle{stopTrainng} = [rectangle, draw, fill=red!20, 
+        text width=3em, text centered,  distance=10cm]
+    \tikzstyle{line} = [draw, -latex']
+    \tikzstyle{circle} = [draw, ellipse, minimum height=2em, distance=4em]
+    \tikzstyle{decision} = [diamond, draw, fill=blue!20, 
+        text width=4em, text badly centered, node distance=2.5cm, inner sep=0pt]
+        
+    \begin{tikzpicture}[node distance = 1.5cm, auto]
+        % Place nodes
+        \node [circle] (init) {Mulai};
+        \node [blockTraining, below of=init] (randomWeight) {Inisialisasi $weight$ dengan random data};
+        \node [blockTraining, below of=randomWeight] (IW){Mengalikan Input Layer Dengan $Weight$ hidden layer};
+        \node [blockTraining, below of=IW] (aktivasi){Jalankan fungsi aktivasi hidden layer};
+        \node [blockTraining, below of=aktivasi] (HW){Mengalikan Input Layer Dengan $Weight$ untuk $output$};
+        \node [blockTraining, below of=HW] (aktivasiOutput){Menjalankan fungsi aktivasi untuk output neuron};
+        \node [blockTraining, below of=aktivasiOutput] (cost){Kalkulasi Error};
+        \node [circle, below of=cost] (stop){Stop};
+  
+        % Draw edges
+        \path [line] (init) -- (randomWeight);
+        \path [line] (randomWeight) -- (IW);
+        \path [line] (IW) -- (aktivasi);
+        \path [line] (aktivasi) -- (HW);
+        \path [line] (HW) -- (aktivasiOutput);
+        \path [line] (aktivasiOutput) -- (cost);
+        \path [line] (cost) -- (stop);
+    \end{tikzpicture}
+  \end{center}
+  \label{fig:alur_ann}
+\end{figure}
+\FloatBarrier
+
+Pada gambar \ref{fig:alur_ann}, algoritma ANN dimulai dengan inisialisasi weight dengan random data. Selanjutnya, nilai pada \emph{input layer} akan dikalikan dengan $weight$ \emph{hidden layer} $W^1$, sehingga dihasilkan $a^1$. Untuk menjadi nilai pada \emph{neuron hidden layer} $z^1$, $a$ akan diaktifasi dengan fungsi aktivasi $RELU$ sehingga nilai $z^1$ merupakan hasil dari $relu(a)$. Untuk mengahasilkan nilai prediksi, $z^1$ dikalikan dengan $weight$ pada \emph{output} $W^2$, sehingga mengasilkan $a^2$. Nilai $a^2$ merupakan nilai hasil prediksi, karna fungsi aktivasi dari \emph{output} adalah linear ($f(a) = a$). Lihat gambar \ref{fig:model_ann_ta_ini} untuk representasi dari Model ANN yang digunakan pada TA ini.
+
+\FloatBarrier
+%%% TEXEXPAND: END FILE ./Metodologi.tex
+
+\section{Evaluasi}
+
+Bagian ini berisi dua sub-bagian, yaitu Hasil Pengujian dan Analisis Hasil Pengujian. Pengujian dan analisis yang dilakukan selaras dengan tujuan TA sebagaimana dinyatakan dalam Pendahuluan.
+
+\subsection{Hasil Pengujian}
+\FloatBarrier
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{lrrrr}
+      \toprule
+      {} &        Wave1; &        Wave2; &        Wave3; &        Wave9; \\
+      \midrule
+      count &  18000.000000 &  18000.000000 &  18000.000000 &  18000.000000 \\
+      mean  &     -0.187642 &     -0.099445 &     -0.056901 &      0.787389 \\
+      std   &      2.052794 &      1.940509 &      1.953062 &      0.818523 \\
+      min   &     -8.662451 &     -8.224868 &     -7.996433 &     -1.365062 \\
+      25\%   &     -1.594967 &     -1.434953 &     -1.408767 &      0.181684 \\
+      50\%   &     -0.218648 &     -0.115488 &     -0.072189 &      0.703352 \\
+      75\%   &      1.186734 &      1.195336 &      1.254351 &      1.303270 \\
+      max   &      9.107983 &      7.837847 &      7.996613 &      4.829746 \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+
+  \caption{Deskripsi data pada "test-18.dat" yang dihasilkan oleh applikasi pandas \cite{mckinney-proc-scipy-2010}}.
+  \label{Tab:deskripsi_data}
+\end{table}
+
+Sistem diuji terhadap data percobaan nomor 18. Data tersebut berada dalam file dengan nama "test-18.dat". Pada data tersebut sensor 1 memiliki nama kolom "Wave1", sensor 2 memiliki nama kolom "Wave2", dan sensor 3 memiliki nama kolom "Wave3". Untuk target prediksi digunakan kolom "Wave9". Masing-masing data memiliki 18000 sampel. Deskripsi deskripsi lengkap dari data bisa di lihat di \ref{Tab:deskripsi_data}.
+
+Dari hasil pengujian didapat nilai $MSE$ sebesar $0.0186$ untuk data training dan MSE $0.0220$ untuk data validasi. Perkembangan nilai $MSE$ pada data training bisa di lihat secara lengkap di gambar "Perkembangan MSE" \ref{fig:perkembangan_nilai_mse} dan tabel \ref{Tab:perkembangan_mse} (pada lampiran).
+
+\begin{figure}
+  \begin{center}
+    % \include{plots/test-18-4-neuron-45-epoch-sgd-16000.pgf}
+    \resizebox{\linewidth}{!}{%
+%%% TEXEXPAND: INCLUDED FILE MARKER ./plots/test-18-4-neuron-45-epoch-sgd-16000.pgf
+%% Creator: Matplotlib, PGF backend
+%%
+%% To include the figure in your LaTeX document, write
+%%   \input{<filename>.pgf}
+%%
+%% Make sure the required packages are loaded in your preamble
+%%   \usepackage{pgf}
+%%
+%% Figures using additional raster images can only be included by \input if
+%% they are in the same directory as the main LaTeX file. For loading figures
+%% from other directories you can use the `import` package
+%%   \usepackage{import}
+%% and then include the figures with
+%%   \import{<path to file>}{<filename>.pgf}
+%%
+%% Matplotlib used the following preamble
+%%   \usepackage{fontspec}
+%%   \setmainfont{DejaVuSerif.ttf}[Path=/Users/yana/.local/share/virtualenvs/demerbilek_prediction-2ieIkYyw/lib/python3.7/site-packages/matplotlib/mpl-data/fonts/ttf/]
+%%   \setsansfont{DejaVuSans.ttf}[Path=/Users/yana/.local/share/virtualenvs/demerbilek_prediction-2ieIkYyw/lib/python3.7/site-packages/matplotlib/mpl-data/fonts/ttf/]
+%%   \setmonofont{DejaVuSansMono.ttf}[Path=/Users/yana/.local/share/virtualenvs/demerbilek_prediction-2ieIkYyw/lib/python3.7/site-packages/matplotlib/mpl-data/fonts/ttf/]
+%%
+\begingroup%
+\makeatletter%
+\begin{pgfpicture}%
+\pgfpathrectangle{\pgfpointorigin}{\pgfqpoint{5.000000in}{5.000000in}}%
+\pgfusepath{use as bounding box, clip}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetmiterjoin%
+\definecolor{currentfill}{rgb}{1.000000,1.000000,1.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetlinewidth{0.000000pt}%
+\definecolor{currentstroke}{rgb}{1.000000,1.000000,1.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{0.000000in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{5.000000in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{5.000000in}{5.000000in}}%
+\pgfpathlineto{\pgfqpoint{0.000000in}{5.000000in}}%
+\pgfpathclose%
+\pgfusepath{fill}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetmiterjoin%
+\definecolor{currentfill}{rgb}{1.000000,1.000000,1.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetlinewidth{0.000000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetstrokeopacity{0.000000}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{0.625000in}{0.625000in}}%
+\pgfpathlineto{\pgfqpoint{4.500000in}{0.625000in}}%
+\pgfpathlineto{\pgfqpoint{4.500000in}{4.400000in}}%
+\pgfpathlineto{\pgfqpoint{0.625000in}{4.400000in}}%
+\pgfpathclose%
+\pgfusepath{fill}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetroundjoin%
+\definecolor{currentfill}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfsys@defobject{currentmarker}{\pgfqpoint{0.000000in}{-0.048611in}}{\pgfqpoint{0.000000in}{0.000000in}}{%
+\pgfpathmoveto{\pgfqpoint{0.000000in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{0.000000in}{-0.048611in}}%
+\pgfusepath{stroke,fill}%
+}%
+\begin{pgfscope}%
+\pgfsys@transformshift{0.801136in}{0.625000in}%
+\pgfsys@useobject{currentmarker}{}%
+\end{pgfscope}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.801136in,y=0.527778in,,top]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 0}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetroundjoin%
+\definecolor{currentfill}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfsys@defobject{currentmarker}{\pgfqpoint{0.000000in}{-0.048611in}}{\pgfqpoint{0.000000in}{0.000000in}}{%
+\pgfpathmoveto{\pgfqpoint{0.000000in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{0.000000in}{-0.048611in}}%
+\pgfusepath{stroke,fill}%
+}%
+\begin{pgfscope}%
+\pgfsys@transformshift{1.601756in}{0.625000in}%
+\pgfsys@useobject{currentmarker}{}%
+\end{pgfscope}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=1.601756in,y=0.527778in,,top]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 10}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetroundjoin%
+\definecolor{currentfill}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfsys@defobject{currentmarker}{\pgfqpoint{0.000000in}{-0.048611in}}{\pgfqpoint{0.000000in}{0.000000in}}{%
+\pgfpathmoveto{\pgfqpoint{0.000000in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{0.000000in}{-0.048611in}}%
+\pgfusepath{stroke,fill}%
+}%
+\begin{pgfscope}%
+\pgfsys@transformshift{2.402376in}{0.625000in}%
+\pgfsys@useobject{currentmarker}{}%
+\end{pgfscope}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=2.402376in,y=0.527778in,,top]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 20}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetroundjoin%
+\definecolor{currentfill}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfsys@defobject{currentmarker}{\pgfqpoint{0.000000in}{-0.048611in}}{\pgfqpoint{0.000000in}{0.000000in}}{%
+\pgfpathmoveto{\pgfqpoint{0.000000in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{0.000000in}{-0.048611in}}%
+\pgfusepath{stroke,fill}%
+}%
+\begin{pgfscope}%
+\pgfsys@transformshift{3.202996in}{0.625000in}%
+\pgfsys@useobject{currentmarker}{}%
+\end{pgfscope}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=3.202996in,y=0.527778in,,top]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 30}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetroundjoin%
+\definecolor{currentfill}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfsys@defobject{currentmarker}{\pgfqpoint{0.000000in}{-0.048611in}}{\pgfqpoint{0.000000in}{0.000000in}}{%
+\pgfpathmoveto{\pgfqpoint{0.000000in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{0.000000in}{-0.048611in}}%
+\pgfusepath{stroke,fill}%
+}%
+\begin{pgfscope}%
+\pgfsys@transformshift{4.003616in}{0.625000in}%
+\pgfsys@useobject{currentmarker}{}%
+\end{pgfscope}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=4.003616in,y=0.527778in,,top]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 40}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=2.562500in,y=0.337809in,,top]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont Epoch}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetroundjoin%
+\definecolor{currentfill}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfsys@defobject{currentmarker}{\pgfqpoint{-0.048611in}{0.000000in}}{\pgfqpoint{0.000000in}{0.000000in}}{%
+\pgfpathmoveto{\pgfqpoint{0.000000in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{-0.048611in}{0.000000in}}%
+\pgfusepath{stroke,fill}%
+}%
+\begin{pgfscope}%
+\pgfsys@transformshift{0.625000in}{0.756461in}%
+\pgfsys@useobject{currentmarker}{}%
+\end{pgfscope}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.306898in,y=0.703700in,left,base]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 0.0}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetroundjoin%
+\definecolor{currentfill}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfsys@defobject{currentmarker}{\pgfqpoint{-0.048611in}{0.000000in}}{\pgfqpoint{0.000000in}{0.000000in}}{%
+\pgfpathmoveto{\pgfqpoint{0.000000in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{-0.048611in}{0.000000in}}%
+\pgfusepath{stroke,fill}%
+}%
+\begin{pgfscope}%
+\pgfsys@transformshift{0.625000in}{1.187068in}%
+\pgfsys@useobject{currentmarker}{}%
+\end{pgfscope}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.306898in,y=1.134306in,left,base]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 0.2}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetroundjoin%
+\definecolor{currentfill}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfsys@defobject{currentmarker}{\pgfqpoint{-0.048611in}{0.000000in}}{\pgfqpoint{0.000000in}{0.000000in}}{%
+\pgfpathmoveto{\pgfqpoint{0.000000in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{-0.048611in}{0.000000in}}%
+\pgfusepath{stroke,fill}%
+}%
+\begin{pgfscope}%
+\pgfsys@transformshift{0.625000in}{1.617675in}%
+\pgfsys@useobject{currentmarker}{}%
+\end{pgfscope}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.306898in,y=1.564913in,left,base]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 0.4}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetroundjoin%
+\definecolor{currentfill}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfsys@defobject{currentmarker}{\pgfqpoint{-0.048611in}{0.000000in}}{\pgfqpoint{0.000000in}{0.000000in}}{%
+\pgfpathmoveto{\pgfqpoint{0.000000in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{-0.048611in}{0.000000in}}%
+\pgfusepath{stroke,fill}%
+}%
+\begin{pgfscope}%
+\pgfsys@transformshift{0.625000in}{2.048281in}%
+\pgfsys@useobject{currentmarker}{}%
+\end{pgfscope}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.306898in,y=1.995520in,left,base]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 0.6}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetroundjoin%
+\definecolor{currentfill}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfsys@defobject{currentmarker}{\pgfqpoint{-0.048611in}{0.000000in}}{\pgfqpoint{0.000000in}{0.000000in}}{%
+\pgfpathmoveto{\pgfqpoint{0.000000in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{-0.048611in}{0.000000in}}%
+\pgfusepath{stroke,fill}%
+}%
+\begin{pgfscope}%
+\pgfsys@transformshift{0.625000in}{2.478888in}%
+\pgfsys@useobject{currentmarker}{}%
+\end{pgfscope}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.306898in,y=2.426126in,left,base]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 0.8}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetroundjoin%
+\definecolor{currentfill}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfsys@defobject{currentmarker}{\pgfqpoint{-0.048611in}{0.000000in}}{\pgfqpoint{0.000000in}{0.000000in}}{%
+\pgfpathmoveto{\pgfqpoint{0.000000in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{-0.048611in}{0.000000in}}%
+\pgfusepath{stroke,fill}%
+}%
+\begin{pgfscope}%
+\pgfsys@transformshift{0.625000in}{2.909494in}%
+\pgfsys@useobject{currentmarker}{}%
+\end{pgfscope}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.306898in,y=2.856733in,left,base]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 1.0}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetroundjoin%
+\definecolor{currentfill}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfsys@defobject{currentmarker}{\pgfqpoint{-0.048611in}{0.000000in}}{\pgfqpoint{0.000000in}{0.000000in}}{%
+\pgfpathmoveto{\pgfqpoint{0.000000in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{-0.048611in}{0.000000in}}%
+\pgfusepath{stroke,fill}%
+}%
+\begin{pgfscope}%
+\pgfsys@transformshift{0.625000in}{3.340101in}%
+\pgfsys@useobject{currentmarker}{}%
+\end{pgfscope}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.306898in,y=3.287339in,left,base]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 1.2}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetroundjoin%
+\definecolor{currentfill}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfsys@defobject{currentmarker}{\pgfqpoint{-0.048611in}{0.000000in}}{\pgfqpoint{0.000000in}{0.000000in}}{%
+\pgfpathmoveto{\pgfqpoint{0.000000in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{-0.048611in}{0.000000in}}%
+\pgfusepath{stroke,fill}%
+}%
+\begin{pgfscope}%
+\pgfsys@transformshift{0.625000in}{3.770707in}%
+\pgfsys@useobject{currentmarker}{}%
+\end{pgfscope}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.306898in,y=3.717946in,left,base]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 1.4}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetroundjoin%
+\definecolor{currentfill}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfsys@defobject{currentmarker}{\pgfqpoint{-0.048611in}{0.000000in}}{\pgfqpoint{0.000000in}{0.000000in}}{%
+\pgfpathmoveto{\pgfqpoint{0.000000in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{-0.048611in}{0.000000in}}%
+\pgfusepath{stroke,fill}%
+}%
+\begin{pgfscope}%
+\pgfsys@transformshift{0.625000in}{4.201314in}%
+\pgfsys@useobject{currentmarker}{}%
+\end{pgfscope}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.306898in,y=4.148552in,left,base]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 1.6}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.251343in,y=2.512500in,,bottom,rotate=90.000000]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont MSE}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfpathrectangle{\pgfqpoint{0.625000in}{0.625000in}}{\pgfqpoint{3.875000in}{3.775000in}}%
+\pgfusepath{clip}%
+\pgfsetrectcap%
+\pgfsetroundjoin%
+\pgfsetlinewidth{1.505625pt}%
+\definecolor{currentstroke}{rgb}{0.121569,0.466667,0.705882}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{0.801136in}{4.228409in}}%
+\pgfpathlineto{\pgfqpoint{0.881198in}{3.494421in}}%
+\pgfpathlineto{\pgfqpoint{0.961260in}{2.922880in}}%
+\pgfpathlineto{\pgfqpoint{1.041322in}{2.422177in}}%
+\pgfpathlineto{\pgfqpoint{1.121384in}{1.987555in}}%
+\pgfpathlineto{\pgfqpoint{1.201446in}{1.623283in}}%
+\pgfpathlineto{\pgfqpoint{1.281508in}{1.335763in}}%
+\pgfpathlineto{\pgfqpoint{1.361570in}{1.125835in}}%
+\pgfpathlineto{\pgfqpoint{1.441632in}{0.985211in}}%
+\pgfpathlineto{\pgfqpoint{1.521694in}{0.898660in}}%
+\pgfpathlineto{\pgfqpoint{1.601756in}{0.849274in}}%
+\pgfpathlineto{\pgfqpoint{1.681818in}{0.822820in}}%
+\pgfpathlineto{\pgfqpoint{1.761880in}{0.809348in}}%
+\pgfpathlineto{\pgfqpoint{1.841942in}{0.802713in}}%
+\pgfpathlineto{\pgfqpoint{1.922004in}{0.799533in}}%
+\pgfpathlineto{\pgfqpoint{2.002066in}{0.798039in}}%
+\pgfpathlineto{\pgfqpoint{2.082128in}{0.797344in}}%
+\pgfpathlineto{\pgfqpoint{2.162190in}{0.797020in}}%
+\pgfpathlineto{\pgfqpoint{2.242252in}{0.796869in}}%
+\pgfpathlineto{\pgfqpoint{2.322314in}{0.796798in}}%
+\pgfpathlineto{\pgfqpoint{2.402376in}{0.796762in}}%
+\pgfpathlineto{\pgfqpoint{2.482438in}{0.796742in}}%
+\pgfpathlineto{\pgfqpoint{2.562500in}{0.796730in}}%
+\pgfpathlineto{\pgfqpoint{2.642562in}{0.796720in}}%
+\pgfpathlineto{\pgfqpoint{2.722624in}{0.796712in}}%
+\pgfpathlineto{\pgfqpoint{2.802686in}{0.796706in}}%
+\pgfpathlineto{\pgfqpoint{2.882748in}{0.796700in}}%
+\pgfpathlineto{\pgfqpoint{2.962810in}{0.796694in}}%
+\pgfpathlineto{\pgfqpoint{3.042872in}{0.796687in}}%
+\pgfpathlineto{\pgfqpoint{3.122934in}{0.796682in}}%
+\pgfpathlineto{\pgfqpoint{3.202996in}{0.796676in}}%
+\pgfpathlineto{\pgfqpoint{3.283058in}{0.796669in}}%
+\pgfpathlineto{\pgfqpoint{3.363120in}{0.796663in}}%
+\pgfpathlineto{\pgfqpoint{3.443182in}{0.796658in}}%
+\pgfpathlineto{\pgfqpoint{3.523244in}{0.796651in}}%
+\pgfpathlineto{\pgfqpoint{3.603306in}{0.796645in}}%
+\pgfpathlineto{\pgfqpoint{3.683368in}{0.796639in}}%
+\pgfpathlineto{\pgfqpoint{3.763430in}{0.796633in}}%
+\pgfpathlineto{\pgfqpoint{3.843492in}{0.796627in}}%
+\pgfpathlineto{\pgfqpoint{3.923554in}{0.796621in}}%
+\pgfpathlineto{\pgfqpoint{4.003616in}{0.796615in}}%
+\pgfpathlineto{\pgfqpoint{4.083678in}{0.796609in}}%
+\pgfpathlineto{\pgfqpoint{4.163740in}{0.796603in}}%
+\pgfpathlineto{\pgfqpoint{4.243802in}{0.796597in}}%
+\pgfpathlineto{\pgfqpoint{4.323864in}{0.796591in}}%
+\pgfusepath{stroke}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetrectcap%
+\pgfsetmiterjoin%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{0.625000in}{0.625000in}}%
+\pgfpathlineto{\pgfqpoint{0.625000in}{4.400000in}}%
+\pgfusepath{stroke}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetrectcap%
+\pgfsetmiterjoin%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{4.500000in}{0.625000in}}%
+\pgfpathlineto{\pgfqpoint{4.500000in}{4.400000in}}%
+\pgfusepath{stroke}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetrectcap%
+\pgfsetmiterjoin%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{0.625000in}{0.625000in}}%
+\pgfpathlineto{\pgfqpoint{4.500000in}{0.625000in}}%
+\pgfusepath{stroke}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetrectcap%
+\pgfsetmiterjoin%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{0.625000in}{4.400000in}}%
+\pgfpathlineto{\pgfqpoint{4.500000in}{4.400000in}}%
+\pgfusepath{stroke}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=2.562500in,y=4.483333in,,base]{\color{textcolor}\sffamily\fontsize{12.000000}{14.400000}\selectfont Perkembangan MSE}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetmiterjoin%
+\definecolor{currentfill}{rgb}{1.000000,1.000000,1.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetfillopacity{0.800000}%
+\pgfsetlinewidth{1.003750pt}%
+\definecolor{currentstroke}{rgb}{0.800000,0.800000,0.800000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetstrokeopacity{0.800000}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{0.722222in}{4.085032in}}%
+\pgfpathlineto{\pgfqpoint{1.499919in}{4.085032in}}%
+\pgfpathquadraticcurveto{\pgfqpoint{1.527696in}{4.085032in}}{\pgfqpoint{1.527696in}{4.112809in}}%
+\pgfpathlineto{\pgfqpoint{1.527696in}{4.302778in}}%
+\pgfpathquadraticcurveto{\pgfqpoint{1.527696in}{4.330556in}}{\pgfqpoint{1.499919in}{4.330556in}}%
+\pgfpathlineto{\pgfqpoint{0.722222in}{4.330556in}}%
+\pgfpathquadraticcurveto{\pgfqpoint{0.694444in}{4.330556in}}{\pgfqpoint{0.694444in}{4.302778in}}%
+\pgfpathlineto{\pgfqpoint{0.694444in}{4.112809in}}%
+\pgfpathquadraticcurveto{\pgfqpoint{0.694444in}{4.085032in}}{\pgfqpoint{0.722222in}{4.085032in}}%
+\pgfpathclose%
+\pgfusepath{stroke,fill}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetrectcap%
+\pgfsetroundjoin%
+\pgfsetlinewidth{1.505625pt}%
+\definecolor{currentstroke}{rgb}{0.121569,0.466667,0.705882}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{0.750000in}{4.218088in}}%
+\pgfpathlineto{\pgfqpoint{1.027778in}{4.218088in}}%
+\pgfusepath{stroke}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=1.138889in,y=4.169477in,left,base]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont Train}%
+\end{pgfscope}%
+\end{pgfpicture}%
+\makeatother%
+\endgroup%
+%%% TEXEXPAND: END FILE ./plots/test-18-4-neuron-45-epoch-sgd-16000.pgf
+}  \end{center}
+  \caption{Perkembangan nilai $MSE$ pada training.}
+  \label{fig:perkembangan_nilai_mse}
+\end{figure}
+
+Untuk data testing, digunakan sampel 1000 data terakhir, yakni data nomo 17000 hingga data nomor 18000. Hasil testing mendapatkan nilai $MSE$ "0.0213". Plot hasil hasil prediksi bisa dilihat di gambar
+\ref{fig:hasil_pengujian_17000-18000-test-18}
+
+\begin{figure}
+  \begin{center}
+    % \resizebox{{1\linewidth}}{}
+  \end{center}
+  \label{fig:hasil_pengujian_17000_18000_test_18}
+\end{figure}
+
+\pagebreak
+\subsection{Analisis Hasil Pengujian}
+
+Pada tahun 2002 Marcel Zijlema\cite{Zijlema_2012} melakukan pemodelan terhadap transformasi gelombang dengan menggunakan swash \cite{zijlema}. Hasil dari pemodelan Zijlema dapat di gambar "Hasil dari model SWASH" \ref{fig:percobaan_zijlema}.\\
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[scale=0.7]{images/model-zijlema.png}
+  \end{center}
+  \caption{Hasil dari model Zijlema. Perbandingan observasi dan prediksi. Biru adalah observasi dan merah adalah prediksi.}
+  \label{fig:percobaan_zijlema}
+\end{figure}
+\FloatBarrier
+
+Bila dibandingkan dengan hasil pengujian yang sama dengan model yang dibuat pada TA ini, hasil pemodelan Zijlema \cite{Zijlema_2012} jauh lebih baik. Hal ini dikarenakan pada model $MLP$ yang dipakai di TA ini tidak menggunakan parameter lain seperti nilai sensor pada $T - 1$ (waktu sebelumnya). Sedangkan feature penting untuk mencari perubahan bentuk dari waktu ke waktu (rates of change). Dimana nilai saat ini, dipengaruhi oleh nilai sebelumnya. Ini adalah kelemahan dari \emph{feedforward} $MLP$. \emph{Feedforward} $MLP$ tidak mengingat hasil sebelumnya untuk digunakan dalam komputasi output. Hal ini dapat dilihat pada 
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[scale=0.27]{plots/test-18-perbandingan.png}
+  \end{center}
+  \caption{Hasil dari prediksi MLP. Merah adalah hasil prediksi dan biru adalah target.}
+  \label{fig:percobaan_zijlema}
+\end{figure}
+\FloatBarrier
+
+\section{Kesimpulan}
+
+Hasil dari pemodel machine learning masih belum mengalahkan pemodelan numerik dari sisi akurasi. Namun demikian, masih tersedia ruang untuk pengembangan yang sangat besar. Mengingat waktu komputasi proses prediksi machine learning lebih cepat dari pada metode lainnya. Ada jenis lain dari \emph{neural network} yang mampu mengingat output dari $T - 1$ dan memasukannya sebagai parameter untuk komputasi output saat ini, disebut dengan $Recurent Neural Network (RNN)$ \cite{werbos1990backpropagation}. Dan pada tahun 1997, Sepp Hochreiter dan Jürgen Schmidhuber mempblikasikan paper tentang \emph{Long Short-term Memory}\cite{lstm1997}, yang bisa dijadikan alternative solusi dari masalah \emph{Vanishing Gradient dan Decaying Gradient} yang terkadang timbul dalam pengaplikasian model $RNN$.
+
+\bibliographystyle{abbrv}
+\bibliography{references}
+\pagebreak
+\section*{Lampiran}
+
+\begin{figure}
+  \includepdf{plots/sensor-1-9-test18.pdf}
+  \label{fig:plots_semua_sensor_test18}
+  \caption{Plot sensor 1 hingga sensor 10.}
+\end{figure}
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{lrr}
+      \toprule
+      epoch &  val\_loss &      loss \\
+      \midrule
+      1  &  1.351153 &  1.612585 \\
+      2  &  1.074336 &  1.271676 \\
+      3  &  0.833380 &  1.006217 \\
+      4  &  0.623319 &  0.773660 \\
+      5  &  0.444484 &  0.571795 \\
+      6  &  0.299844 &  0.402605 \\
+      7  &  0.191346 &  0.269063 \\
+      8  &  0.116986 &  0.171560 \\
+      9  &  0.070712 &  0.106245 \\
+      10  &  0.044566 &  0.066046 \\
+      11 &  0.031083 &  0.043108 \\
+      12 &  0.024793 &  0.030821 \\
+      13 &  0.022173 &  0.024564 \\
+      14 &  0.021282 &  0.021482 \\
+      15 &  0.021124 &  0.020005 \\
+      16 &  0.021233 &  0.019311 \\
+      17 &  0.021408 &  0.018988 \\
+      18 &  0.021575 &  0.018838 \\
+      19 &  0.021705 &  0.018768 \\
+      20 &  0.021799 &  0.018735 \\
+      21 &  0.021869 &  0.018718 \\
+      22 &  0.021913 &  0.018709 \\
+      23 &  0.021950 &  0.018703 \\
+      24 &  0.021977 &  0.018699 \\
+      25 &  0.021993 &  0.018695 \\
+      26 &  0.022000 &  0.018692 \\
+      27 &  0.022003 &  0.018689 \\
+      28 &  0.022007 &  0.018686 \\
+      29 &  0.022008 &  0.018683 \\
+      30 &  0.022007 &  0.018681 \\
+      31 &  0.022004 &  0.018678 \\
+      32 &  0.022002 &  0.018675 \\
+      33 &  0.021998 &  0.018672 \\
+      34 &  0.021997 &  0.018670 \\
+      35 &  0.021995 &  0.018667 \\
+      36 &  0.021990 &  0.018664 \\
+      37 &  0.021989 &  0.018661 \\
+      38 &  0.021986 &  0.018658 \\
+      39 &  0.021987 &  0.018655 \\
+      40 &  0.021985 &  0.018653 \\
+      41 &  0.021980 &  0.018650 \\
+      42 &  0.021980 &  0.018647 \\
+      43 &  0.021981 &  0.018644 \\
+      44 &  0.021976 &  0.018641 \\
+      45 &  0.021977 &  0.018639 \\
+      \bottomrule
+      \end{tabular}
+      
+  \end{center}
+  \caption{Perkembangan MSE}
+  \label{Tab:perkembangan_mse}
+\end{table}
+%%% TEXEXPAND: END FILE ./Paper.tex
+
+\end{document}

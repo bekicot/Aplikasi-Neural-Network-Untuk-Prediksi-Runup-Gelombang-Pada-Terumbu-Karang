@@ -1,0 +1,42 @@
+<tex2html_file>#./Pendahuluan.tex#
+\subsection<<404>>\textbf<<366>>Latar Belakang<<366>><<404>>
+\begin<<408>>tex2html_deferred<<408>>\par\end<<409>>tex2html_deferred<<409>>
+Terumbu karang adalah ekosistem bawah laut yang terbentuk dari sekumpulan karang. Selain berfungsi sebagai ekosistem di bawah laut, terumbu karang juga berfungsi sebagai pemecah gelombang. Sebagian besar kepulauan di wilayah pasific di kelilingi oleh terumbu karang yang tumbuh di laut dangkal yang dekat dengan pantai \cite<<367>>DemirbilekBoussinesq<<367>>.\\ 
+\begin<<410>>tex2html_deferred<<410>>\par\end<<411>>tex2html_deferred<<411>>
+\begin<<368>>figure<<368>>[htp]
+    \begin<<369>>center<<369>>
+        \includegraphics[scale=0.1]<<370>>./images/hawai_coral.jpg<<370>>
+    \end<<371>>center<<371>>
+    \begin<<412>>tex2html_deferred<<412>>\caption<<372>>Terumbu Karang di tepi pantai di sekitar Hawai.<<372>>\end<<413>>tex2html_deferred<<413>>
+    \label<<373>>fig:hawai_coral<<373>>
+\end<<374>>figure<<374>>
+\begin<<414>>tex2html_deferred<<414>>\par\end<<415>>tex2html_deferred<<415>>
+Gelombang yang melewati terumbu karang akan teredam kecepatannya \cite<<375>>DemirbilekReport<<375>>. Hal ini akan mempengaruhi naiknya gelombang ke daratan di atas batas normal, atau dalam literatur lain disebut \emph<<376>>runup<<376>> gelombang \cite<<377>>nielsen1991wave<<377>>. Teredamnya kecepatan gelombang disebabkan oleh bertumbukannya dasar gelombang dengan karang. Dalam beberapa kasus, hal ini menyebabkan pecahnya gelombang \cite<<378>>DemirbilekReport<<378>>. Pada gambar \ref<<379>>fig:hawai_coral<<379>> dapat terlihat pecahnya gelombang yang terjadi di atas karang.\\ 
+\begin<<416>>tex2html_deferred<<416>>\par\end<<417>>tex2html_deferred<<417>>
+Efektifitas dari terumbu karang dalam meredam gelombang masih menjadi perdebatan para peneliti. Yang selama ini dilakukan dalam mempelajari redaman dari terumbu karang adalah eksperimen di laboratorium. Seperti yang dilakukan Yau et al (2012)\cite<<380>>YAO201230<<380>>. Dalam papernya dia menggunakan model \emph<<381>>Boussinesq<<381>> 1 dimensi untuk memodelkan transformasi gelombang saat melewati terumbu karang.  Namun cara mempelajari ini tergolong mahal dan membutuhkan pemodelan matematika yang dalam untuk memodelkan pecahnya gelombang.
+\begin<<418>>tex2html_deferred<<418>>\par\end<<419>>tex2html_deferred<<419>>
+Selama ini metode yang ada untuk memprediksi tinggi gelombang \emph<<382>>runup<<382>> pada terumbu karang menggunakan pembelajaran mesin masih tergolong baru. Metodenya sendiri terbagi menjadi 2. Metode yang pertama dilakukan dengan pendekatan klasik, dan di lakukan secara analitis. Yakni dengan melakukan eksperimen dan observasi, lalu di cari model matematika yang tepat. Model yang demikian sulit untuk dikembangkan dan beradaptasi dengan kondisi lingkungan yang berbeda. Prediksi yang didapat dari model yang demikian pun masih belum sempurna \cite<<383>>DemirbilekBoussinesq<<383>>. Sedangkan metode yang kedua dilakukan dengan pendekatan \emph<<384>>soft computing<<384>>.
+\begin<<420>>tex2html_deferred<<420>>\par\end<<421>>tex2html_deferred<<421>>
+Pada TA ini digunakan Pembelajaran Mesin untuk memprediksi \emph<<385>>runup<<385>> gelombang. Metode yang digunakan disini adalah \emph<<386>>supervised learning<<386>>, dengan menggunakan data analisa observasi gelombang yang dilakukan oleh Demirbilek et al (2007)\cite<<387>>DemirbilekReport<<387>>. Data tersebut akan di \emph<<388>>training<<388>> dengan konfigurasi neural network. Dari proses training tersebut diharapakan mendapatkan model prediksi \emph<<389>>runup<<389>> gelombang dengan akurasi yang tinggi.
+\begin<<422>>tex2html_deferred<<422>>\par\end<<423>>tex2html_deferred<<423>>
+\subsection<<405>>\textbf<<390>>Perumusan Masalah<<390>><<405>>
+Rumusan masalah yang ingin diangkat pada TA ini adalah
+\begin<<391>>enumerate<<391>>
+    \item Bagaimana melakukan pemodelan supervised learning dengan data eksperimen yang dilakukan di laboratorium?
+    \item Bagaimana akurasi dari model prediksi runup gelombang yang telah dibuat?
+\end<<392>>enumerate<<392>>
+\subsection<<406>>\textbf<<393>>Tujuan<<393>><<406>>
+Berikut adalah tujuan yang ingin dicapai pada penulisan proposal/TA.
+\begin<<394>>enumerate<<394>>
+    \item Memodelkan data hasil eksperimen di laboratorium menggunakan \emph<<395>>supervised learning<<395>>
+    \item Mengetahui akurasi Artificial Neural Network untuk prediksi \emph<<396>>runup<<396>> gelombang pada terumbu karang dengan metrik \textbf<<397>>MSE<<397>> dan \textbf<<398>>MAPE<<398>>.
+\end<<399>>enumerate<<399>>
+\subsection<<407>>\textbf<<400>>Batasan Masalah<<400>><<407>>
+Untuk memastikan hasil yang cukup akurat. Lingkupan masalah diperkecil menjadi:
+\begin<<401>>enumerate<<401>>
+    \item Data berasal dari eksperimen pada laboratorium dinamika oleh Demerbilek (2007).
+    \item Metode yang digunakan pada eksperimen ini adalah Artificial Neural Network.
+\end<<402>>enumerate<<402>>
+<tex2html_endfile>#./Pendahuluan.tex#
+\begin<<424>>tex2html_deferred<<424>>\par\end<<425>>tex2html_deferred<<425>>
+\section<<403>>Studi Terkait<<403>>

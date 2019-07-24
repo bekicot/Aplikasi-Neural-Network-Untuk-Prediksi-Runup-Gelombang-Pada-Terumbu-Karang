@@ -1,0 +1,210 @@
+<tex2html_file>#./Metodologi.tex#
+Metode yang akan digunakan pada TA ini adalah Artificial Neural Network. Data hasil analisa Demirbilek et al (2007) \cite<<702>>DemirbilekReport<<702>> akan dibagi 2. Yakni 80 persen untuk training, dan 20 persen untuk testing. Masing masing, akan disimpan ke dalam file csv. Sistem akan membaca data training langsung dari file, lalu dimasukannya sebagai input ke dalam algoritma ANN. Setelah training, sistem akan menghasilkan suatu model dengan matriks dengan attribut \begin<<869>>tex2html_wrap_inline<<869>>$W_<<703>>input<<703>>$\end<<870>>tex2html_wrap_inline<<870>>\space dan \begin<<871>>tex2html_wrap_inline<<871>>$W_<<704>>output<<704>>$\end<<872>>tex2html_wrap_inline<<872>>\space di dalamnya. Tujuannya adalah mendapatkan suatu model yang cukup baik untuk menghasilkan prediksi yang cukup akurat.
+\begin<<931>>tex2html_deferred<<931>>\par\end<<932>>tex2html_deferred<<932>>
+\subsection<<705>>Kondisi Eksperimen<<705>>
+\begin<<933>>tex2html_deferred<<933>>\par\end<<934>>tex2html_deferred<<934>>
+\label<<706>>kondisiEksperimen<<706>>
+\begin<<935>>tex2html_deferred<<935>>\par\end<<936>>tex2html_deferred<<936>>
+Eksperimen dibagi menjadi 3 bagian. Eksperimen pertama dilakukan hanya menggunakan variabel gelombang, dengan kecepatan angin 0. Eksperimen kedua, dilakukan hanya menggunakan variabel angin. Selanjutnya eksperimen ketiga adalah gabungan dari perubahan variable gelombang dan variabel angin.
+\begin<<937>>tex2html_deferred<<937>>\par\end<<938>>tex2html_deferred<<938>>
+\begin<<707>>figure<<707>>
+  \begin<<708>>center<<708>>
+    \includegraphics[scale=0.2]<<709>>./images/instrumen_eksperimen.png<<709>>
+  \end<<710>>center<<710>>
+  \begin<<939>>tex2html_deferred<<939>>\caption<<863>>Instrumen eksperimen yang digunakan oleh Demirbilek et al \cite<<711>>DemirbilekReport<<711>>.<<863>>\end<<940>>tex2html_deferred<<940>>
+  \label<<712>>fig:intrumen_demirbilek<<712>>
+\end<<713>>figure<<713>>
+\FloatBarrier
+\begin<<941>>tex2html_deferred<<941>>\par\end<<942>>tex2html_deferred<<942>>
+Gambar \ref<<714>>fig:intrumen_demirbilek<<714>> merupakan konfigurasi yang digunakan Demirbilek et al \cite<<715>>DemirbilekReport<<715>> untuk mengamati gelombang. Pada konfigurasi tersebut ada 9 sensor gelombang, 2 sensor kecepatan angin, dan 1 sensor \emph<<716>>runup<<716>> gelombang. Wilayah penyebaran sensor gelombang dikelompokan menjadi 2. Wilayah pertama berada di atas karang dan wilayah kedua berada di laut. Wilayah karang merupakan gabungan dari wilayah karang yang datar \emph<<717>>Reef Flat<<717>> dan wilayah karang yang miring. Wilayah karang datar memiliki panjang mulai dari \emph<<718>>SWL<<718>> hingga 4.8 meter ke arah laut. Wilayah karang yang miring \emph<<719>>Reef Slope<<719>> di mulai dari bibir karang datar hingga 4.79 meter ke arah laut. Laut didefinisikan dengan wilayah dengan dasar terdalam. Untuk sensor 1, 2, dan 3 tersebar di wilayah laut, sensor 4, 5, dan 6 tersebar di wilayah \emph<<720>>reef slope<<720>>, dan untuk sensor 7, 8, dan 9 tersebar di wilayah \emph<<721>>reef flat<<721>>.
+\begin<<943>>tex2html_deferred<<943>>\par\end<<944>>tex2html_deferred<<944>>
+\subsection<<722>>Deskripsi Data<<722>>
+\FloatBarrier
+\begin<<945>>tex2html_deferred<<945>>\par\end<<946>>tex2html_deferred<<946>>
+Data yang digunakan dalam aplikasi neural network di TA ini adalah data dari eksperimen yang di lakukan oleh US Army Corps of Engineer pada Agustus - September 2006. Analisa dilakukan oleh Demirbilek et al. dan di tulis dalam laporan yang berjudul \emph<<723>>;SPMquot;Laboratory Study of Wind Effect on Runup over Fringing Reefs;SPMquot;<<723>>. Data berasal dari hasil percobaan yang dilakukan di Ann Arbor oleh University of Michigan\ref<<724>>TechnicalReports<<724>>. Data memiliki format \emph<<725>>tab separated value (tsv)<<725>>, header sensor berlokasi di 
+index ke 8 dari baris. Header 1 hingga 7 berisi meta informasi seputar data. Hanya meta informasi frequensi, channels, dan samples yang digunakan untuk TA ini. Masing-masing berfungsi untuk menentukan proses yang tepat dalam membaca data.
+\begin<<947>>tex2html_deferred<<947>>\par\end<<948>>tex2html_deferred<<948>>
+\begin<<726>>figure<<726>>
+  \begin<<727>>center<<727>>
+    \includegraphics[scale=0.2]<<728>>./images/raw_data_test-18.png<<728>>
+  \end<<729>>center<<729>>
+  \begin<<949>>tex2html_deferred<<949>>\caption<<730>>Raw data dengan nama file test-18.dat yang dihasilkan oleh percobaan di laboratorium.<<730>>\end<<950>>tex2html_deferred<<950>>
+  \label<<731>>fig:raw_data_18<<731>>
+\end<<732>>figure<<732>>
+\begin<<951>>tex2html_deferred<<951>>\par\end<<952>>tex2html_deferred<<952>>
+\subsection<<733>>Model Artificial Neural Network<<733>>
+Pada TA ini, digunakan model ANN dengan 1 hidden layer (\emph<<734>>Non-deep Neural Network<<734>>). Terdapat 3 input, yang berupa vektor dengan masing-masing nilai merupakan sensor 1, sensor 2, dan sensor 3 yang terletak pada laut dalam. Model AAN ini memiliki 1 output dan merupakan model \emph<<735>>regressi linear<<735>>. Output merupakan prediksi ketinggian \emph<<736>>runup<<736>> dengan satuan \begin<<873>>tex2html_wrap_inline<<873>>$cm$\end<<874>>tex2html_wrap_inline<<874>>. Model tersebut direpresentasikan pada gambar \ref<<737>>fig:model_ann_ta_ini<<737>>.
+\begin<<953>>tex2html_deferred<<953>>\par\end<<954>>tex2html_deferred<<954>>
+\begin<<739>>figure<<739>>
+  \begin<<740>>tikzpicture<<740>>[shorten ;SPMgt;=1pt,-;SPMgt;,draw=black!50, node distance=4cm]
+      \tikzstyle<<741>>every pin edge<<741>>=[;SPMlt;-,shorten ;SPMlt;=1pt]
+      \tikzstyle<<742>>neuron<<742>>=[circle, fill=black!25,minimum size=17pt,inner sep=0pt]
+      \tikzstyle<<743>>input neuron<<743>>=[neuron, fill=green!50];
+      \tikzstyle<<744>>output neuron<<744>>=[neuron, fill=red!50];
+      \tikzstyle<<745>>hidden neuron<<745>>=[neuron, fill=blue!50];
+      \tikzstyle<<746>>annot<<746>> = [text width=4em, text centered]
+\begin<<955>>tex2html_deferred<<955>>\par\end<<956>>tex2html_deferred<<956>>
+\node[input neuron, pin=left:Sensor 1] (I-SENSOR1) at (0,-1) <<747>><<747>>;
+      \node[input neuron, pin=left:Sensor 2] (I-SENSOR2) at (0,-2) <<748>><<748>>;
+      \node[input neuron, pin=left:Sensor 3] (I-SENSOR3) at (0,-3) <<749>><<749>>;
+\begin<<957>>tex2html_deferred<<957>>\par\end<<958>>tex2html_deferred<<958>>
+\path[yshift=0.0cm]<<750>><<750>>
+          node[hidden neuron] (H-1) at (4cm,-1 cm) <<751>><<751>>;
+      \path[yshift=0.0cm]<<752>><<752>>
+          node[hidden neuron] (H-2) at (4cm,-2 cm) <<753>><<753>>;
+      \path[yshift=0.0cm]<<754>><<754>>
+          node[hidden neuron] (H-3) at (4cm,-3 cm) <<755>><<755>>;
+      \path[yshift=0.0cm]<<756>><<756>>
+          node[hidden neuron] (H-4) at (4cm,-4 cm) <<757>><<757>>;
+\begin<<959>>tex2html_deferred<<959>>\par\end<<960>>tex2html_deferred<<960>>
+\node[output neuron,pin=<<864>>[pin edge=<<758>>-;SPMgt;<<758>>]right:Prediksi Runup<<864>>, right of=H-3] (O) <<759>><<759>>;
+\begin<<961>>tex2html_deferred<<961>>\par\end<<962>>tex2html_deferred<<962>>
+\foreach \source in <<760>>SENSOR1, SENSOR2, SENSOR3<<760>>
+          \foreach \dest in <<761>>1,...,4<<761>>
+              \path (I-\source) edge node[midway, right] <<865>>\begin<<875>>tex2html_wrap_inline<<875>>$W_<<762>>hidden<<762>>$\end<<876>>tex2html_wrap_inline<<876>><<865>> (H-\dest);
+\begin<<963>>tex2html_deferred<<963>>\par\end<<964>>tex2html_deferred<<964>>
+\foreach \source in <<763>>1,...,4<<763>>
+          \path (H-\source) edge node[midway, right] <<866>>\begin<<877>>tex2html_wrap_inline<<877>>$W_<<764>>output<<764>>$\end<<878>>tex2html_wrap_inline<<878>><<866>> (O);
+\begin<<965>>tex2html_deferred<<965>>\par\end<<966>>tex2html_deferred<<966>>
+\node[annot,above of=H-1, node distance=1cm] (hl) <<765>>Hidden layer<<765>>;
+      \node[annot,left of=hl] <<766>>Input layer<<766>>;
+      \node[annot,right of=hl] <<767>>Output layer<<767>>;
+      \label<<768>>modelANNTA<<768>>
+  \end<<769>>tikzpicture<<769>>
+  \begin<<967>>tex2html_deferred<<967>>\caption<<770>>Model ANN yang digunakan pada TA ini.<<770>>\end<<968>>tex2html_deferred<<968>>
+  \label<<771>>fig:model_ann_ta_ini<<771>>
+\end<<772>>figure<<772>>
+\FloatBarrier
+\begin<<969>>tex2html_deferred<<969>>\par\end<<970>>tex2html_deferred<<970>>
+\subsection<<773>>Flowchart Sistem TA<<773>>
+\begin<<971>>tex2html_deferred<<971>>\par\end<<972>>tex2html_deferred<<972>>
+Secara keseluruhan, terdapat bentuk hirarki dalam sistem ini. Hirarki \emph<<774>>root<<774>> (Hirarki Utama), yakni sistem itu sendiri, bertugas sebagai pengatur. \emph<<775>>Root<<775>> memiliki anak yang memiliki tugas-tugas tertentu, seperti: \emph<<776>>Membaca File<<776>>, \emph<<777>>Transformasi Data<<777>>, \emph<<778>>Membagi Data<<778>>, atau yang paling penting yakni \emph<<779>>Training Data<<779>>.
+\begin<<973>>tex2html_deferred<<973>>\par\end<<974>>tex2html_deferred<<974>>
+\subsection<<780>>Flowchart Sistem Utama<<780>>
+\begin<<975>>tex2html_deferred<<975>>\par\end<<976>>tex2html_deferred<<976>>
+Sistem utama merupakan pengatur dari komponen-komponen yang ada pada sistem TA ini. Komponen-komponen tersebut termasuk: Pembacaan Data, Transformasi Data, Pembagian Data, Inisialisasi Epoch Dan Learning Rate, Melakukan Training, dan Melakukan Testing. Alur kerja lebih lanjut dapat dilihat pada gambar \ref<<781>>fig:flowchart_sistem<<781>>.
+\begin<<977>>tex2html_deferred<<977>>\par\end<<978>>tex2html_deferred<<978>>
+Sistem utama dimulai dengan membaca data. Pembacaan data dibagi menjadi 2. Pembacaan data training dan pembacaan data testing. Data training mencakup 80 persen dari seluruh data observasi, sedangkan data training mencakup 20 persen. Hal ini sejalan dengan Fan et al \cite<<782>>fan2008liblinear<<782>>, dimana beliau menggunakan rasio 80/20 untuk training dan testing. Setelah melakukan pembacaan data, sistem akan melakukan transformasi data. Mengubah data csv, menjadi matriks dengan panjang kolom 4, yang mewakili \begin<<879>>tex2html_wrap_inline<<879>>$H$\end<<880>>tex2html_wrap_inline<<880>>, \begin<<881>>tex2html_wrap_inline<<881>>$T$\end<<882>>tex2html_wrap_inline<<882>>, \begin<<883>>tex2html_wrap_inline<<883>>$WL$\end<<884>>tex2html_wrap_inline<<884>>, dan \begin<<885>>tex2html_wrap_inline<<885>>$WIND$\end<<886>>tex2html_wrap_inline<<886>>. Komponen selanjutnya adalah inisialisasi \emph<<783>>epoch<<783>> dan \emph<<784>>learning rate<<784>>. \emph<<785>>Epoch<<785>> adalah representasi dari keseluruhan data yang digunakan pada training. Sedangkan \emph<<786>>learning rate<<786>> adalah besaran dari suatu langkah pembelajaran. Nilai dari \emph<<787>>learning rate<<787>> dan \emph<<788>>epoch<<788>> selanjutnya akan dimasukan ke dalam fungsi training.
+\begin<<979>>tex2html_deferred<<979>>\par\end<<980>>tex2html_deferred<<980>>
+\begin<<789>>figure<<789>>[ht]
+  \begin<<981>>tex2html_deferred<<981>>\caption<<790>>Flowchart Sistem Utama<<790>>\end<<982>>tex2html_deferred<<982>>
+  \begin<<791>>center<<791>>
+    \tikzstyle<<792>>decision<<792>> = [diamond, draw, 
+        text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+    \tikzstyle<<793>>block<<793>> = [rectangle, draw, 
+        text width=12em, text centered, minimum height=2em]
+    \tikzstyle<<794>>circle<<794>> = [draw, ellipse, minimum height=2em, distance=4em]
+    \tikzstyle<<795>>blockTraining<<795>> = [rectangle, draw, fill=red!20, 
+        text width=12em, text centered, minimum height=2em]
+    \tikzstyle<<796>>line<<796>> = [draw, -latex']
+\begin<<983>>tex2html_deferred<<983>>\par\end<<984>>tex2html_deferred<<984>>
+\begin<<797>>tikzpicture<<797>>[node distance = 1.5cm, auto]
+        \begin<<985>>tex2html_deferred<<985>>\footnotesize\end<<986>>tex2html_deferred<<986>>
+        <tex2html_comment_mark>44
+\node [circle] (init) <<798>>Mulai<<798>>;
+        \node [block, below of=init] (bacaData) <<799>>Membaca data report dari csv file<<799>>;
+        \node [block, below of=bacaData] (transformasiData) <<800>>Transformasi data menjadi matrix<<800>>;
+        \node [block, below of=transformasiData] (setupEpochLr) <<801>>Menentukan jumlah epoch dan learning rate<<801>>;
+        \node [blockTraining, below of=setupEpochLr] (training) <<802>>Melakukan Training<<802>>;
+        \node [blockTraining, below of=training] (testing) <<803>>Melakukan Testing<<803>>;
+        \node [circle, below of=testing] (stop) <<804>>Stop<<804>>;
+\begin<<987>>tex2html_deferred<<987>>\par\end<<988>>tex2html_deferred<<988>>
+\path [line] (init) -- (bacaData);
+        \path [line] (bacaData) -- (transformasiData);
+        \path [line] (transformasiData) -- (setupEpochLr);
+        \path [line] (setupEpochLr) -- (training);
+        \path [line] (training) -- (testing);
+        \path [line] (testing) -- (stop);
+        \label<<805>>fig:sistem<<805>>
+    \end<<806>>tikzpicture<<806>>
+  \end<<807>>center<<807>>
+  \label<<808>>fig:flowchart_sistem<<808>>
+\end<<809>>figure<<809>>
+\FloatBarrier
+\begin<<989>>tex2html_deferred<<989>>\par\end<<990>>tex2html_deferred<<990>>
+\subsection<<810>>Flowchart Komponen Training Dan Testing<<810>>
+\label<<811>>FlowChartTraining<<811>>
+\begin<<991>>tex2html_deferred<<991>>\par\end<<992>>tex2html_deferred<<992>>
+Pada bagian training dan testing \ref<<812>>fig:sistem<<812>>, algoritma yang digunakan adalah algoritma ANN. Untuk testing, hanya dilakukan algoritma \emph<<813>>Feed Forward<<813>>. Alur kerja ANN representasikan pada gambar \ref<<814>>fig:alur_ann<<814>>.
+\begin<<993>>tex2html_deferred<<993>>\par\end<<994>>tex2html_deferred<<994>>
+\begin<<815>>figure<<815>>[ht]
+  \begin<<995>>tex2html_deferred<<995>>\caption<<816>>Flowchart Komponen Training Dan Testing<<816>>\end<<996>>tex2html_deferred<<996>>
+  \begin<<817>>center<<817>>
+    \begin<<997>>tex2html_deferred<<997>>\footnotesize\end<<998>>tex2html_deferred<<998>>
+    \tikzstyle<<818>>block<<818>> = [rectangle, draw, fill=blue!20, 
+        text width=10em, text centered, minimum height=6em]
+    \tikzstyle<<819>>blockTraining<<819>> = [rectangle, draw, fill=red!20, 
+        text width=14em, text centered, minimum height=2em]
+    \tikzstyle<<820>>stopTrainng<<820>> = [rectangle, draw, fill=red!20, 
+        text width=3em, text centered,  distance=10cm]
+    \tikzstyle<<821>>line<<821>> = [draw, -latex']
+    \tikzstyle<<822>>circle<<822>> = [draw, ellipse, minimum height=2em, distance=4em]
+    \tikzstyle<<823>>decision<<823>> = [diamond, draw, fill=blue!20, 
+        text width=4em, text badly centered, node distance=2.5cm, inner sep=0pt]
+\begin<<999>>tex2html_deferred<<999>>\par\end<<1000>>tex2html_deferred<<1000>>
+\begin<<824>>tikzpicture<<824>>[node distance = 1.5cm, auto]
+        <tex2html_comment_mark>46
+\node [circle] (init) <<825>>Mulai<<825>>;
+        \node [blockTraining, below of=init] (randomWeight) <<826>>Inisialisasi \begin<<887>>tex2html_wrap_inline<<887>>$weight$\end<<888>>tex2html_wrap_inline<<888>>\space dengan random data<<826>>;
+        \node [blockTraining, below of=randomWeight] (IW)<<827>>Mengalikan Input Layer Dengan \begin<<889>>tex2html_wrap_inline<<889>>$Weight$\end<<890>>tex2html_wrap_inline<<890>>\space hidden layer<<827>>;
+        \node [blockTraining, below of=IW] (aktivasi)<<828>>Jalankan fungsi aktivasi hidden layer<<828>>;
+        \node [blockTraining, below of=aktivasi] (HW)<<829>>Mengalikan Input Layer Dengan \begin<<891>>tex2html_wrap_inline<<891>>$Weight$\end<<892>>tex2html_wrap_inline<<892>>\space untuk \begin<<893>>tex2html_wrap_inline<<893>>$output$\end<<894>>tex2html_wrap_inline<<894>><<829>>;
+        \node [blockTraining, below of=HW] (aktivasiOutput)<<830>>Menjalankan fungsi aktivasi untuk output neuron<<830>>;
+        \node [blockTraining, below of=aktivasiOutput] (cost)<<831>>Kalkulasi Error<<831>>;
+        \node [circle, below of=cost] (stop)<<832>>Stop<<832>>;
+\begin<<1001>>tex2html_deferred<<1001>>\par\end<<1002>>tex2html_deferred<<1002>>
+\path [line] (init) -- (randomWeight);
+        \path [line] (randomWeight) -- (IW);
+        \path [line] (IW) -- (aktivasi);
+        \path [line] (aktivasi) -- (HW);
+        \path [line] (HW) -- (aktivasiOutput);
+        \path [line] (aktivasiOutput) -- (cost);
+        \path [line] (cost) -- (stop);
+    \end<<833>>tikzpicture<<833>>
+  \end<<834>>center<<834>>
+  \label<<835>>fig:alur_ann<<835>>
+\end<<836>>figure<<836>>
+\FloatBarrier
+\begin<<1003>>tex2html_deferred<<1003>>\par\end<<1004>>tex2html_deferred<<1004>>
+Pada gambar \ref<<837>>fig:alur_ann<<837>>, algoritma ANN dimulai dengan inisialisasi weight dengan random data. Selanjutnya, nilai pada \emph<<838>>input layer<<838>> akan dikalikan dengan \begin<<895>>tex2html_wrap_inline<<895>>$weight$\end<<896>>tex2html_wrap_inline<<896>>\space \emph<<839>>hidden layer<<839>> \begin<<897>>tex2html_wrap_inline<<897>>$W^1$\end<<898>>tex2html_wrap_inline<<898>>, sehingga dihasilkan \begin<<899>>tex2html_wrap_inline<<899>>$a^1$\end<<900>>tex2html_wrap_inline<<900>>. Untuk menjadi nilai pada \emph<<840>>neuron hidden layer<<840>> \begin<<901>>tex2html_wrap_inline<<901>>$z^1$\end<<902>>tex2html_wrap_inline<<902>>, \begin<<903>>tex2html_wrap_inline<<903>>$a$\end<<904>>tex2html_wrap_inline<<904>>\space akan diaktifasi dengan fungsi aktivasi \begin<<905>>tex2html_wrap_inline<<905>>$RELU$\end<<906>>tex2html_wrap_inline<<906>>\space sehingga nilai \begin<<907>>tex2html_wrap_inline<<907>>$z^1$\end<<908>>tex2html_wrap_inline<<908>>\space merupakan hasil dari \begin<<909>>tex2html_wrap_inline<<909>>$relu(a)$\end<<910>>tex2html_wrap_inline<<910>>. Untuk mengahasilkan nilai prediksi, \begin<<911>>tex2html_wrap_inline<<911>>$z^1$\end<<912>>tex2html_wrap_inline<<912>>\space dikalikan dengan \begin<<913>>tex2html_wrap_inline<<913>>$weight$\end<<914>>tex2html_wrap_inline<<914>>\space pada \emph<<841>>output<<841>> \begin<<915>>tex2html_wrap_inline<<915>>$W^2$\end<<916>>tex2html_wrap_inline<<916>>, sehingga mengasilkan \begin<<917>>tex2html_wrap_inline<<917>>$a^2$\end<<918>>tex2html_wrap_inline<<918>>. Nilai \begin<<919>>tex2html_wrap_inline<<919>>$a^2$\end<<920>>tex2html_wrap_inline<<920>>\space merupakan nilai hasil prediksi, karna fungsi aktivasi dari \emph<<842>>output<<842>> adalah linear (\begin<<921>>tex2html_wrap_inline<<921>>$f(a) = a$\end<<922>>tex2html_wrap_inline<<922>>). Lihat gambar \ref<<843>>fig:model_ann_ta_ini<<843>> untuk representasi dari Model ANN yang digunakan pada TA ini.
+\begin<<1005>>tex2html_deferred<<1005>>\par\end<<1006>>tex2html_deferred<<1006>>
+\FloatBarrier
+<tex2html_endfile>#./Metodologi.tex#
+\begin<<1007>>tex2html_deferred<<1007>>\par\end<<1008>>tex2html_deferred<<1008>>
+\section<<844>>Evaluasi<<844>>
+\begin<<1009>>tex2html_deferred<<1009>>\par\end<<1010>>tex2html_deferred<<1010>>
+Bagian ini berisi dua sub-bagian, yaitu Hasil Pengujian dan Analisis Hasil Pengujian. Pengujian dan analisis yang dilakukan selaras dengan tujuan TA sebagaimana dinyatakan dalam Pendahuluan.
+\begin<<1011>>tex2html_deferred<<1011>>\par\end<<1012>>tex2html_deferred<<1012>>
+\subsection<<845>>Hasil Pengujian<<845>>
+\FloatBarrier
+\begin<<1013>>tex2html_deferred<<1013>>\par\end<<1014>>tex2html_deferred<<1014>>
+\begin<<846>>table<<846>>
+  \begin<<847>>center<<847>>
+    \begin<<848>>tabular<<848>><<849>>lrrrr<<849>>
+      \toprule
+      <<850>><<850>> ;SPMamp;        Wave1; ;SPMamp;        Wave2; ;SPMamp;        Wave3; ;SPMamp;        Wave9; \\ 
+      \midrule
+      count ;SPMamp;  18000.000000 ;SPMamp;  18000.000000 ;SPMamp;  18000.000000 ;SPMamp;  18000.000000 \\ 
+      mean  ;SPMamp;     -0.187642 ;SPMamp;     -0.099445 ;SPMamp;     -0.056901 ;SPMamp;      0.787389 \\ 
+      std   ;SPMamp;      2.052794 ;SPMamp;      1.940509 ;SPMamp;      1.953062 ;SPMamp;      0.818523 \\ 
+      min   ;SPMamp;     -8.662451 ;SPMamp;     -8.224868 ;SPMamp;     -7.996433 ;SPMamp;     -1.365062 \\ 
+      25\%   ;SPMamp;     -1.594967 ;SPMamp;     -1.434953 ;SPMamp;     -1.408767 ;SPMamp;      0.181684 \\ 
+      50\%   ;SPMamp;     -0.218648 ;SPMamp;     -0.115488 ;SPMamp;     -0.072189 ;SPMamp;      0.703352 \\ 
+      75\%   ;SPMamp;      1.186734 ;SPMamp;      1.195336 ;SPMamp;      1.254351 ;SPMamp;      1.303270 \\ 
+      max   ;SPMamp;      9.107983 ;SPMamp;      7.837847 ;SPMamp;      7.996613 ;SPMamp;      4.829746 \\ 
+      \bottomrule
+    \end<<851>>tabular<<851>>
+  \end<<852>>center<<852>>
+\begin<<1015>>tex2html_deferred<<1015>>\par\end<<1016>>tex2html_deferred<<1016>>
+\begin<<1017>>tex2html_deferred<<1017>>\caption<<867>>Deskripsi data pada ;SPMquot;test-18.dat;SPMquot; yang dihasilkan oleh applikasi pandas \cite<<853>>mckinney-proc-scipy-2010<<853>><<867>>\end<<1018>>tex2html_deferred<<1018>>.
+  \label<<854>>Tab:deskripsi_data<<854>>
+\end<<855>>table<<855>>
+\begin<<1019>>tex2html_deferred<<1019>>\par\end<<1020>>tex2html_deferred<<1020>>
+Sistem diuji terhadap data percobaan nomor 18. Data tersebut berada dalam file dengan nama ;SPMquot;test-18.dat;SPMquot;. Pada data tersebut sensor 1 memiliki nama kolom ;SPMquot;Wave1;SPMquot;, sensor 2 memiliki nama kolom ;SPMquot;Wave2;SPMquot;, dan sensor 3 memiliki nama kolom ;SPMquot;Wave3;SPMquot;. Untuk target prediksi digunakan kolom ;SPMquot;Wave9;SPMquot;. Masing-masing data memiliki 18000 sampel. Deskripsi deskripsi lengkap dari data bisa di lihat di \ref<<856>>Tab:deskripsi_data<<856>>.
+\begin<<1021>>tex2html_deferred<<1021>>\par\end<<1022>>tex2html_deferred<<1022>>
+Dari hasil pengujian didapat nilai \begin<<923>>tex2html_wrap_inline<<923>>$MSE$\end<<924>>tex2html_wrap_inline<<924>>\space sebesar \begin<<925>>tex2html_wrap_inline<<925>>$0.0186$\end<<926>>tex2html_wrap_inline<<926>>\space untuk data training dan MSE \begin<<927>>tex2html_wrap_inline<<927>>$0.0220$\end<<928>>tex2html_wrap_inline<<928>>\space untuk data validasi. Perkembangan nilai \begin<<929>>tex2html_wrap_inline<<929>>$MSE$\end<<930>>tex2html_wrap_inline<<930>>\space pada data training bisa di lihat secara lengkap di gambar ;SPMquot;Perkembangan MSE;SPMquot; \ref<<857>>fig:perkembangan_nilai_mse<<857>> dan tabel \ref<<858>>Tab:perkembangan_mse<<858>> (pada lampiran).
+\begin<<1023>>tex2html_deferred<<1023>>\par\end<<1024>>tex2html_deferred<<1024>>
+\begin<<859>>figure<<859>>
+  \begin<<860>>center<<860>>
+    <tex2html_comment_mark>48
+\begin<<1025>>tex2html_wrap<<1025>>\resizebox<<861>>\linewidth<<861>><<862>>!<<862>>{<}\end<<1026>>tex2html_wrap<<1026>><868>><tex2html_comment_mark>49

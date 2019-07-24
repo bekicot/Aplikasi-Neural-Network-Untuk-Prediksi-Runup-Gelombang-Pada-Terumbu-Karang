@@ -1,0 +1,17 @@
+
+<tex2html_mydb_mark>#622#$Multi Layer Perceptron(MLP)$
+<tex2html_mydb_mark>#623#\begin{equation}
+y = f(z)
+\end{equation}
+<tex2html_mydb_mark>#624#\begin{equation}
+z = \sum_{i=1}^N I_iW_i
+\end{equation}
+<tex2html_mydb_mark>#625#$W_{output}$
+<tex2html_mydb_mark>#626#\begin{equation}
+f(z) = max(0, z)
+\end{equation}
+<tex2html_mydb_mark>#627#\begin{equation}
+\operatorname{MSE}=\frac{1}{n}\sum_{i=1}^n(Y_i-\hat{Y_i})^2,
+\end{equation}
+<tex2html_mydb_mark>#628#$W_{output}$
+<tex2html_mydb_mark>#629#$Recurent Neural Network (RNN)$

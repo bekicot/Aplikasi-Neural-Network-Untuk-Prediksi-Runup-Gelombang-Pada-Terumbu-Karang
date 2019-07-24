@@ -1,0 +1,44 @@
+No implementation found for style `geometry'
+No implementation found for style `mathptmx'
+No implementation found for style `setspace'
+No implementation found for style `titlesec'
+No implementation found for style `todonotes'
+No implementation found for style `hhline'
+No implementation found for style `placeins'
+No implementation found for style `upgreek'
+No implementation found for style `pgfplotstable'
+No implementation found for style `pgfplots'
+No implementation found for style `booktabs'
+No implementation found for style `pdfpages'
+No implementation found for style `tikz'
+No implementation found for style `sectsty'
+No implementation found for style `indentfirst'
+No implementation found for style `caption'
+
+redefining command \abstractname 
+
+redefining command \refname 
+
+redefining command \thesection 
+
+redefining command \thesubsection 
+
+redefining command \tablename 
+
+redefining command \figurename 
+
+redefined environment {abstract} 
+
+? brace missing for \resizebox
+
+Substitution of arg to newlabelxx delayed.
+
+? brace missing for \oldcontentsline
+
+No number for "Ilustrasi<SPANCLASS="textit">Runup</SPAN>gelombangolehMikeSwenson,CoastalMorphology,UniversityofWisconsin-Madison(#MikeSwenson:WaveRunup###)."
+
+No number for "InstrumeneksperimenyangdigunakanolehDemirbileketal(#DemirbilekReport###)."
+
+No number for "Deskripsidatapada;SPMquot;test-18.dat;SPMquot;yangdihasilkanolehapplikasipandas(#mckinney-proc-scipy-2010###)"
+
+\bibitem label format not supported, using \bibcite information!

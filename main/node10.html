@@ -1,0 +1,47 @@
+
+<H3><A ID="SECTION00022200000000000000">
+Neural Network</A>
+</H3>
+
+<P>
+Selanjutnya data tersebut dimasukan kedalam suatu sistem untuk belajar. Pada TA ini, sistem yang digunakan untuk pembelajaran adalah <SPAN  CLASS="textit">Neural Network</SPAN>.
+Model <SPAN  CLASS="textit">neural network</SPAN> sederhana di definisikan oleh McCulloch-Pitts (#McCulloch1943#<tex2html_cite_par_mark>##). Dimana persamaan memiliki <SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_inline3652#</SPAN> himpunan <SPAN  CLASS="textit">Input</SPAN> (<SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_inline3654#</SPAN>) (<SPAN  CLASS="textit">input neuron</SPAN>), dan satu <SPAN  CLASS="textit">output</SPAN> (<SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_inline3656#</SPAN>), dengan <SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_inline3658#</SPAN> merupakan bagian dari <SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_inline3660#</SPAN>. Atau dengan kata lain, <SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_inline3662#</SPAN> adalah fungsi yang hanya memiliki <SPAN  CLASS="textit">output</SPAN> <SPAN CLASS="MATH">0</SPAN> dan <SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_inline3665#</SPAN>.
+
+<P>
+<P></P>
+<DIV CLASS="mathdisplay"><tex2html_verbatim_mark>#math623#<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_indisplay3667#</SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">1</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+dimana
+<P></P>
+<DIV CLASS="mathdisplay"><A ID="eq:mcullochNeuralNetwork"><tex2html_anchor_mark></A><tex2html_verbatim_mark>#math624#<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_indisplay3669#</SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">2</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+dan <SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_inline3671#</SPAN> merupakan output dari neuron sebelumnya. Pada input layer, <SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_inline3673#</SPAN> adalah feature yang dijadikan prediktor.
+
+<P>
+Di TA ini, <SPAN  CLASS="textit">output</SPAN> yang akan dihasilkan tidak terbatas pada <SPAN CLASS="MATH">0</SPAN> dan <SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_inline3676#</SPAN>. Sehingga di <SPAN  CLASS="textit">neuron output</SPAN>, fungsi aktivasi yang digunakan adalah fungsi aktivasi linear. Model <SPAN  CLASS="textit">Neural Network</SPAN>nya dapat direpresentasikan pada gambar <A HREF=<tex2html_cr_mark>#fig:neural_network_sederhana#494><tex2html_cr_mark></A>
+
+<P>
+
+<DIV class="CENTER"><A ID="neuralNetworkRepresentation"><tex2html_anchor_mark></A><A ID="fig:neural_network_sederhana"><tex2html_anchor_mark></A><A ID="562"><tex2html_anchor_mark></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG><#3677#><SPAN  CLASS="textbf">Gambar</SPAN><#3677#> 3:</STRONG>
+<#3679#>Model <SPAN  CLASS="textit">Neural Network</SPAN> dengan 1 <SPAN  CLASS="textit">Hidden Layer</SPAN>.<#3679#></CAPTION>
+<TR><TD><tex2html_image_mark>#figure495#</TD></TR>
+</TABLE>
+</DIV>
+
+
+<P>
+Pada gambar <A HREF=<tex2html_cr_mark>#fig:neural_network_sederhana#525><tex2html_cr_mark></A>, <SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_inline3682#</SPAN> adalah peubah yang menyatakan berat. Masing masing <SPAN  CLASS="textit">input</SPAN> akan dikalikan dengan <SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_inline3684#</SPAN> <SPAN  CLASS="textit">hidden layer</SPAN> tertentu untuk menghasilkan nilai pada <SPAN  CLASS="textit">hidden layer neuron</SPAN> tersebut. Selanjutnya, nilai hasil aktivasi di <SPAN  CLASS="textit">hidden layer</SPAN>, akan dikalikan dengan <tex2html_verbatim_mark>#math625#<SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_inline3686#</SPAN>. Untuk selanjutnya menjadi <SPAN  CLASS="textit">output</SPAN>, yakni prediksi dari runup gelombang.
+
+<P>

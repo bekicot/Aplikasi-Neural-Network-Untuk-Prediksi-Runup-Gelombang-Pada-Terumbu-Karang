@@ -1,0 +1,96 @@
+\documentclass[10pt]<<1>>article<<1>>
+\usepackage[utf8]<<2>>inputenc<<2>>
+\usepackage[a4paper, margin=2.51cm]<<3>>geometry<<3>>
+\usepackage<<4>>mathptmx<<4>>
+\usepackage<<5>>array<<5>>
+\usepackage<<6>>setspace<<6>>
+\usepackage<<7>>hyperref<<7>>
+\usepackage[compact]<<8>>titlesec<<8>> 
+\usepackage<<9>>natbib<<9>>
+\usepackage<<10>>graphicx<<10>>
+\usepackage[bahasa]<<11>>babel<<11>>
+\begin<<100>>tex2html_deferred<<100>>\par\end<<101>>tex2html_deferred<<101>>
+\usepackage<<12>>todonotes<<12>>
+\usepackage<<13>>amsmath<<13>>
+\usepackage<<14>>multirow<<14>>
+\usepackage<<15>>hhline<<15>>
+\usepackage<<16>>placeins<<16>>
+\usepackage<<17>>float<<17>>
+\usepackage<<18>>upgreek<<18>>
+\usepackage<<19>>pgfplotstable<<19>>
+\usepackage<<20>>pgfplots<<20>>
+\usepackage<<21>>booktabs<<21>>
+\usepackage<<22>>pdfpages<<22>>
+\pgfplotsset<<23>>compat=1.16<<23>>
+\usepackage<<24>>graphicx<<24>>
+\graphicspath<<25>>./images/<<25>>
+\usepackage<<26>>tikz<<26>>
+\usetikzlibrary<<27>>shapes.geometric, arrows<<27>>
+\begin<<102>>tex2html_deferred<<102>>\par\end<<103>>tex2html_deferred<<103>>
+\addto<<28>>\captionsbahasa<<28>><<86>>\begin<<104>>tex2html_deferred<<104>>\renewedcommand<<29>>abstractname<<29>><<30>>ABSTRACT<<30>>\end<<105>>tex2html_deferred<<105>><<86>>
+\addto\captionsbahasa<<87>>\begin<<106>>tex2html_deferred<<106>>\renewedcommand<<31>>refname<<31>><<32>>Daftar Pustaka<<32>>\end<<107>>tex2html_deferred<<107>><<87>>
+\begin<<108>>tex2html_deferred<<108>>\renewedcommand<<98>>thesection<<98>><<88>> \arabic<<33>>section<<33>>.<<88>>\end<<109>>tex2html_deferred<<109>>
+\begin<<110>>tex2html_deferred<<110>>\renewedcommand<<99>>thesubsection<<99>><<89>>\thesection \arabic<<34>>subsection<<34>><<89>>\end<<111>>tex2html_deferred<<111>>
+\begin<<112>>tex2html_deferred<<112>>\par\end<<113>>tex2html_deferred<<113>>
+\usepackage<<35>>sectsty<<35>>
+\sectionfont<<90>>\fontsize<<36>>12<<36>><<37>>15<<37>>\selectfont<<90>>
+\subsectionfont<<91>>\fontsize<<38>>11<<38>><<39>>15<<39>>\begin<<114>>tex2html_deferred<<114>>\normalfont\end<<115>>tex2html_deferred<<115>><<91>>
+\subsubsectionfont<<92>>\fontsize<<40>>11<<40>><<41>>15<<41>>\begin<<116>>tex2html_deferred<<116>>\normalfont\end<<117>>tex2html_deferred<<117>><<92>>
+\begin<<118>>tex2html_nowrap<<118>>
+\setlength<<42>>\columnsep<<42>><<43>>7mm<<43>>\end<<119>>tex2html_nowrap<<119>> 
+\pagenumbering<<44>>gobble<<44>>
+\usepackage<<45>>indentfirst<<45>>
+\addto\captionsbahasa<<96>>\begin<<120>>tex2html_deferred<<120>>\renewedcommand<<46>>tablename<<46>><<93>>\textbf<<47>>Tabel<<47>><<93>>\end<<121>>tex2html_deferred<<121>><<96>>
+\addto\captionsbahasa<<97>>\begin<<122>>tex2html_deferred<<122>>\renewedcommand<<48>>figurename<<48>><<94>>\textbf<<49>>Gambar<<49>><<94>>\end<<123>>tex2html_deferred<<123>><<97>>
+\usepackage<<50>>caption<<50>>
+\captionsetup[figure]<<51>>labelformat=simple, labelsep=period<<51>>
+\captionsetup[table]<<52>>labelformat=simple, labelsep=period<<52>>
+\begin<<124>>tex2html_deferred<<124>>\par\end<<125>>tex2html_deferred<<125>>
+\begin<<126>>tex2html_deferred<<126>>\renewedenvironment<<53>>abstract<<53>><<95>><tex2html_comment_mark>5
+\centering\small
+  \textbf\abstractname   \list<<54>><<54>><<55>>\leftmargin0cm \rightmargin\leftmargin<<55>>
+  \item\relax
+<<95>><<56>><tex2html_comment_mark>6
+\endlist \par
+\bigskip
+<<56>>\end<<127>>tex2html_deferred<<127>>
+\begin<<128>>tex2html_deferred<<128>>\par\end<<129>>tex2html_deferred<<129>>
+\makeatletter
+\begin<<130>>tex2html_deferred<<130>>\par\end<<131>>tex2html_deferred<<131>>
+\title<<57>> Aplikasi Neural Network Untuk Prediksi Runup Gelombang Pada Terumbu Karang <<57>>\let\Title\@title
+\begin<<132>>tex2html_deferred<<132>>\par\end<<133>>tex2html_deferred<<133>>
+\begin<<134>>tex2html_nowrap<<134>>
+\newedcommand<<58>>EngTitle<<58>><<59>>Neural Network Application For Predicting Wave Runup On Fringing Reef<<59>>\end<<135>>tex2html_nowrap<<135>> 
+\begin<<136>>tex2html_deferred<<136>>\par\end<<137>>tex2html_deferred<<137>>
+\begin<<138>>tex2html_deferred<<138>>\author<<60>>Yana Agun Siswanto<<60>>\end<<139>>tex2html_deferred<<139>>\let\Author\@author
+\begin<<140>>tex2html_nowrap<<140>>
+\newedcommand<<61>>NIM<<61>><<62>>1301150773<<62>>\end<<141>>tex2html_nowrap<<141>> 
+\begin<<142>>tex2html_deferred<<142>>\par\end<<143>>tex2html_deferred<<143>>
+\begin<<144>>tex2html_nowrap<<144>>
+\newedcommand<<63>>Prodi<<63>><<64>>Teknologi Informasi<<64>>\end<<145>>tex2html_nowrap<<145>> 
+\begin<<146>>tex2html_deferred<<146>>\par\end<<147>>tex2html_deferred<<147>>
+\begin<<148>>tex2html_nowrap<<148>>
+\newedcommand<<65>>Tanggal<<65>><<66>>9<<66>>\end<<149>>tex2html_nowrap<<149>> 
+\begin<<150>>tex2html_nowrap<<150>>
+\newedcommand<<67>>Bulan<<67>><<68>>Juli<<68>>\end<<151>>tex2html_nowrap<<151>> 
+\begin<<152>>tex2html_nowrap<<152>>
+\newedcommand<<69>>Tahun<<69>><<70>>2019<<70>>\end<<153>>tex2html_nowrap<<153>> 
+\begin<<154>>tex2html_nowrap<<154>>
+\newedcommand<<71>>PembimbingSatu<<71>><<72>>Dr. Didit Adytia, S.Si,. M.Si.<<72>>\end<<155>>tex2html_nowrap<<155>> 
+\begin<<156>>tex2html_nowrap<<156>>
+\newedcommand<<73>>NIPPembimbingSatu<<73>><<74>>16830005<<74>>\end<<157>>tex2html_nowrap<<157>> 
+\begin<<158>>tex2html_nowrap<<158>>
+\newedcommand<<75>>PembimbingDua<<75>><<76>>Dr. Putu Harry Gunawan, S.Si., M.Si., M.Se.<<76>>\end<<159>>tex2html_nowrap<<159>> 
+\begin<<160>>tex2html_nowrap<<160>>
+\newedcommand<<77>>NIPPembimbingDua<<77>><<78>>16860043<<78>>\end<<161>>tex2html_nowrap<<161>> 
+\begin<<162>>tex2html_nowrap<<162>>
+\newedcommand<<79>>Kaprodi<<79>><<80>>Niken Dwi Cahyani, S.T., M.Kom.<<80>>\end<<163>>tex2html_nowrap<<163>> 
+\begin<<164>>tex2html_nowrap<<164>>
+\newedcommand<<81>>NIPKaprodi<<81>><<82>>00750199-1<<82>>\end<<165>>tex2html_nowrap<<165>> 
+\begin<<166>>tex2html_deferred<<166>>\par\end<<167>>tex2html_deferred<<167>>
+\date<<83>> \today<<83>>\let\Date\@date
+\makeatother
+\linespread<<84>>2<<84>>
+\begin<<168>>tex2html_deferred<<168>>\par\end<<169>>tex2html_deferred<<169>>
+\begin<<85>>document<<85>>
+   <tex2html_comment_mark>15

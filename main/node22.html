@@ -1,0 +1,46 @@
+
+<H2><A ID="SECTION00042000000000000000">
+Analisis Hasil Pengujian</A>
+</H2>
+
+<P>
+Pada tahun 2002 Marcel Zijlema(#Zijlema_2012#<tex2html_cite_par_mark>##) melakukan pemodelan terhadap transformasi gelombang dengan menggunakan swash (#zijlema#<tex2html_cite_par_mark>##). Hasil dari pemodelan Zijlema dapat di gambar ;SPMquot;Hasil dari model SWASH;SPMquot; <A HREF=<tex2html_cr_mark>#fig:percobaan_zijlema#1894><tex2html_cr_mark></A>.
+<BR>
+<P>
+
+<DIV class="CENTER"><A ID="fig:percobaan_zijlema"><tex2html_anchor_mark></A><A ID="1899"><tex2html_anchor_mark></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG><#3865#><SPAN  CLASS="textbf">Gambar</SPAN><#3865#> 10:</STRONG>
+<#3867#>Hasil dari model Zijlema. Perbandingan observasi dan prediksi. Biru adalah observasi dan merah adalah prediksi.<#3867#></CAPTION>
+<TR><TD><DIV class="CENTER">
+<IMG STYLE=""
+ SRC="./model-zijlema.png"
+ ALT="Image model-zijlema">
+  
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+
+
+<P>
+Bila dibandingkan dengan hasil pengujian yang sama dengan model yang dibuat pada TA ini, hasil pemodelan Zijlema (#Zijlema_2012#<tex2html_cite_par_mark>##) jauh lebih baik. Hal ini dikarenakan pada model <SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_inline3870#</SPAN> yang dipakai di TA ini tidak menggunakan parameter lain seperti nilai sensor pada <SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_inline3872#</SPAN> (waktu sebelumnya). Sedangkan feature penting untuk mencari perubahan bentuk dari waktu ke waktu (rates of change). Dimana nilai saat ini, dipengaruhi oleh nilai sebelumnya. Ini adalah kelemahan dari <SPAN  CLASS="textit">feedforward</SPAN> <SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_inline3874#</SPAN>. <SPAN  CLASS="textit">Feedforward</SPAN> <SPAN CLASS="MATH"><tex2html_image_mark>#tex2html_wrap_inline3876#</SPAN> tidak mengingat hasil sebelumnya untuk digunakan dalam komputasi output. Hal ini dapat dilihat pada 
+
+<P>
+
+<DIV class="CENTER"><A ID="fig:percobaan_zijlema"><tex2html_anchor_mark></A><A ID="1909"><tex2html_anchor_mark></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG><#3877#><SPAN  CLASS="textbf">Gambar</SPAN><#3877#> 11:</STRONG>
+<#3879#>Hasil dari prediksi MLP. Merah adalah hasil prediksi dan biru adalah target.<#3879#></CAPTION>
+<TR><TD><DIV class="CENTER">
+<IMG STYLE=""
+ SRC="./test-18-perbandingan.png"
+ ALT="Image test-18-perbandingan">
+  
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+
+
+<P>

@@ -1,0 +1,611 @@
+<tex2html_file>#./plots/test-18-4-neuron-45-epoch-sgd-16000.pgf#
+\begin<<2103>>tex2html_begingroup<<2103>>\makeatletter \begin<<1027>>pgfpicture<<1027>><tex2html_comment_mark>73
+\pgfpathrectangle<<1028>>\pgfpointorigin<<1028>><<1936>>\pgfqpoint<<1029>>5.000000in<<1029>><<1030>>5.000000in<<1030>><<1936>><tex2html_comment_mark>74
+\pgfusepath<<1031>>use as bounding box, clip<<1031>><tex2html_comment_mark>75
+\begin<<1032>>pgfscope<<1032>><tex2html_comment_mark>76
+\pgfsetbuttcap \pgfsetmiterjoin \definecolor<<1033>>currentfill<<1033>><<1034>>rgb<<1034>><<1035>>1.000000,1.000000,1.000000<<1035>><tex2html_comment_mark>79
+\pgfsetfillcolor<<1036>>currentfill<<1036>><tex2html_comment_mark>80
+\pgfsetlinewidth<<1037>>0.000000pt<<1037>><tex2html_comment_mark>81
+\definecolor<<1038>>currentstroke<<1038>><<1039>>rgb<<1039>><<1040>>1.000000,1.000000,1.000000<<1040>><tex2html_comment_mark>82
+\pgfsetstrokecolor<<1041>>currentstroke<<1041>><tex2html_comment_mark>83
+\pgfsetdash<<1042>><<1042>><<1043>>0pt<<1043>><tex2html_comment_mark>84
+\pgfpathmoveto<<1937>>\pgfqpoint<<1044>>0.000000in<<1044>><<1045>>0.000000in<<1045>><<1937>><tex2html_comment_mark>85
+\pgfpathlineto<<1938>>\pgfqpoint<<1046>>5.000000in<<1046>><<1047>>0.000000in<<1047>><<1938>><tex2html_comment_mark>86
+\pgfpathlineto<<1939>>\pgfqpoint<<1048>>5.000000in<<1048>><<1049>>5.000000in<<1049>><<1939>><tex2html_comment_mark>87
+\pgfpathlineto<<1940>>\pgfqpoint<<1050>>0.000000in<<1050>><<1051>>5.000000in<<1051>><<1940>><tex2html_comment_mark>88
+\pgfpathclose \pgfusepath<<1052>>fill<<1052>><tex2html_comment_mark>90
+\end<<1053>>pgfscope<<1053>><tex2html_comment_mark>91
+\begin<<1054>>pgfscope<<1054>><tex2html_comment_mark>92
+\pgfsetbuttcap \pgfsetmiterjoin \definecolor<<1055>>currentfill<<1055>><<1056>>rgb<<1056>><<1057>>1.000000,1.000000,1.000000<<1057>><tex2html_comment_mark>95
+\pgfsetfillcolor<<1058>>currentfill<<1058>><tex2html_comment_mark>96
+\pgfsetlinewidth<<1059>>0.000000pt<<1059>><tex2html_comment_mark>97
+\definecolor<<1060>>currentstroke<<1060>><<1061>>rgb<<1061>><<1062>>0.000000,0.000000,0.000000<<1062>><tex2html_comment_mark>98
+\pgfsetstrokecolor<<1063>>currentstroke<<1063>><tex2html_comment_mark>99
+\pgfsetstrokeopacity<<1064>>0.000000<<1064>><tex2html_comment_mark>100
+\pgfsetdash<<1065>><<1065>><<1066>>0pt<<1066>><tex2html_comment_mark>101
+\pgfpathmoveto<<1941>>\pgfqpoint<<1067>>0.625000in<<1067>><<1068>>0.625000in<<1068>><<1941>><tex2html_comment_mark>102
+\pgfpathlineto<<1942>>\pgfqpoint<<1069>>4.500000in<<1069>><<1070>>0.625000in<<1070>><<1942>><tex2html_comment_mark>103
+\pgfpathlineto<<1943>>\pgfqpoint<<1071>>4.500000in<<1071>><<1072>>4.400000in<<1072>><<1943>><tex2html_comment_mark>104
+\pgfpathlineto<<1944>>\pgfqpoint<<1073>>0.625000in<<1073>><<1074>>4.400000in<<1074>><<1944>><tex2html_comment_mark>105
+\pgfpathclose \pgfusepath<<1075>>fill<<1075>><tex2html_comment_mark>107
+\end<<1076>>pgfscope<<1076>><tex2html_comment_mark>108
+\begin<<1077>>pgfscope<<1077>><tex2html_comment_mark>109
+\pgfsetbuttcap \pgfsetroundjoin \definecolor<<1078>>currentfill<<1078>><<1079>>rgb<<1079>><<1080>>0.000000,0.000000,0.000000<<1080>><tex2html_comment_mark>112
+\pgfsetfillcolor<<1081>>currentfill<<1081>><tex2html_comment_mark>113
+\pgfsetlinewidth<<1082>>0.803000pt<<1082>><tex2html_comment_mark>114
+\definecolor<<1083>>currentstroke<<1083>><<1084>>rgb<<1084>><<1085>>0.000000,0.000000,0.000000<<1085>><tex2html_comment_mark>115
+\pgfsetstrokecolor<<1086>>currentstroke<<1086>><tex2html_comment_mark>116
+\pgfsetdash<<1087>><<1087>><<1088>>0pt<<1088>><tex2html_comment_mark>117
+\pgfsys@defobject<<1089>>currentmarker<<1089>><<1945>>\pgfqpoint<<1090>>0.000000in<<1090>><<1091>>-0.048611in<<1091>><<1945>><<1946>>\pgfqpoint<<1092>>0.000000in<<1092>><<1093>>0.000000in<<1093>><<1946>><<2089>><tex2html_comment_mark>118
+\pgfpathmoveto<<1947>>\pgfqpoint<<1094>>0.000000in<<1094>><<1095>>0.000000in<<1095>><<1947>><tex2html_comment_mark>119
+\pgfpathlineto<<1948>>\pgfqpoint<<1096>>0.000000in<<1096>><<1097>>-0.048611in<<1097>><<1948>><tex2html_comment_mark>120
+\pgfusepath<<1098>>stroke,fill<<1098>><tex2html_comment_mark>121
+<<2089>><tex2html_comment_mark>122
+\begin<<1099>>pgfscope<<1099>><tex2html_comment_mark>123
+\pgfsys@transformshift<<1100>>0.801136in<<1100>><<1101>>0.625000in<<1101>><tex2html_comment_mark>124
+\pgfsys@useobject<<1102>>currentmarker<<1102>><<1103>><<1103>><tex2html_comment_mark>125
+\end<<1104>>pgfscope<<1104>><tex2html_comment_mark>126
+\end<<1105>>pgfscope<<1105>><tex2html_comment_mark>127
+\begin<<1106>>pgfscope<<1106>><tex2html_comment_mark>128
+\definecolor<<1107>>textcolor<<1107>><<1108>>rgb<<1108>><<1109>>0.000000,0.000000,0.000000<<1109>><tex2html_comment_mark>129
+\pgfsetstrokecolor<<1110>>textcolor<<1110>><tex2html_comment_mark>130
+\pgfsetfillcolor<<1111>>textcolor<<1111>><tex2html_comment_mark>131
+\pgftext[x=0.801136in,y=0.527778in,,top]<<1949>>\color<<1112>>textcolor<<1112>>\begin<<2123>>tex2html_deferred<<2123>>\sffamily\end<<2124>>tex2html_deferred<<2124>>\fontsize<<1113>>10.000000<<1113>><<1114>>12.000000<<1114>>\selectfont 0<<1949>><tex2html_comment_mark>132
+\end<<1115>>pgfscope<<1115>><tex2html_comment_mark>133
+\begin<<1116>>pgfscope<<1116>><tex2html_comment_mark>134
+\pgfsetbuttcap \pgfsetroundjoin \definecolor<<1117>>currentfill<<1117>><<1118>>rgb<<1118>><<1119>>0.000000,0.000000,0.000000<<1119>><tex2html_comment_mark>137
+\pgfsetfillcolor<<1120>>currentfill<<1120>><tex2html_comment_mark>138
+\pgfsetlinewidth<<1121>>0.803000pt<<1121>><tex2html_comment_mark>139
+\definecolor<<1122>>currentstroke<<1122>><<1123>>rgb<<1123>><<1124>>0.000000,0.000000,0.000000<<1124>><tex2html_comment_mark>140
+\pgfsetstrokecolor<<1125>>currentstroke<<1125>><tex2html_comment_mark>141
+\pgfsetdash<<1126>><<1126>><<1127>>0pt<<1127>><tex2html_comment_mark>142
+\pgfsys@defobject<<1128>>currentmarker<<1128>><<1950>>\pgfqpoint<<1129>>0.000000in<<1129>><<1130>>-0.048611in<<1130>><<1950>><<1951>>\pgfqpoint<<1131>>0.000000in<<1131>><<1132>>0.000000in<<1132>><<1951>><<2090>><tex2html_comment_mark>143
+\pgfpathmoveto<<1952>>\pgfqpoint<<1133>>0.000000in<<1133>><<1134>>0.000000in<<1134>><<1952>><tex2html_comment_mark>144
+\pgfpathlineto<<1953>>\pgfqpoint<<1135>>0.000000in<<1135>><<1136>>-0.048611in<<1136>><<1953>><tex2html_comment_mark>145
+\pgfusepath<<1137>>stroke,fill<<1137>><tex2html_comment_mark>146
+<<2090>><tex2html_comment_mark>147
+\begin<<1138>>pgfscope<<1138>><tex2html_comment_mark>148
+\pgfsys@transformshift<<1139>>1.601756in<<1139>><<1140>>0.625000in<<1140>><tex2html_comment_mark>149
+\pgfsys@useobject<<1141>>currentmarker<<1141>><<1142>><<1142>><tex2html_comment_mark>150
+\end<<1143>>pgfscope<<1143>><tex2html_comment_mark>151
+\end<<1144>>pgfscope<<1144>><tex2html_comment_mark>152
+\begin<<1145>>pgfscope<<1145>><tex2html_comment_mark>153
+\definecolor<<1146>>textcolor<<1146>><<1147>>rgb<<1147>><<1148>>0.000000,0.000000,0.000000<<1148>><tex2html_comment_mark>154
+\pgfsetstrokecolor<<1149>>textcolor<<1149>><tex2html_comment_mark>155
+\pgfsetfillcolor<<1150>>textcolor<<1150>><tex2html_comment_mark>156
+\pgftext[x=1.601756in,y=0.527778in,,top]<<1954>>\color<<1151>>textcolor<<1151>>\begin<<2125>>tex2html_deferred<<2125>>\sffamily\end<<2126>>tex2html_deferred<<2126>>\fontsize<<1152>>10.000000<<1152>><<1153>>12.000000<<1153>>\selectfont 10<<1954>><tex2html_comment_mark>157
+\end<<1154>>pgfscope<<1154>><tex2html_comment_mark>158
+\begin<<1155>>pgfscope<<1155>><tex2html_comment_mark>159
+\pgfsetbuttcap \pgfsetroundjoin \definecolor<<1156>>currentfill<<1156>><<1157>>rgb<<1157>><<1158>>0.000000,0.000000,0.000000<<1158>><tex2html_comment_mark>162
+\pgfsetfillcolor<<1159>>currentfill<<1159>><tex2html_comment_mark>163
+\pgfsetlinewidth<<1160>>0.803000pt<<1160>><tex2html_comment_mark>164
+\definecolor<<1161>>currentstroke<<1161>><<1162>>rgb<<1162>><<1163>>0.000000,0.000000,0.000000<<1163>><tex2html_comment_mark>165
+\pgfsetstrokecolor<<1164>>currentstroke<<1164>><tex2html_comment_mark>166
+\pgfsetdash<<1165>><<1165>><<1166>>0pt<<1166>><tex2html_comment_mark>167
+\pgfsys@defobject<<1167>>currentmarker<<1167>><<1955>>\pgfqpoint<<1168>>0.000000in<<1168>><<1169>>-0.048611in<<1169>><<1955>><<1956>>\pgfqpoint<<1170>>0.000000in<<1170>><<1171>>0.000000in<<1171>><<1956>><<2091>><tex2html_comment_mark>168
+\pgfpathmoveto<<1957>>\pgfqpoint<<1172>>0.000000in<<1172>><<1173>>0.000000in<<1173>><<1957>><tex2html_comment_mark>169
+\pgfpathlineto<<1958>>\pgfqpoint<<1174>>0.000000in<<1174>><<1175>>-0.048611in<<1175>><<1958>><tex2html_comment_mark>170
+\pgfusepath<<1176>>stroke,fill<<1176>><tex2html_comment_mark>171
+<<2091>><tex2html_comment_mark>172
+\begin<<1177>>pgfscope<<1177>><tex2html_comment_mark>173
+\pgfsys@transformshift<<1178>>2.402376in<<1178>><<1179>>0.625000in<<1179>><tex2html_comment_mark>174
+\pgfsys@useobject<<1180>>currentmarker<<1180>><<1181>><<1181>><tex2html_comment_mark>175
+\end<<1182>>pgfscope<<1182>><tex2html_comment_mark>176
+\end<<1183>>pgfscope<<1183>><tex2html_comment_mark>177
+\begin<<1184>>pgfscope<<1184>><tex2html_comment_mark>178
+\definecolor<<1185>>textcolor<<1185>><<1186>>rgb<<1186>><<1187>>0.000000,0.000000,0.000000<<1187>><tex2html_comment_mark>179
+\pgfsetstrokecolor<<1188>>textcolor<<1188>><tex2html_comment_mark>180
+\pgfsetfillcolor<<1189>>textcolor<<1189>><tex2html_comment_mark>181
+\pgftext[x=2.402376in,y=0.527778in,,top]<<1959>>\color<<1190>>textcolor<<1190>>\begin<<2127>>tex2html_deferred<<2127>>\sffamily\end<<2128>>tex2html_deferred<<2128>>\fontsize<<1191>>10.000000<<1191>><<1192>>12.000000<<1192>>\selectfont 20<<1959>><tex2html_comment_mark>182
+\end<<1193>>pgfscope<<1193>><tex2html_comment_mark>183
+\begin<<1194>>pgfscope<<1194>><tex2html_comment_mark>184
+\pgfsetbuttcap \pgfsetroundjoin \definecolor<<1195>>currentfill<<1195>><<1196>>rgb<<1196>><<1197>>0.000000,0.000000,0.000000<<1197>><tex2html_comment_mark>187
+\pgfsetfillcolor<<1198>>currentfill<<1198>><tex2html_comment_mark>188
+\pgfsetlinewidth<<1199>>0.803000pt<<1199>><tex2html_comment_mark>189
+\definecolor<<1200>>currentstroke<<1200>><<1201>>rgb<<1201>><<1202>>0.000000,0.000000,0.000000<<1202>><tex2html_comment_mark>190
+\pgfsetstrokecolor<<1203>>currentstroke<<1203>><tex2html_comment_mark>191
+\pgfsetdash<<1204>><<1204>><<1205>>0pt<<1205>><tex2html_comment_mark>192
+\pgfsys@defobject<<1206>>currentmarker<<1206>><<1960>>\pgfqpoint<<1207>>0.000000in<<1207>><<1208>>-0.048611in<<1208>><<1960>><<1961>>\pgfqpoint<<1209>>0.000000in<<1209>><<1210>>0.000000in<<1210>><<1961>><<2092>><tex2html_comment_mark>193
+\pgfpathmoveto<<1962>>\pgfqpoint<<1211>>0.000000in<<1211>><<1212>>0.000000in<<1212>><<1962>><tex2html_comment_mark>194
+\pgfpathlineto<<1963>>\pgfqpoint<<1213>>0.000000in<<1213>><<1214>>-0.048611in<<1214>><<1963>><tex2html_comment_mark>195
+\pgfusepath<<1215>>stroke,fill<<1215>><tex2html_comment_mark>196
+<<2092>><tex2html_comment_mark>197
+\begin<<1216>>pgfscope<<1216>><tex2html_comment_mark>198
+\pgfsys@transformshift<<1217>>3.202996in<<1217>><<1218>>0.625000in<<1218>><tex2html_comment_mark>199
+\pgfsys@useobject<<1219>>currentmarker<<1219>><<1220>><<1220>><tex2html_comment_mark>200
+\end<<1221>>pgfscope<<1221>><tex2html_comment_mark>201
+\end<<1222>>pgfscope<<1222>><tex2html_comment_mark>202
+\begin<<1223>>pgfscope<<1223>><tex2html_comment_mark>203
+\definecolor<<1224>>textcolor<<1224>><<1225>>rgb<<1225>><<1226>>0.000000,0.000000,0.000000<<1226>><tex2html_comment_mark>204
+\pgfsetstrokecolor<<1227>>textcolor<<1227>><tex2html_comment_mark>205
+\pgfsetfillcolor<<1228>>textcolor<<1228>><tex2html_comment_mark>206
+\pgftext[x=3.202996in,y=0.527778in,,top]<<1964>>\color<<1229>>textcolor<<1229>>\begin<<2129>>tex2html_deferred<<2129>>\sffamily\end<<2130>>tex2html_deferred<<2130>>\fontsize<<1230>>10.000000<<1230>><<1231>>12.000000<<1231>>\selectfont 30<<1964>><tex2html_comment_mark>207
+\end<<1232>>pgfscope<<1232>><tex2html_comment_mark>208
+\begin<<1233>>pgfscope<<1233>><tex2html_comment_mark>209
+\pgfsetbuttcap \pgfsetroundjoin \definecolor<<1234>>currentfill<<1234>><<1235>>rgb<<1235>><<1236>>0.000000,0.000000,0.000000<<1236>><tex2html_comment_mark>212
+\pgfsetfillcolor<<1237>>currentfill<<1237>><tex2html_comment_mark>213
+\pgfsetlinewidth<<1238>>0.803000pt<<1238>><tex2html_comment_mark>214
+\definecolor<<1239>>currentstroke<<1239>><<1240>>rgb<<1240>><<1241>>0.000000,0.000000,0.000000<<1241>><tex2html_comment_mark>215
+\pgfsetstrokecolor<<1242>>currentstroke<<1242>><tex2html_comment_mark>216
+\pgfsetdash<<1243>><<1243>><<1244>>0pt<<1244>><tex2html_comment_mark>217
+\pgfsys@defobject<<1245>>currentmarker<<1245>><<1965>>\pgfqpoint<<1246>>0.000000in<<1246>><<1247>>-0.048611in<<1247>><<1965>><<1966>>\pgfqpoint<<1248>>0.000000in<<1248>><<1249>>0.000000in<<1249>><<1966>><<2093>><tex2html_comment_mark>218
+\pgfpathmoveto<<1967>>\pgfqpoint<<1250>>0.000000in<<1250>><<1251>>0.000000in<<1251>><<1967>><tex2html_comment_mark>219
+\pgfpathlineto<<1968>>\pgfqpoint<<1252>>0.000000in<<1252>><<1253>>-0.048611in<<1253>><<1968>><tex2html_comment_mark>220
+\pgfusepath<<1254>>stroke,fill<<1254>><tex2html_comment_mark>221
+<<2093>><tex2html_comment_mark>222
+\begin<<1255>>pgfscope<<1255>><tex2html_comment_mark>223
+\pgfsys@transformshift<<1256>>4.003616in<<1256>><<1257>>0.625000in<<1257>><tex2html_comment_mark>224
+\pgfsys@useobject<<1258>>currentmarker<<1258>><<1259>><<1259>><tex2html_comment_mark>225
+\end<<1260>>pgfscope<<1260>><tex2html_comment_mark>226
+\end<<1261>>pgfscope<<1261>><tex2html_comment_mark>227
+\begin<<1262>>pgfscope<<1262>><tex2html_comment_mark>228
+\definecolor<<1263>>textcolor<<1263>><<1264>>rgb<<1264>><<1265>>0.000000,0.000000,0.000000<<1265>><tex2html_comment_mark>229
+\pgfsetstrokecolor<<1266>>textcolor<<1266>><tex2html_comment_mark>230
+\pgfsetfillcolor<<1267>>textcolor<<1267>><tex2html_comment_mark>231
+\pgftext[x=4.003616in,y=0.527778in,,top]<<1969>>\color<<1268>>textcolor<<1268>>\begin<<2131>>tex2html_deferred<<2131>>\sffamily\end<<2132>>tex2html_deferred<<2132>>\fontsize<<1269>>10.000000<<1269>><<1270>>12.000000<<1270>>\selectfont 40<<1969>><tex2html_comment_mark>232
+\end<<1271>>pgfscope<<1271>><tex2html_comment_mark>233
+\begin<<1272>>pgfscope<<1272>><tex2html_comment_mark>234
+\definecolor<<1273>>textcolor<<1273>><<1274>>rgb<<1274>><<1275>>0.000000,0.000000,0.000000<<1275>><tex2html_comment_mark>235
+\pgfsetstrokecolor<<1276>>textcolor<<1276>><tex2html_comment_mark>236
+\pgfsetfillcolor<<1277>>textcolor<<1277>><tex2html_comment_mark>237
+\pgftext[x=2.562500in,y=0.337809in,,top]<<1970>>\color<<1278>>textcolor<<1278>>\begin<<2133>>tex2html_deferred<<2133>>\sffamily\end<<2134>>tex2html_deferred<<2134>>\fontsize<<1279>>10.000000<<1279>><<1280>>12.000000<<1280>>\selectfont Epoch<<1970>><tex2html_comment_mark>238
+\end<<1281>>pgfscope<<1281>><tex2html_comment_mark>239
+\begin<<1282>>pgfscope<<1282>><tex2html_comment_mark>240
+\pgfsetbuttcap \pgfsetroundjoin \definecolor<<1283>>currentfill<<1283>><<1284>>rgb<<1284>><<1285>>0.000000,0.000000,0.000000<<1285>><tex2html_comment_mark>243
+\pgfsetfillcolor<<1286>>currentfill<<1286>><tex2html_comment_mark>244
+\pgfsetlinewidth<<1287>>0.803000pt<<1287>><tex2html_comment_mark>245
+\definecolor<<1288>>currentstroke<<1288>><<1289>>rgb<<1289>><<1290>>0.000000,0.000000,0.000000<<1290>><tex2html_comment_mark>246
+\pgfsetstrokecolor<<1291>>currentstroke<<1291>><tex2html_comment_mark>247
+\pgfsetdash<<1292>><<1292>><<1293>>0pt<<1293>><tex2html_comment_mark>248
+\pgfsys@defobject<<1294>>currentmarker<<1294>><<1971>>\pgfqpoint<<1295>>-0.048611in<<1295>><<1296>>0.000000in<<1296>><<1971>><<1972>>\pgfqpoint<<1297>>0.000000in<<1297>><<1298>>0.000000in<<1298>><<1972>><<2094>><tex2html_comment_mark>249
+\pgfpathmoveto<<1973>>\pgfqpoint<<1299>>0.000000in<<1299>><<1300>>0.000000in<<1300>><<1973>><tex2html_comment_mark>250
+\pgfpathlineto<<1974>>\pgfqpoint<<1301>>-0.048611in<<1301>><<1302>>0.000000in<<1302>><<1974>><tex2html_comment_mark>251
+\pgfusepath<<1303>>stroke,fill<<1303>><tex2html_comment_mark>252
+<<2094>><tex2html_comment_mark>253
+\begin<<1304>>pgfscope<<1304>><tex2html_comment_mark>254
+\pgfsys@transformshift<<1305>>0.625000in<<1305>><<1306>>0.756461in<<1306>><tex2html_comment_mark>255
+\pgfsys@useobject<<1307>>currentmarker<<1307>><<1308>><<1308>><tex2html_comment_mark>256
+\end<<1309>>pgfscope<<1309>><tex2html_comment_mark>257
+\end<<1310>>pgfscope<<1310>><tex2html_comment_mark>258
+\begin<<1311>>pgfscope<<1311>><tex2html_comment_mark>259
+\definecolor<<1312>>textcolor<<1312>><<1313>>rgb<<1313>><<1314>>0.000000,0.000000,0.000000<<1314>><tex2html_comment_mark>260
+\pgfsetstrokecolor<<1315>>textcolor<<1315>><tex2html_comment_mark>261
+\pgfsetfillcolor<<1316>>textcolor<<1316>><tex2html_comment_mark>262
+\pgftext[x=0.306898in,y=0.703700in,left,base]<<1975>>\color<<1317>>textcolor<<1317>>\begin<<2135>>tex2html_deferred<<2135>>\sffamily\end<<2136>>tex2html_deferred<<2136>>\fontsize<<1318>>10.000000<<1318>><<1319>>12.000000<<1319>>\selectfont 0.0<<1975>><tex2html_comment_mark>263
+\end<<1320>>pgfscope<<1320>><tex2html_comment_mark>264
+\begin<<1321>>pgfscope<<1321>><tex2html_comment_mark>265
+\pgfsetbuttcap \pgfsetroundjoin \definecolor<<1322>>currentfill<<1322>><<1323>>rgb<<1323>><<1324>>0.000000,0.000000,0.000000<<1324>><tex2html_comment_mark>268
+\pgfsetfillcolor<<1325>>currentfill<<1325>><tex2html_comment_mark>269
+\pgfsetlinewidth<<1326>>0.803000pt<<1326>><tex2html_comment_mark>270
+\definecolor<<1327>>currentstroke<<1327>><<1328>>rgb<<1328>><<1329>>0.000000,0.000000,0.000000<<1329>><tex2html_comment_mark>271
+\pgfsetstrokecolor<<1330>>currentstroke<<1330>><tex2html_comment_mark>272
+\pgfsetdash<<1331>><<1331>><<1332>>0pt<<1332>><tex2html_comment_mark>273
+\pgfsys@defobject<<1333>>currentmarker<<1333>><<1976>>\pgfqpoint<<1334>>-0.048611in<<1334>><<1335>>0.000000in<<1335>><<1976>><<1977>>\pgfqpoint<<1336>>0.000000in<<1336>><<1337>>0.000000in<<1337>><<1977>><<2095>><tex2html_comment_mark>274
+\pgfpathmoveto<<1978>>\pgfqpoint<<1338>>0.000000in<<1338>><<1339>>0.000000in<<1339>><<1978>><tex2html_comment_mark>275
+\pgfpathlineto<<1979>>\pgfqpoint<<1340>>-0.048611in<<1340>><<1341>>0.000000in<<1341>><<1979>><tex2html_comment_mark>276
+\pgfusepath<<1342>>stroke,fill<<1342>><tex2html_comment_mark>277
+<<2095>><tex2html_comment_mark>278
+\begin<<1343>>pgfscope<<1343>><tex2html_comment_mark>279
+\pgfsys@transformshift<<1344>>0.625000in<<1344>><<1345>>1.187068in<<1345>><tex2html_comment_mark>280
+\pgfsys@useobject<<1346>>currentmarker<<1346>><<1347>><<1347>><tex2html_comment_mark>281
+\end<<1348>>pgfscope<<1348>><tex2html_comment_mark>282
+\end<<1349>>pgfscope<<1349>><tex2html_comment_mark>283
+\begin<<1350>>pgfscope<<1350>><tex2html_comment_mark>284
+\definecolor<<1351>>textcolor<<1351>><<1352>>rgb<<1352>><<1353>>0.000000,0.000000,0.000000<<1353>><tex2html_comment_mark>285
+\pgfsetstrokecolor<<1354>>textcolor<<1354>><tex2html_comment_mark>286
+\pgfsetfillcolor<<1355>>textcolor<<1355>><tex2html_comment_mark>287
+\pgftext[x=0.306898in,y=1.134306in,left,base]<<1980>>\color<<1356>>textcolor<<1356>>\begin<<2137>>tex2html_deferred<<2137>>\sffamily\end<<2138>>tex2html_deferred<<2138>>\fontsize<<1357>>10.000000<<1357>><<1358>>12.000000<<1358>>\selectfont 0.2<<1980>><tex2html_comment_mark>288
+\end<<1359>>pgfscope<<1359>><tex2html_comment_mark>289
+\begin<<1360>>pgfscope<<1360>><tex2html_comment_mark>290
+\pgfsetbuttcap \pgfsetroundjoin \definecolor<<1361>>currentfill<<1361>><<1362>>rgb<<1362>><<1363>>0.000000,0.000000,0.000000<<1363>><tex2html_comment_mark>293
+\pgfsetfillcolor<<1364>>currentfill<<1364>><tex2html_comment_mark>294
+\pgfsetlinewidth<<1365>>0.803000pt<<1365>><tex2html_comment_mark>295
+\definecolor<<1366>>currentstroke<<1366>><<1367>>rgb<<1367>><<1368>>0.000000,0.000000,0.000000<<1368>><tex2html_comment_mark>296
+\pgfsetstrokecolor<<1369>>currentstroke<<1369>><tex2html_comment_mark>297
+\pgfsetdash<<1370>><<1370>><<1371>>0pt<<1371>><tex2html_comment_mark>298
+\pgfsys@defobject<<1372>>currentmarker<<1372>><<1981>>\pgfqpoint<<1373>>-0.048611in<<1373>><<1374>>0.000000in<<1374>><<1981>><<1982>>\pgfqpoint<<1375>>0.000000in<<1375>><<1376>>0.000000in<<1376>><<1982>><<2096>><tex2html_comment_mark>299
+\pgfpathmoveto<<1983>>\pgfqpoint<<1377>>0.000000in<<1377>><<1378>>0.000000in<<1378>><<1983>><tex2html_comment_mark>300
+\pgfpathlineto<<1984>>\pgfqpoint<<1379>>-0.048611in<<1379>><<1380>>0.000000in<<1380>><<1984>><tex2html_comment_mark>301
+\pgfusepath<<1381>>stroke,fill<<1381>><tex2html_comment_mark>302
+<<2096>><tex2html_comment_mark>303
+\begin<<1382>>pgfscope<<1382>><tex2html_comment_mark>304
+\pgfsys@transformshift<<1383>>0.625000in<<1383>><<1384>>1.617675in<<1384>><tex2html_comment_mark>305
+\pgfsys@useobject<<1385>>currentmarker<<1385>><<1386>><<1386>><tex2html_comment_mark>306
+\end<<1387>>pgfscope<<1387>><tex2html_comment_mark>307
+\end<<1388>>pgfscope<<1388>><tex2html_comment_mark>308
+\begin<<1389>>pgfscope<<1389>><tex2html_comment_mark>309
+\definecolor<<1390>>textcolor<<1390>><<1391>>rgb<<1391>><<1392>>0.000000,0.000000,0.000000<<1392>><tex2html_comment_mark>310
+\pgfsetstrokecolor<<1393>>textcolor<<1393>><tex2html_comment_mark>311
+\pgfsetfillcolor<<1394>>textcolor<<1394>><tex2html_comment_mark>312
+\pgftext[x=0.306898in,y=1.564913in,left,base]<<1985>>\color<<1395>>textcolor<<1395>>\begin<<2139>>tex2html_deferred<<2139>>\sffamily\end<<2140>>tex2html_deferred<<2140>>\fontsize<<1396>>10.000000<<1396>><<1397>>12.000000<<1397>>\selectfont 0.4<<1985>><tex2html_comment_mark>313
+\end<<1398>>pgfscope<<1398>><tex2html_comment_mark>314
+\begin<<1399>>pgfscope<<1399>><tex2html_comment_mark>315
+\pgfsetbuttcap \pgfsetroundjoin \definecolor<<1400>>currentfill<<1400>><<1401>>rgb<<1401>><<1402>>0.000000,0.000000,0.000000<<1402>><tex2html_comment_mark>318
+\pgfsetfillcolor<<1403>>currentfill<<1403>><tex2html_comment_mark>319
+\pgfsetlinewidth<<1404>>0.803000pt<<1404>><tex2html_comment_mark>320
+\definecolor<<1405>>currentstroke<<1405>><<1406>>rgb<<1406>><<1407>>0.000000,0.000000,0.000000<<1407>><tex2html_comment_mark>321
+\pgfsetstrokecolor<<1408>>currentstroke<<1408>><tex2html_comment_mark>322
+\pgfsetdash<<1409>><<1409>><<1410>>0pt<<1410>><tex2html_comment_mark>323
+\pgfsys@defobject<<1411>>currentmarker<<1411>><<1986>>\pgfqpoint<<1412>>-0.048611in<<1412>><<1413>>0.000000in<<1413>><<1986>><<1987>>\pgfqpoint<<1414>>0.000000in<<1414>><<1415>>0.000000in<<1415>><<1987>><<2097>><tex2html_comment_mark>324
+\pgfpathmoveto<<1988>>\pgfqpoint<<1416>>0.000000in<<1416>><<1417>>0.000000in<<1417>><<1988>><tex2html_comment_mark>325
+\pgfpathlineto<<1989>>\pgfqpoint<<1418>>-0.048611in<<1418>><<1419>>0.000000in<<1419>><<1989>><tex2html_comment_mark>326
+\pgfusepath<<1420>>stroke,fill<<1420>><tex2html_comment_mark>327
+<<2097>><tex2html_comment_mark>328
+\begin<<1421>>pgfscope<<1421>><tex2html_comment_mark>329
+\pgfsys@transformshift<<1422>>0.625000in<<1422>><<1423>>2.048281in<<1423>><tex2html_comment_mark>330
+\pgfsys@useobject<<1424>>currentmarker<<1424>><<1425>><<1425>><tex2html_comment_mark>331
+\end<<1426>>pgfscope<<1426>><tex2html_comment_mark>332
+\end<<1427>>pgfscope<<1427>><tex2html_comment_mark>333
+\begin<<1428>>pgfscope<<1428>><tex2html_comment_mark>334
+\definecolor<<1429>>textcolor<<1429>><<1430>>rgb<<1430>><<1431>>0.000000,0.000000,0.000000<<1431>><tex2html_comment_mark>335
+\pgfsetstrokecolor<<1432>>textcolor<<1432>><tex2html_comment_mark>336
+\pgfsetfillcolor<<1433>>textcolor<<1433>><tex2html_comment_mark>337
+\pgftext[x=0.306898in,y=1.995520in,left,base]<<1990>>\color<<1434>>textcolor<<1434>>\begin<<2141>>tex2html_deferred<<2141>>\sffamily\end<<2142>>tex2html_deferred<<2142>>\fontsize<<1435>>10.000000<<1435>><<1436>>12.000000<<1436>>\selectfont 0.6<<1990>><tex2html_comment_mark>338
+\end<<1437>>pgfscope<<1437>><tex2html_comment_mark>339
+\begin<<1438>>pgfscope<<1438>><tex2html_comment_mark>340
+\pgfsetbuttcap \pgfsetroundjoin \definecolor<<1439>>currentfill<<1439>><<1440>>rgb<<1440>><<1441>>0.000000,0.000000,0.000000<<1441>><tex2html_comment_mark>343
+\pgfsetfillcolor<<1442>>currentfill<<1442>><tex2html_comment_mark>344
+\pgfsetlinewidth<<1443>>0.803000pt<<1443>><tex2html_comment_mark>345
+\definecolor<<1444>>currentstroke<<1444>><<1445>>rgb<<1445>><<1446>>0.000000,0.000000,0.000000<<1446>><tex2html_comment_mark>346
+\pgfsetstrokecolor<<1447>>currentstroke<<1447>><tex2html_comment_mark>347
+\pgfsetdash<<1448>><<1448>><<1449>>0pt<<1449>><tex2html_comment_mark>348
+\pgfsys@defobject<<1450>>currentmarker<<1450>><<1991>>\pgfqpoint<<1451>>-0.048611in<<1451>><<1452>>0.000000in<<1452>><<1991>><<1992>>\pgfqpoint<<1453>>0.000000in<<1453>><<1454>>0.000000in<<1454>><<1992>><<2098>><tex2html_comment_mark>349
+\pgfpathmoveto<<1993>>\pgfqpoint<<1455>>0.000000in<<1455>><<1456>>0.000000in<<1456>><<1993>><tex2html_comment_mark>350
+\pgfpathlineto<<1994>>\pgfqpoint<<1457>>-0.048611in<<1457>><<1458>>0.000000in<<1458>><<1994>><tex2html_comment_mark>351
+\pgfusepath<<1459>>stroke,fill<<1459>><tex2html_comment_mark>352
+<<2098>><tex2html_comment_mark>353
+\begin<<1460>>pgfscope<<1460>><tex2html_comment_mark>354
+\pgfsys@transformshift<<1461>>0.625000in<<1461>><<1462>>2.478888in<<1462>><tex2html_comment_mark>355
+\pgfsys@useobject<<1463>>currentmarker<<1463>><<1464>><<1464>><tex2html_comment_mark>356
+\end<<1465>>pgfscope<<1465>><tex2html_comment_mark>357
+\end<<1466>>pgfscope<<1466>><tex2html_comment_mark>358
+\begin<<1467>>pgfscope<<1467>><tex2html_comment_mark>359
+\definecolor<<1468>>textcolor<<1468>><<1469>>rgb<<1469>><<1470>>0.000000,0.000000,0.000000<<1470>><tex2html_comment_mark>360
+\pgfsetstrokecolor<<1471>>textcolor<<1471>><tex2html_comment_mark>361
+\pgfsetfillcolor<<1472>>textcolor<<1472>><tex2html_comment_mark>362
+\pgftext[x=0.306898in,y=2.426126in,left,base]<<1995>>\color<<1473>>textcolor<<1473>>\begin<<2143>>tex2html_deferred<<2143>>\sffamily\end<<2144>>tex2html_deferred<<2144>>\fontsize<<1474>>10.000000<<1474>><<1475>>12.000000<<1475>>\selectfont 0.8<<1995>><tex2html_comment_mark>363
+\end<<1476>>pgfscope<<1476>><tex2html_comment_mark>364
+\begin<<1477>>pgfscope<<1477>><tex2html_comment_mark>365
+\pgfsetbuttcap \pgfsetroundjoin \definecolor<<1478>>currentfill<<1478>><<1479>>rgb<<1479>><<1480>>0.000000,0.000000,0.000000<<1480>><tex2html_comment_mark>368
+\pgfsetfillcolor<<1481>>currentfill<<1481>><tex2html_comment_mark>369
+\pgfsetlinewidth<<1482>>0.803000pt<<1482>><tex2html_comment_mark>370
+\definecolor<<1483>>currentstroke<<1483>><<1484>>rgb<<1484>><<1485>>0.000000,0.000000,0.000000<<1485>><tex2html_comment_mark>371
+\pgfsetstrokecolor<<1486>>currentstroke<<1486>><tex2html_comment_mark>372
+\pgfsetdash<<1487>><<1487>><<1488>>0pt<<1488>><tex2html_comment_mark>373
+\pgfsys@defobject<<1489>>currentmarker<<1489>><<1996>>\pgfqpoint<<1490>>-0.048611in<<1490>><<1491>>0.000000in<<1491>><<1996>><<1997>>\pgfqpoint<<1492>>0.000000in<<1492>><<1493>>0.000000in<<1493>><<1997>><<2099>><tex2html_comment_mark>374
+\pgfpathmoveto<<1998>>\pgfqpoint<<1494>>0.000000in<<1494>><<1495>>0.000000in<<1495>><<1998>><tex2html_comment_mark>375
+\pgfpathlineto<<1999>>\pgfqpoint<<1496>>-0.048611in<<1496>><<1497>>0.000000in<<1497>><<1999>><tex2html_comment_mark>376
+\pgfusepath<<1498>>stroke,fill<<1498>><tex2html_comment_mark>377
+<<2099>><tex2html_comment_mark>378
+\begin<<1499>>pgfscope<<1499>><tex2html_comment_mark>379
+\pgfsys@transformshift<<1500>>0.625000in<<1500>><<1501>>2.909494in<<1501>><tex2html_comment_mark>380
+\pgfsys@useobject<<1502>>currentmarker<<1502>><<1503>><<1503>><tex2html_comment_mark>381
+\end<<1504>>pgfscope<<1504>><tex2html_comment_mark>382
+\end<<1505>>pgfscope<<1505>><tex2html_comment_mark>383
+\begin<<1506>>pgfscope<<1506>><tex2html_comment_mark>384
+\definecolor<<1507>>textcolor<<1507>><<1508>>rgb<<1508>><<1509>>0.000000,0.000000,0.000000<<1509>><tex2html_comment_mark>385
+\pgfsetstrokecolor<<1510>>textcolor<<1510>><tex2html_comment_mark>386
+\pgfsetfillcolor<<1511>>textcolor<<1511>><tex2html_comment_mark>387
+\pgftext[x=0.306898in,y=2.856733in,left,base]<<2000>>\color<<1512>>textcolor<<1512>>\begin<<2145>>tex2html_deferred<<2145>>\sffamily\end<<2146>>tex2html_deferred<<2146>>\fontsize<<1513>>10.000000<<1513>><<1514>>12.000000<<1514>>\selectfont 1.0<<2000>><tex2html_comment_mark>388
+\end<<1515>>pgfscope<<1515>><tex2html_comment_mark>389
+\begin<<1516>>pgfscope<<1516>><tex2html_comment_mark>390
+\pgfsetbuttcap \pgfsetroundjoin \definecolor<<1517>>currentfill<<1517>><<1518>>rgb<<1518>><<1519>>0.000000,0.000000,0.000000<<1519>><tex2html_comment_mark>393
+\pgfsetfillcolor<<1520>>currentfill<<1520>><tex2html_comment_mark>394
+\pgfsetlinewidth<<1521>>0.803000pt<<1521>><tex2html_comment_mark>395
+\definecolor<<1522>>currentstroke<<1522>><<1523>>rgb<<1523>><<1524>>0.000000,0.000000,0.000000<<1524>><tex2html_comment_mark>396
+\pgfsetstrokecolor<<1525>>currentstroke<<1525>><tex2html_comment_mark>397
+\pgfsetdash<<1526>><<1526>><<1527>>0pt<<1527>><tex2html_comment_mark>398
+\pgfsys@defobject<<1528>>currentmarker<<1528>><<2001>>\pgfqpoint<<1529>>-0.048611in<<1529>><<1530>>0.000000in<<1530>><<2001>><<2002>>\pgfqpoint<<1531>>0.000000in<<1531>><<1532>>0.000000in<<1532>><<2002>><<2100>><tex2html_comment_mark>399
+\pgfpathmoveto<<2003>>\pgfqpoint<<1533>>0.000000in<<1533>><<1534>>0.000000in<<1534>><<2003>><tex2html_comment_mark>400
+\pgfpathlineto<<2004>>\pgfqpoint<<1535>>-0.048611in<<1535>><<1536>>0.000000in<<1536>><<2004>><tex2html_comment_mark>401
+\pgfusepath<<1537>>stroke,fill<<1537>><tex2html_comment_mark>402
+<<2100>><tex2html_comment_mark>403
+\begin<<1538>>pgfscope<<1538>><tex2html_comment_mark>404
+\pgfsys@transformshift<<1539>>0.625000in<<1539>><<1540>>3.340101in<<1540>><tex2html_comment_mark>405
+\pgfsys@useobject<<1541>>currentmarker<<1541>><<1542>><<1542>><tex2html_comment_mark>406
+\end<<1543>>pgfscope<<1543>><tex2html_comment_mark>407
+\end<<1544>>pgfscope<<1544>><tex2html_comment_mark>408
+\begin<<1545>>pgfscope<<1545>><tex2html_comment_mark>409
+\definecolor<<1546>>textcolor<<1546>><<1547>>rgb<<1547>><<1548>>0.000000,0.000000,0.000000<<1548>><tex2html_comment_mark>410
+\pgfsetstrokecolor<<1549>>textcolor<<1549>><tex2html_comment_mark>411
+\pgfsetfillcolor<<1550>>textcolor<<1550>><tex2html_comment_mark>412
+\pgftext[x=0.306898in,y=3.287339in,left,base]<<2005>>\color<<1551>>textcolor<<1551>>\begin<<2147>>tex2html_deferred<<2147>>\sffamily\end<<2148>>tex2html_deferred<<2148>>\fontsize<<1552>>10.000000<<1552>><<1553>>12.000000<<1553>>\selectfont 1.2<<2005>><tex2html_comment_mark>413
+\end<<1554>>pgfscope<<1554>><tex2html_comment_mark>414
+\begin<<1555>>pgfscope<<1555>><tex2html_comment_mark>415
+\pgfsetbuttcap \pgfsetroundjoin \definecolor<<1556>>currentfill<<1556>><<1557>>rgb<<1557>><<1558>>0.000000,0.000000,0.000000<<1558>><tex2html_comment_mark>418
+\pgfsetfillcolor<<1559>>currentfill<<1559>><tex2html_comment_mark>419
+\pgfsetlinewidth<<1560>>0.803000pt<<1560>><tex2html_comment_mark>420
+\definecolor<<1561>>currentstroke<<1561>><<1562>>rgb<<1562>><<1563>>0.000000,0.000000,0.000000<<1563>><tex2html_comment_mark>421
+\pgfsetstrokecolor<<1564>>currentstroke<<1564>><tex2html_comment_mark>422
+\pgfsetdash<<1565>><<1565>><<1566>>0pt<<1566>><tex2html_comment_mark>423
+\pgfsys@defobject<<1567>>currentmarker<<1567>><<2006>>\pgfqpoint<<1568>>-0.048611in<<1568>><<1569>>0.000000in<<1569>><<2006>><<2007>>\pgfqpoint<<1570>>0.000000in<<1570>><<1571>>0.000000in<<1571>><<2007>><<2101>><tex2html_comment_mark>424
+\pgfpathmoveto<<2008>>\pgfqpoint<<1572>>0.000000in<<1572>><<1573>>0.000000in<<1573>><<2008>><tex2html_comment_mark>425
+\pgfpathlineto<<2009>>\pgfqpoint<<1574>>-0.048611in<<1574>><<1575>>0.000000in<<1575>><<2009>><tex2html_comment_mark>426
+\pgfusepath<<1576>>stroke,fill<<1576>><tex2html_comment_mark>427
+<<2101>><tex2html_comment_mark>428
+\begin<<1577>>pgfscope<<1577>><tex2html_comment_mark>429
+\pgfsys@transformshift<<1578>>0.625000in<<1578>><<1579>>3.770707in<<1579>><tex2html_comment_mark>430
+\pgfsys@useobject<<1580>>currentmarker<<1580>><<1581>><<1581>><tex2html_comment_mark>431
+\end<<1582>>pgfscope<<1582>><tex2html_comment_mark>432
+\end<<1583>>pgfscope<<1583>><tex2html_comment_mark>433
+\begin<<1584>>pgfscope<<1584>><tex2html_comment_mark>434
+\definecolor<<1585>>textcolor<<1585>><<1586>>rgb<<1586>><<1587>>0.000000,0.000000,0.000000<<1587>><tex2html_comment_mark>435
+\pgfsetstrokecolor<<1588>>textcolor<<1588>><tex2html_comment_mark>436
+\pgfsetfillcolor<<1589>>textcolor<<1589>><tex2html_comment_mark>437
+\pgftext[x=0.306898in,y=3.717946in,left,base]<<2010>>\color<<1590>>textcolor<<1590>>\begin<<2149>>tex2html_deferred<<2149>>\sffamily\end<<2150>>tex2html_deferred<<2150>>\fontsize<<1591>>10.000000<<1591>><<1592>>12.000000<<1592>>\selectfont 1.4<<2010>><tex2html_comment_mark>438
+\end<<1593>>pgfscope<<1593>><tex2html_comment_mark>439
+\begin<<1594>>pgfscope<<1594>><tex2html_comment_mark>440
+\pgfsetbuttcap \pgfsetroundjoin \definecolor<<1595>>currentfill<<1595>><<1596>>rgb<<1596>><<1597>>0.000000,0.000000,0.000000<<1597>><tex2html_comment_mark>443
+\pgfsetfillcolor<<1598>>currentfill<<1598>><tex2html_comment_mark>444
+\pgfsetlinewidth<<1599>>0.803000pt<<1599>><tex2html_comment_mark>445
+\definecolor<<1600>>currentstroke<<1600>><<1601>>rgb<<1601>><<1602>>0.000000,0.000000,0.000000<<1602>><tex2html_comment_mark>446
+\pgfsetstrokecolor<<1603>>currentstroke<<1603>><tex2html_comment_mark>447
+\pgfsetdash<<1604>><<1604>><<1605>>0pt<<1605>><tex2html_comment_mark>448
+\pgfsys@defobject<<1606>>currentmarker<<1606>><<2011>>\pgfqpoint<<1607>>-0.048611in<<1607>><<1608>>0.000000in<<1608>><<2011>><<2012>>\pgfqpoint<<1609>>0.000000in<<1609>><<1610>>0.000000in<<1610>><<2012>><<2102>><tex2html_comment_mark>449
+\pgfpathmoveto<<2013>>\pgfqpoint<<1611>>0.000000in<<1611>><<1612>>0.000000in<<1612>><<2013>><tex2html_comment_mark>450
+\pgfpathlineto<<2014>>\pgfqpoint<<1613>>-0.048611in<<1613>><<1614>>0.000000in<<1614>><<2014>><tex2html_comment_mark>451
+\pgfusepath<<1615>>stroke,fill<<1615>><tex2html_comment_mark>452
+<<2102>><tex2html_comment_mark>453
+\begin<<1616>>pgfscope<<1616>><tex2html_comment_mark>454
+\pgfsys@transformshift<<1617>>0.625000in<<1617>><<1618>>4.201314in<<1618>><tex2html_comment_mark>455
+\pgfsys@useobject<<1619>>currentmarker<<1619>><<1620>><<1620>><tex2html_comment_mark>456
+\end<<1621>>pgfscope<<1621>><tex2html_comment_mark>457
+\end<<1622>>pgfscope<<1622>><tex2html_comment_mark>458
+\begin<<1623>>pgfscope<<1623>><tex2html_comment_mark>459
+\definecolor<<1624>>textcolor<<1624>><<1625>>rgb<<1625>><<1626>>0.000000,0.000000,0.000000<<1626>><tex2html_comment_mark>460
+\pgfsetstrokecolor<<1627>>textcolor<<1627>><tex2html_comment_mark>461
+\pgfsetfillcolor<<1628>>textcolor<<1628>><tex2html_comment_mark>462
+\pgftext[x=0.306898in,y=4.148552in,left,base]<<2015>>\color<<1629>>textcolor<<1629>>\begin<<2151>>tex2html_deferred<<2151>>\sffamily\end<<2152>>tex2html_deferred<<2152>>\fontsize<<1630>>10.000000<<1630>><<1631>>12.000000<<1631>>\selectfont 1.6<<2015>><tex2html_comment_mark>463
+\end<<1632>>pgfscope<<1632>><tex2html_comment_mark>464
+\begin<<1633>>pgfscope<<1633>><tex2html_comment_mark>465
+\definecolor<<1634>>textcolor<<1634>><<1635>>rgb<<1635>><<1636>>0.000000,0.000000,0.000000<<1636>><tex2html_comment_mark>466
+\pgfsetstrokecolor<<1637>>textcolor<<1637>><tex2html_comment_mark>467
+\pgfsetfillcolor<<1638>>textcolor<<1638>><tex2html_comment_mark>468
+\pgftext[x=0.251343in,y=2.512500in,,bottom,rotate=90.000000]<<2016>>\color<<1639>>textcolor<<1639>>\begin<<2153>>tex2html_deferred<<2153>>\sffamily\end<<2154>>tex2html_deferred<<2154>>\fontsize<<1640>>10.000000<<1640>><<1641>>12.000000<<1641>>\selectfont MSE<<2016>><tex2html_comment_mark>469
+\end<<1642>>pgfscope<<1642>><tex2html_comment_mark>470
+\begin<<1643>>pgfscope<<1643>><tex2html_comment_mark>471
+\pgfpathrectangle<<2017>>\pgfqpoint<<1644>>0.625000in<<1644>><<1645>>0.625000in<<1645>><<2017>><<2018>>\pgfqpoint<<1646>>3.875000in<<1646>><<1647>>3.775000in<<1647>><<2018>><tex2html_comment_mark>472
+\pgfusepath<<1648>>clip<<1648>><tex2html_comment_mark>473
+\pgfsetrectcap \pgfsetroundjoin \pgfsetlinewidth<<1649>>1.505625pt<<1649>><tex2html_comment_mark>476
+\definecolor<<1650>>currentstroke<<1650>><<1651>>rgb<<1651>><<1652>>0.121569,0.466667,0.705882<<1652>><tex2html_comment_mark>477
+\pgfsetstrokecolor<<1653>>currentstroke<<1653>><tex2html_comment_mark>478
+\pgfsetdash<<1654>><<1654>><<1655>>0pt<<1655>><tex2html_comment_mark>479
+\pgfpathmoveto<<2019>>\pgfqpoint<<1656>>0.801136in<<1656>><<1657>>4.228409in<<1657>><<2019>><tex2html_comment_mark>480
+\pgfpathlineto<<2020>>\pgfqpoint<<1658>>0.881198in<<1658>><<1659>>3.494421in<<1659>><<2020>><tex2html_comment_mark>481
+\pgfpathlineto<<2021>>\pgfqpoint<<1660>>0.961260in<<1660>><<1661>>2.922880in<<1661>><<2021>><tex2html_comment_mark>482
+\pgfpathlineto<<2022>>\pgfqpoint<<1662>>1.041322in<<1662>><<1663>>2.422177in<<1663>><<2022>><tex2html_comment_mark>483
+\pgfpathlineto<<2023>>\pgfqpoint<<1664>>1.121384in<<1664>><<1665>>1.987555in<<1665>><<2023>><tex2html_comment_mark>484
+\pgfpathlineto<<2024>>\pgfqpoint<<1666>>1.201446in<<1666>><<1667>>1.623283in<<1667>><<2024>><tex2html_comment_mark>485
+\pgfpathlineto<<2025>>\pgfqpoint<<1668>>1.281508in<<1668>><<1669>>1.335763in<<1669>><<2025>><tex2html_comment_mark>486
+\pgfpathlineto<<2026>>\pgfqpoint<<1670>>1.361570in<<1670>><<1671>>1.125835in<<1671>><<2026>><tex2html_comment_mark>487
+\pgfpathlineto<<2027>>\pgfqpoint<<1672>>1.441632in<<1672>><<1673>>0.985211in<<1673>><<2027>><tex2html_comment_mark>488
+\pgfpathlineto<<2028>>\pgfqpoint<<1674>>1.521694in<<1674>><<1675>>0.898660in<<1675>><<2028>><tex2html_comment_mark>489
+\pgfpathlineto<<2029>>\pgfqpoint<<1676>>1.601756in<<1676>><<1677>>0.849274in<<1677>><<2029>><tex2html_comment_mark>490
+\pgfpathlineto<<2030>>\pgfqpoint<<1678>>1.681818in<<1678>><<1679>>0.822820in<<1679>><<2030>><tex2html_comment_mark>491
+\pgfpathlineto<<2031>>\pgfqpoint<<1680>>1.761880in<<1680>><<1681>>0.809348in<<1681>><<2031>><tex2html_comment_mark>492
+\pgfpathlineto<<2032>>\pgfqpoint<<1682>>1.841942in<<1682>><<1683>>0.802713in<<1683>><<2032>><tex2html_comment_mark>493
+\pgfpathlineto<<2033>>\pgfqpoint<<1684>>1.922004in<<1684>><<1685>>0.799533in<<1685>><<2033>><tex2html_comment_mark>494
+\pgfpathlineto<<2034>>\pgfqpoint<<1686>>2.002066in<<1686>><<1687>>0.798039in<<1687>><<2034>><tex2html_comment_mark>495
+\pgfpathlineto<<2035>>\pgfqpoint<<1688>>2.082128in<<1688>><<1689>>0.797344in<<1689>><<2035>><tex2html_comment_mark>496
+\pgfpathlineto<<2036>>\pgfqpoint<<1690>>2.162190in<<1690>><<1691>>0.797020in<<1691>><<2036>><tex2html_comment_mark>497
+\pgfpathlineto<<2037>>\pgfqpoint<<1692>>2.242252in<<1692>><<1693>>0.796869in<<1693>><<2037>><tex2html_comment_mark>498
+\pgfpathlineto<<2038>>\pgfqpoint<<1694>>2.322314in<<1694>><<1695>>0.796798in<<1695>><<2038>><tex2html_comment_mark>499
+\pgfpathlineto<<2039>>\pgfqpoint<<1696>>2.402376in<<1696>><<1697>>0.796762in<<1697>><<2039>><tex2html_comment_mark>500
+\pgfpathlineto<<2040>>\pgfqpoint<<1698>>2.482438in<<1698>><<1699>>0.796742in<<1699>><<2040>><tex2html_comment_mark>501
+\pgfpathlineto<<2041>>\pgfqpoint<<1700>>2.562500in<<1700>><<1701>>0.796730in<<1701>><<2041>><tex2html_comment_mark>502
+\pgfpathlineto<<2042>>\pgfqpoint<<1702>>2.642562in<<1702>><<1703>>0.796720in<<1703>><<2042>><tex2html_comment_mark>503
+\pgfpathlineto<<2043>>\pgfqpoint<<1704>>2.722624in<<1704>><<1705>>0.796712in<<1705>><<2043>><tex2html_comment_mark>504
+\pgfpathlineto<<2044>>\pgfqpoint<<1706>>2.802686in<<1706>><<1707>>0.796706in<<1707>><<2044>><tex2html_comment_mark>505
+\pgfpathlineto<<2045>>\pgfqpoint<<1708>>2.882748in<<1708>><<1709>>0.796700in<<1709>><<2045>><tex2html_comment_mark>506
+\pgfpathlineto<<2046>>\pgfqpoint<<1710>>2.962810in<<1710>><<1711>>0.796694in<<1711>><<2046>><tex2html_comment_mark>507
+\pgfpathlineto<<2047>>\pgfqpoint<<1712>>3.042872in<<1712>><<1713>>0.796687in<<1713>><<2047>><tex2html_comment_mark>508
+\pgfpathlineto<<2048>>\pgfqpoint<<1714>>3.122934in<<1714>><<1715>>0.796682in<<1715>><<2048>><tex2html_comment_mark>509
+\pgfpathlineto<<2049>>\pgfqpoint<<1716>>3.202996in<<1716>><<1717>>0.796676in<<1717>><<2049>><tex2html_comment_mark>510
+\pgfpathlineto<<2050>>\pgfqpoint<<1718>>3.283058in<<1718>><<1719>>0.796669in<<1719>><<2050>><tex2html_comment_mark>511
+\pgfpathlineto<<2051>>\pgfqpoint<<1720>>3.363120in<<1720>><<1721>>0.796663in<<1721>><<2051>><tex2html_comment_mark>512
+\pgfpathlineto<<2052>>\pgfqpoint<<1722>>3.443182in<<1722>><<1723>>0.796658in<<1723>><<2052>><tex2html_comment_mark>513
+\pgfpathlineto<<2053>>\pgfqpoint<<1724>>3.523244in<<1724>><<1725>>0.796651in<<1725>><<2053>><tex2html_comment_mark>514
+\pgfpathlineto<<2054>>\pgfqpoint<<1726>>3.603306in<<1726>><<1727>>0.796645in<<1727>><<2054>><tex2html_comment_mark>515
+\pgfpathlineto<<2055>>\pgfqpoint<<1728>>3.683368in<<1728>><<1729>>0.796639in<<1729>><<2055>><tex2html_comment_mark>516
+\pgfpathlineto<<2056>>\pgfqpoint<<1730>>3.763430in<<1730>><<1731>>0.796633in<<1731>><<2056>><tex2html_comment_mark>517
+\pgfpathlineto<<2057>>\pgfqpoint<<1732>>3.843492in<<1732>><<1733>>0.796627in<<1733>><<2057>><tex2html_comment_mark>518
+\pgfpathlineto<<2058>>\pgfqpoint<<1734>>3.923554in<<1734>><<1735>>0.796621in<<1735>><<2058>><tex2html_comment_mark>519
+\pgfpathlineto<<2059>>\pgfqpoint<<1736>>4.003616in<<1736>><<1737>>0.796615in<<1737>><<2059>><tex2html_comment_mark>520
+\pgfpathlineto<<2060>>\pgfqpoint<<1738>>4.083678in<<1738>><<1739>>0.796609in<<1739>><<2060>><tex2html_comment_mark>521
+\pgfpathlineto<<2061>>\pgfqpoint<<1740>>4.163740in<<1740>><<1741>>0.796603in<<1741>><<2061>><tex2html_comment_mark>522
+\pgfpathlineto<<2062>>\pgfqpoint<<1742>>4.243802in<<1742>><<1743>>0.796597in<<1743>><<2062>><tex2html_comment_mark>523
+\pgfpathlineto<<2063>>\pgfqpoint<<1744>>4.323864in<<1744>><<1745>>0.796591in<<1745>><<2063>><tex2html_comment_mark>524
+\pgfusepath<<1746>>stroke<<1746>><tex2html_comment_mark>525
+\end<<1747>>pgfscope<<1747>><tex2html_comment_mark>526
+\begin<<1748>>pgfscope<<1748>><tex2html_comment_mark>527
+\pgfsetrectcap \pgfsetmiterjoin \pgfsetlinewidth<<1749>>0.803000pt<<1749>><tex2html_comment_mark>530
+\definecolor<<1750>>currentstroke<<1750>><<1751>>rgb<<1751>><<1752>>0.000000,0.000000,0.000000<<1752>><tex2html_comment_mark>531
+\pgfsetstrokecolor<<1753>>currentstroke<<1753>><tex2html_comment_mark>532
+\pgfsetdash<<1754>><<1754>><<1755>>0pt<<1755>><tex2html_comment_mark>533
+\pgfpathmoveto<<2064>>\pgfqpoint<<1756>>0.625000in<<1756>><<1757>>0.625000in<<1757>><<2064>><tex2html_comment_mark>534
+\pgfpathlineto<<2065>>\pgfqpoint<<1758>>0.625000in<<1758>><<1759>>4.400000in<<1759>><<2065>><tex2html_comment_mark>535
+\pgfusepath<<1760>>stroke<<1760>><tex2html_comment_mark>536
+\end<<1761>>pgfscope<<1761>><tex2html_comment_mark>537
+\begin<<1762>>pgfscope<<1762>><tex2html_comment_mark>538
+\pgfsetrectcap \pgfsetmiterjoin \pgfsetlinewidth<<1763>>0.803000pt<<1763>><tex2html_comment_mark>541
+\definecolor<<1764>>currentstroke<<1764>><<1765>>rgb<<1765>><<1766>>0.000000,0.000000,0.000000<<1766>><tex2html_comment_mark>542
+\pgfsetstrokecolor<<1767>>currentstroke<<1767>><tex2html_comment_mark>543
+\pgfsetdash<<1768>><<1768>><<1769>>0pt<<1769>><tex2html_comment_mark>544
+\pgfpathmoveto<<2066>>\pgfqpoint<<1770>>4.500000in<<1770>><<1771>>0.625000in<<1771>><<2066>><tex2html_comment_mark>545
+\pgfpathlineto<<2067>>\pgfqpoint<<1772>>4.500000in<<1772>><<1773>>4.400000in<<1773>><<2067>><tex2html_comment_mark>546
+\pgfusepath<<1774>>stroke<<1774>><tex2html_comment_mark>547
+\end<<1775>>pgfscope<<1775>><tex2html_comment_mark>548
+\begin<<1776>>pgfscope<<1776>><tex2html_comment_mark>549
+\pgfsetrectcap \pgfsetmiterjoin \pgfsetlinewidth<<1777>>0.803000pt<<1777>><tex2html_comment_mark>552
+\definecolor<<1778>>currentstroke<<1778>><<1779>>rgb<<1779>><<1780>>0.000000,0.000000,0.000000<<1780>><tex2html_comment_mark>553
+\pgfsetstrokecolor<<1781>>currentstroke<<1781>><tex2html_comment_mark>554
+\pgfsetdash<<1782>><<1782>><<1783>>0pt<<1783>><tex2html_comment_mark>555
+\pgfpathmoveto<<2068>>\pgfqpoint<<1784>>0.625000in<<1784>><<1785>>0.625000in<<1785>><<2068>><tex2html_comment_mark>556
+\pgfpathlineto<<2069>>\pgfqpoint<<1786>>4.500000in<<1786>><<1787>>0.625000in<<1787>><<2069>><tex2html_comment_mark>557
+\pgfusepath<<1788>>stroke<<1788>><tex2html_comment_mark>558
+\end<<1789>>pgfscope<<1789>><tex2html_comment_mark>559
+\begin<<1790>>pgfscope<<1790>><tex2html_comment_mark>560
+\pgfsetrectcap \pgfsetmiterjoin \pgfsetlinewidth<<1791>>0.803000pt<<1791>><tex2html_comment_mark>563
+\definecolor<<1792>>currentstroke<<1792>><<1793>>rgb<<1793>><<1794>>0.000000,0.000000,0.000000<<1794>><tex2html_comment_mark>564
+\pgfsetstrokecolor<<1795>>currentstroke<<1795>><tex2html_comment_mark>565
+\pgfsetdash<<1796>><<1796>><<1797>>0pt<<1797>><tex2html_comment_mark>566
+\pgfpathmoveto<<2070>>\pgfqpoint<<1798>>0.625000in<<1798>><<1799>>4.400000in<<1799>><<2070>><tex2html_comment_mark>567
+\pgfpathlineto<<2071>>\pgfqpoint<<1800>>4.500000in<<1800>><<1801>>4.400000in<<1801>><<2071>><tex2html_comment_mark>568
+\pgfusepath<<1802>>stroke<<1802>><tex2html_comment_mark>569
+\end<<1803>>pgfscope<<1803>><tex2html_comment_mark>570
+\begin<<1804>>pgfscope<<1804>><tex2html_comment_mark>571
+\definecolor<<1805>>textcolor<<1805>><<1806>>rgb<<1806>><<1807>>0.000000,0.000000,0.000000<<1807>><tex2html_comment_mark>572
+\pgfsetstrokecolor<<1808>>textcolor<<1808>><tex2html_comment_mark>573
+\pgfsetfillcolor<<1809>>textcolor<<1809>><tex2html_comment_mark>574
+\pgftext[x=2.562500in,y=4.483333in,,base]<<2072>>\color<<1810>>textcolor<<1810>>\begin<<2155>>tex2html_deferred<<2155>>\sffamily\end<<2156>>tex2html_deferred<<2156>>\fontsize<<1811>>12.000000<<1811>><<1812>>14.400000<<1812>>\selectfont Perkembangan MSE<<2072>><tex2html_comment_mark>575
+\end<<1813>>pgfscope<<1813>><tex2html_comment_mark>576
+\begin<<1814>>pgfscope<<1814>><tex2html_comment_mark>577
+\pgfsetbuttcap \pgfsetmiterjoin \definecolor<<1815>>currentfill<<1815>><<1816>>rgb<<1816>><<1817>>1.000000,1.000000,1.000000<<1817>><tex2html_comment_mark>580
+\pgfsetfillcolor<<1818>>currentfill<<1818>><tex2html_comment_mark>581
+\pgfsetfillopacity<<1819>>0.800000<<1819>><tex2html_comment_mark>582
+\pgfsetlinewidth<<1820>>1.003750pt<<1820>><tex2html_comment_mark>583
+\definecolor<<1821>>currentstroke<<1821>><<1822>>rgb<<1822>><<1823>>0.800000,0.800000,0.800000<<1823>><tex2html_comment_mark>584
+\pgfsetstrokecolor<<1824>>currentstroke<<1824>><tex2html_comment_mark>585
+\pgfsetstrokeopacity<<1825>>0.800000<<1825>><tex2html_comment_mark>586
+\pgfsetdash<<1826>><<1826>><<1827>>0pt<<1827>><tex2html_comment_mark>587
+\pgfpathmoveto<<2073>>\pgfqpoint<<1828>>0.722222in<<1828>><<1829>>4.085032in<<1829>><<2073>><tex2html_comment_mark>588
+\pgfpathlineto<<2074>>\pgfqpoint<<1830>>1.499919in<<1830>><<1831>>4.085032in<<1831>><<2074>><tex2html_comment_mark>589
+\pgfpathquadraticcurveto<<2075>>\pgfqpoint<<1832>>1.527696in<<1832>><<1833>>4.085032in<<1833>><<2075>><<2076>>\pgfqpoint<<1834>>1.527696in<<1834>><<1835>>4.112809in<<1835>><<2076>><tex2html_comment_mark>590
+\pgfpathlineto<<2077>>\pgfqpoint<<1836>>1.527696in<<1836>><<1837>>4.302778in<<1837>><<2077>><tex2html_comment_mark>591
+\pgfpathquadraticcurveto<<2078>>\pgfqpoint<<1838>>1.527696in<<1838>><<1839>>4.330556in<<1839>><<2078>><<2079>>\pgfqpoint<<1840>>1.499919in<<1840>><<1841>>4.330556in<<1841>><<2079>><tex2html_comment_mark>592
+\pgfpathlineto<<2080>>\pgfqpoint<<1842>>0.722222in<<1842>><<1843>>4.330556in<<1843>><<2080>><tex2html_comment_mark>593
+\pgfpathquadraticcurveto<<2081>>\pgfqpoint<<1844>>0.694444in<<1844>><<1845>>4.330556in<<1845>><<2081>><<2082>>\pgfqpoint<<1846>>0.694444in<<1846>><<1847>>4.302778in<<1847>><<2082>><tex2html_comment_mark>594
+\pgfpathlineto<<2083>>\pgfqpoint<<1848>>0.694444in<<1848>><<1849>>4.112809in<<1849>><<2083>><tex2html_comment_mark>595
+\pgfpathquadraticcurveto<<2084>>\pgfqpoint<<1850>>0.694444in<<1850>><<1851>>4.085032in<<1851>><<2084>><<2085>>\pgfqpoint<<1852>>0.722222in<<1852>><<1853>>4.085032in<<1853>><<2085>><tex2html_comment_mark>596
+\pgfpathclose \pgfusepath<<1854>>stroke,fill<<1854>><tex2html_comment_mark>598
+\end<<1855>>pgfscope<<1855>><tex2html_comment_mark>599
+\begin<<1856>>pgfscope<<1856>><tex2html_comment_mark>600
+\pgfsetrectcap \pgfsetroundjoin \pgfsetlinewidth<<1857>>1.505625pt<<1857>><tex2html_comment_mark>603
+\definecolor<<1858>>currentstroke<<1858>><<1859>>rgb<<1859>><<1860>>0.121569,0.466667,0.705882<<1860>><tex2html_comment_mark>604
+\pgfsetstrokecolor<<1861>>currentstroke<<1861>><tex2html_comment_mark>605
+\pgfsetdash<<1862>><<1862>><<1863>>0pt<<1863>><tex2html_comment_mark>606
+\pgfpathmoveto<<2086>>\pgfqpoint<<1864>>0.750000in<<1864>><<1865>>4.218088in<<1865>><<2086>><tex2html_comment_mark>607
+\pgfpathlineto<<2087>>\pgfqpoint<<1866>>1.027778in<<1866>><<1867>>4.218088in<<1867>><<2087>><tex2html_comment_mark>608
+\pgfusepath<<1868>>stroke<<1868>><tex2html_comment_mark>609
+\end<<1869>>pgfscope<<1869>><tex2html_comment_mark>610
+\begin<<1870>>pgfscope<<1870>><tex2html_comment_mark>611
+\definecolor<<1871>>textcolor<<1871>><<1872>>rgb<<1872>><<1873>>0.000000,0.000000,0.000000<<1873>><tex2html_comment_mark>612
+\pgfsetstrokecolor<<1874>>textcolor<<1874>><tex2html_comment_mark>613
+\pgfsetfillcolor<<1875>>textcolor<<1875>><tex2html_comment_mark>614
+\pgftext[x=1.138889in,y=4.169477in,left,base]<<2088>>\color<<1876>>textcolor<<1876>>\begin<<2157>>tex2html_deferred<<2157>>\sffamily\end<<2158>>tex2html_deferred<<2158>>\fontsize<<1877>>10.000000<<1877>><<1878>>12.000000<<1878>>\selectfont Train<<2088>><tex2html_comment_mark>615
+\end<<1879>>pgfscope<<1879>><tex2html_comment_mark>616
+\end<<1880>>pgfpicture<<1880>><tex2html_comment_mark>617
+\makeatother \end<<2104>>tex2html_begingroup<<2104>><tex2html_endfile>#./plots/test-18-4-neuron-45-epoch-sgd-16000.pgf#
+<<868>>  \end<<1881>>center<<1881>>
+  \begin<<2159>>tex2html_deferred<<2159>>\caption<<1882>>Perkembangan nilai \begin<<2105>>tex2html_wrap_inline<<2105>>$MSE$\end<<2106>>tex2html_wrap_inline<<2106>>\space pada training.<<1882>>\end<<2160>>tex2html_deferred<<2160>>
+  \label<<1883>>fig:perkembangan_nilai_mse<<1883>>
+\end<<1884>>figure<<1884>>
+\begin<<2161>>tex2html_deferred<<2161>>\par\end<<2162>>tex2html_deferred<<2162>>
+Untuk data testing, digunakan sampel 1000 data terakhir, yakni data nomo 17000 hingga data nomor 18000. Hasil testing mendapatkan nilai \begin<<2107>>tex2html_wrap_inline<<2107>>$MSE$\end<<2108>>tex2html_wrap_inline<<2108>>\space ;SPMquot;0.0213;SPMquot;. Plot hasil hasil prediksi bisa dilihat di gambar
+\ref<<1885>>fig:hasil_pengujian_17000-18000-test-18<<1885>>
+\begin<<2163>>tex2html_deferred<<2163>>\par\end<<2164>>tex2html_deferred<<2164>>
+\begin<<1886>>figure<<1886>>
+  \begin<<1887>>center<<1887>>
+    <tex2html_comment_mark>620
+\end<<1888>>center<<1888>>
+  \label<<1889>>fig:hasil_pengujian_17000_18000_test_18<<1889>>
+\end<<1890>>figure<<1890>>
+\begin<<2165>>tex2html_deferred<<2165>>\par\end<<2166>>tex2html_deferred<<2166>>
+\begin<<2167>>tex2html_deferred<<2167>>\pagebreak\end<<2168>>tex2html_deferred<<2168>>\subsection<<1891>>Analisis Hasil Pengujian<<1891>>
+\begin<<2169>>tex2html_deferred<<2169>>\par\end<<2170>>tex2html_deferred<<2170>>
+Pada tahun 2002 Marcel Zijlema\cite<<1892>>Zijlema_2012<<1892>> melakukan pemodelan terhadap transformasi gelombang dengan menggunakan swash \cite<<1893>>zijlema<<1893>>. Hasil dari pemodelan Zijlema dapat di gambar ;SPMquot;Hasil dari model SWASH;SPMquot; \ref<<1894>>fig:percobaan_zijlema<<1894>>.\\ 
+\begin<<2171>>tex2html_deferred<<2171>>\par\end<<2172>>tex2html_deferred<<2172>>
+\begin<<1895>>figure<<1895>>
+  \begin<<1896>>center<<1896>>
+    \includegraphics[scale=0.7]<<1897>>images/model-zijlema.png<<1897>>
+  \end<<1898>>center<<1898>>
+  \begin<<2173>>tex2html_deferred<<2173>>\caption<<1899>>Hasil dari model Zijlema. Perbandingan observasi dan prediksi. Biru adalah observasi dan merah adalah prediksi.<<1899>>\end<<2174>>tex2html_deferred<<2174>>
+  \label<<1900>>fig:percobaan_zijlema<<1900>>
+\end<<1901>>figure<<1901>>
+\FloatBarrier
+\begin<<2175>>tex2html_deferred<<2175>>\par\end<<2176>>tex2html_deferred<<2176>>
+Bila dibandingkan dengan hasil pengujian yang sama dengan model yang dibuat pada TA ini, hasil pemodelan Zijlema \cite<<1902>>Zijlema_2012<<1902>> jauh lebih baik. Hal ini dikarenakan pada model \begin<<2109>>tex2html_wrap_inline<<2109>>$MLP$\end<<2110>>tex2html_wrap_inline<<2110>>\space yang dipakai di TA ini tidak menggunakan parameter lain seperti nilai sensor pada \begin<<2111>>tex2html_wrap_inline<<2111>>$T - 1$\end<<2112>>tex2html_wrap_inline<<2112>>\space (waktu sebelumnya). Sedangkan feature penting untuk mencari perubahan bentuk dari waktu ke waktu (rates of change). Dimana nilai saat ini, dipengaruhi oleh nilai sebelumnya. Ini adalah kelemahan dari \emph<<1903>>feedforward<<1903>> \begin<<2113>>tex2html_wrap_inline<<2113>>$MLP$\end<<2114>>tex2html_wrap_inline<<2114>>. \emph<<1904>>Feedforward<<1904>> \begin<<2115>>tex2html_wrap_inline<<2115>>$MLP$\end<<2116>>tex2html_wrap_inline<<2116>>\space tidak mengingat hasil sebelumnya untuk digunakan dalam komputasi output. Hal ini dapat dilihat pada 
+\begin<<2177>>tex2html_deferred<<2177>>\par\end<<2178>>tex2html_deferred<<2178>>
+\begin<<1905>>figure<<1905>>
+  \begin<<1906>>center<<1906>>
+    \includegraphics[scale=0.27]<<1907>>plots/test-18-perbandingan.png<<1907>>
+  \end<<1908>>center<<1908>>
+  \begin<<2179>>tex2html_deferred<<2179>>\caption<<1909>>Hasil dari prediksi MLP. Merah adalah hasil prediksi dan biru adalah target.<<1909>>\end<<2180>>tex2html_deferred<<2180>>
+  \label<<1910>>fig:percobaan_zijlema<<1910>>
+\end<<1911>>figure<<1911>>
+\FloatBarrier
+\begin<<2181>>tex2html_deferred<<2181>>\par\end<<2182>>tex2html_deferred<<2182>>
+\section<<1912>>Kesimpulan<<1912>>
+\begin<<2183>>tex2html_deferred<<2183>>\par\end<<2184>>tex2html_deferred<<2184>>
+Hasil dari pemodel machine learning masih belum mengalahkan pemodelan numerik dari sisi akurasi. Namun demikian, masih tersedia ruang untuk pengembangan yang sangat besar. Mengingat waktu komputasi proses prediksi machine learning lebih cepat dari pada metode lainnya. Ada jenis lain dari \emph<<1913>>neural network<<1913>> yang mampu mengingat output dari \begin<<2117>>tex2html_wrap_inline<<2117>>$T - 1$\end<<2118>>tex2html_wrap_inline<<2118>>\space dan memasukannya sebagai parameter untuk komputasi output saat ini, disebut dengan \begin<<2119>>tex2html_wrap_inline<<2119>>$Recurent Neural Network (RNN)$\end<<2120>>tex2html_wrap_inline<<2120>>\space \cite<<1914>>werbos1990backpropagation<<1914>>. Dan pada tahun 1997, Sepp Hochreiter dan Jürgen Schmidhuber mempblikasikan paper tentang \emph<<1915>>Long Short-term Memory<<1915>>\cite<<1916>>lstm1997<<1916>>, yang bisa dijadikan alternative solusi dari masalah \emph<<1917>>Vanishing Gradient dan Decaying Gradient<<1917>> yang terkadang timbul dalam pengaplikasian model \begin<<2121>>tex2html_wrap_inline<<2121>>$RNN$\end<<2122>>tex2html_wrap_inline<<2122>>.
+\begin<<2185>>tex2html_deferred<<2185>>\par\end<<2186>>tex2html_deferred<<2186>>
+\bibliographystyle<<1918>>abbrv<<1918>>
+\bibliography<<1919>>references<<1919>>
+\begin<<2187>>tex2html_deferred<<2187>>\pagebreak\end<<2188>>tex2html_deferred<<2188>>\section*<<1920>>Lampiran<<1920>>
+\begin<<2189>>tex2html_deferred<<2189>>\par\end<<2190>>tex2html_deferred<<2190>>
+\begin<<1921>>figure<<1921>>
+  \includepdf<<1922>>plots/sensor-1-9-test18.pdf<<1922>>
+  \label<<1923>>fig:plots_semua_sensor_test18<<1923>>
+  \begin<<2191>>tex2html_deferred<<2191>>\caption<<1924>>Plot sensor 1 hingga sensor 10.<<1924>>\end<<2192>>tex2html_deferred<<2192>>
+\end<<1925>>figure<<1925>>
+\begin<<2193>>tex2html_deferred<<2193>>\par\end<<2194>>tex2html_deferred<<2194>>
+\begin<<1926>>table<<1926>>
+  \begin<<1927>>center<<1927>>
+    \begin<<1928>>tabular<<1928>><<1929>>lrr<<1929>>
+      \toprule
+      epoch ;SPMamp;  val\_loss ;SPMamp;      loss \\ 
+      \midrule
+      1  ;SPMamp;  1.351153 ;SPMamp;  1.612585 \\ 
+      2  ;SPMamp;  1.074336 ;SPMamp;  1.271676 \\ 
+      3  ;SPMamp;  0.833380 ;SPMamp;  1.006217 \\ 
+      4  ;SPMamp;  0.623319 ;SPMamp;  0.773660 \\ 
+      5  ;SPMamp;  0.444484 ;SPMamp;  0.571795 \\ 
+      6  ;SPMamp;  0.299844 ;SPMamp;  0.402605 \\ 
+      7  ;SPMamp;  0.191346 ;SPMamp;  0.269063 \\ 
+      8  ;SPMamp;  0.116986 ;SPMamp;  0.171560 \\ 
+      9  ;SPMamp;  0.070712 ;SPMamp;  0.106245 \\ 
+      10  ;SPMamp;  0.044566 ;SPMamp;  0.066046 \\ 
+      11 ;SPMamp;  0.031083 ;SPMamp;  0.043108 \\ 
+      12 ;SPMamp;  0.024793 ;SPMamp;  0.030821 \\ 
+      13 ;SPMamp;  0.022173 ;SPMamp;  0.024564 \\ 
+      14 ;SPMamp;  0.021282 ;SPMamp;  0.021482 \\ 
+      15 ;SPMamp;  0.021124 ;SPMamp;  0.020005 \\ 
+      16 ;SPMamp;  0.021233 ;SPMamp;  0.019311 \\ 
+      17 ;SPMamp;  0.021408 ;SPMamp;  0.018988 \\ 
+      18 ;SPMamp;  0.021575 ;SPMamp;  0.018838 \\ 
+      19 ;SPMamp;  0.021705 ;SPMamp;  0.018768 \\ 
+      20 ;SPMamp;  0.021799 ;SPMamp;  0.018735 \\ 
+      21 ;SPMamp;  0.021869 ;SPMamp;  0.018718 \\ 
+      22 ;SPMamp;  0.021913 ;SPMamp;  0.018709 \\ 
+      23 ;SPMamp;  0.021950 ;SPMamp;  0.018703 \\ 
+      24 ;SPMamp;  0.021977 ;SPMamp;  0.018699 \\ 
+      25 ;SPMamp;  0.021993 ;SPMamp;  0.018695 \\ 
+      26 ;SPMamp;  0.022000 ;SPMamp;  0.018692 \\ 
+      27 ;SPMamp;  0.022003 ;SPMamp;  0.018689 \\ 
+      28 ;SPMamp;  0.022007 ;SPMamp;  0.018686 \\ 
+      29 ;SPMamp;  0.022008 ;SPMamp;  0.018683 \\ 
+      30 ;SPMamp;  0.022007 ;SPMamp;  0.018681 \\ 
+      31 ;SPMamp;  0.022004 ;SPMamp;  0.018678 \\ 
+      32 ;SPMamp;  0.022002 ;SPMamp;  0.018675 \\ 
+      33 ;SPMamp;  0.021998 ;SPMamp;  0.018672 \\ 
+      34 ;SPMamp;  0.021997 ;SPMamp;  0.018670 \\ 
+      35 ;SPMamp;  0.021995 ;SPMamp;  0.018667 \\ 
+      36 ;SPMamp;  0.021990 ;SPMamp;  0.018664 \\ 
+      37 ;SPMamp;  0.021989 ;SPMamp;  0.018661 \\ 
+      38 ;SPMamp;  0.021986 ;SPMamp;  0.018658 \\ 
+      39 ;SPMamp;  0.021987 ;SPMamp;  0.018655 \\ 
+      40 ;SPMamp;  0.021985 ;SPMamp;  0.018653 \\ 
+      41 ;SPMamp;  0.021980 ;SPMamp;  0.018650 \\ 
+      42 ;SPMamp;  0.021980 ;SPMamp;  0.018647 \\ 
+      43 ;SPMamp;  0.021981 ;SPMamp;  0.018644 \\ 
+      44 ;SPMamp;  0.021976 ;SPMamp;  0.018641 \\ 
+      45 ;SPMamp;  0.021977 ;SPMamp;  0.018639 \\ 
+      \bottomrule
+      \end<<1930>>tabular<<1930>>
+\begin<<2195>>tex2html_deferred<<2195>>\par\end<<2196>>tex2html_deferred<<2196>>
+\end<<1931>>center<<1931>>
+  \begin<<2197>>tex2html_deferred<<2197>>\caption<<1932>>Perkembangan MSE<<1932>>\end<<2198>>tex2html_deferred<<2198>>
+  \label<<1933>>Tab:perkembangan_mse<<1933>>
+\end<<1934>>table<<1934>>
+\begin<<2199>>tex2html_deferred<<2199>>\par\end<<2200>>tex2html_deferred<<2200>>
+\end<<1935>>document<<1935>>
