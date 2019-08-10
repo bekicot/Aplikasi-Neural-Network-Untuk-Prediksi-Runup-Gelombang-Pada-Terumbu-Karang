@@ -8,7 +8,7 @@
 
 % Yau et al (2012)\cite{YAO201230}, dalam papernya dia menggunakan model \emph{Boussinesq} 1 dimensi untuk memodelkan transformasi gelombang ketika melewati terumbu karang. Pada bab ini dijelaskan model \emph{runup} gelombang pada terumbu karang menggunakan Pembelajaran Mesin.
 \subsection{Runup Gelombang}
-Runup gelombang adalah jarak vertikal maksimum dari kenaikan gelombang pada pantai atau struktur di atas \emph{SWL} \cite{sorensen2005basic}. Dalam penelitian ini, data ovservasi ketinggian \emph{runup} gelombang diukur mulai ketinggian \emph{swl}, hingga maksimum ketinggian air di daratan. Penjelasan lebih lanjut tentang pengambilan data dijelaskan pada bagian \nameref{kondisiEksperimen}. Runup gelombang dapat diilustrasikan pada gambar \ref{fig:runup}.
+Runup gelombang adalah jarak vertikal maksimum dari kenaikan gelombang pada pantai atau struktur di atas \emph{SWL} \cite{sorensen2005basic}. Dalam penelitian ini, data ovservasi ketinggian \emph{runup} gelombang diukur mulai ketinggian \emph{swl}, hingga maksimum ketinggian air di daratan. Penjelasan lebih lanjut tentang pengambilan data dijelaskan pada bagian \nameref{kondisiEksperimen}. Runup gelombang dapat diilustrasikan pada Gambar \ref{fig:runup}.
 \begin{figure}[h]
     \begin{center}
         \includegraphics[scale=0.7]{./images/runup_gelombang.jpg}
@@ -17,11 +17,11 @@ Runup gelombang adalah jarak vertikal maksimum dari kenaikan gelombang pada pant
     \label{fig:runup}
 \end{figure}
 \FloatBarrier
-Pada gambar.\ref{fig:runup} \emph{SWL (Sea Water Level)} adalah ketinggian air normal ketika tidak ada gelombang. Wilayah Pantai (\emph{Foreshore}) dimulai dari titik \emph{SWL} yang berpotongan dengan daratan. Wilayah lautan (\emph{Nearshore}) dimulai dari titik \emph{SWL} yang berpotongan dengan air. Ketika titik potong air dengan daratan berada di atas \emph{SWL}, maka kondisi tersebut dinamakan dengan \emph{runup}. Ketinggian \emph{runup} dinotasikan dengan $R$. Simbol $\upbeta$ melambangkan kemiringan bibir pantai.
+Pada Gambar \ref{fig:runup} \emph{SWL (Sea Water Level)} adalah ketinggian air normal ketika tidak ada gelombang. Wilayah Pantai (\emph{Foreshore}) dimulai dari titik \emph{SWL} yang berpotongan dengan daratan. Wilayah lautan (\emph{Nearshore}) dimulai dari titik \emph{SWL} yang berpotongan dengan air. Ketika titik potong air dengan daratan berada di atas \emph{SWL}, maka kondisi tersebut dinamakan dengan \emph{runup}. Ketinggian \emph{runup} dinotasikan dengan $R$. Simbol $\upbeta$ melambangkan kemiringan bibir pantai.
 
 \subsection{Pembelajaran Mesin}
 
-Pembelajaran mesin adalah bidang studi yang memberikan kemampuan komputer untuk belajar, tanpa harus di program secara khusus \cite{arthur_l_samuel_1959}. Mesin dikatakan belajar dari pengalaman ($E$) terhadap tugas ($T$) dan ukuran kinerja ($P$), jika kinerja pada tugas ($T$), yang di ukur berdasarkan ($P$), berkembang berdasarkan pengalaman ($E$). Dalam TA ini, akan dibuat suatu program yang dapat belajar dari data gelombang hasil observasi ($T$). Lalu dievaluasi hasilnya dengan menggunakan $MSE$ ($P$), sehingga dapat di lihat seberapa besar galatnya. Lalu diperkecil galatnya dengan metode optimasi.
+Pembelajaran mesin adalah bidang studi yang memberikan kemampuan komputer untuk belajar, tanpa harus di program secara khusus \cite{arthur_l_samuel_1959}. Mesin dikatakan belajar dari pengalaman ($E$) terhadap tugas ($T$) dan ukuran kinerja ($P$), jika kinerja pada tugas ($T$), yang di ukur berdasarkan ($P$), berkembang berdasarkan pengalaman ($E$). Dalam jurnal ini, akan dibuat suatu program yang dapat belajar dari data gelombang hasil observasi ($T$). Lalu dievaluasi hasilnya dengan menggunakan $MSE$ ($P$), sehingga dapat di lihat seberapa besar galatnya. Lalu diperkecil galatnya dengan metode optimasi.
 
 % \subsubsection{Supervised Learning}
 
@@ -30,7 +30,7 @@ Pembelajaran mesin adalah bidang studi yang memberikan kemampuan komputer untuk 
 \subsubsection{Neural Network}
 
 \emph{Neural network} pertama kali didefenisikan oleh McCulloch-Pitts pada tahun 1943 \cite{McCulloch1943}. \emph{Neural network} adalah model matematika atau model komputasi untuk memproses informasi berdasarkan pendekatan koneksionis ke komputasi, perilaku globalnya ditentukan oleh koneksi antara elemen pemrosesan dan parameter elemen\cite{gurney2014introduction}.
-Arsitektur \emph{Neural network} terdiri dari \emph{Input neuron}, \emph{hidden layer} dan \emph{Output neuron}. Arsitektur \emph{Neural network} dapat dilihat pada gambar 
+Arsitektur \emph{Neural network} terdiri dari \emph{Input neuron}, \emph{hidden layer} dan \emph{Output neuron}. Arsitektur \emph{Neural network} dapat dilihat pada Gambar 
 \ref{fig:neural_network_sederhana}
 
 \begin{figure}[H]
@@ -108,7 +108,7 @@ ReLU (x)=\begin{cases} 0, & \mbox{if} x\le 0 \\ x, & \mbox{if} x > 0 \end{cases}
 
 \subsubsection{Estimasi Galat / \emph{Cost / Lost Function}}
 
-Kalkulasi galat sangat penting untuk menentukan seberapa besar akurasi yang dimiliki model prediksi pada TA ini. Fungsi estimasi galat yang digunakan adalah \emph{Mean Square Error (MSE)}. Persamaan MSE didefinisikan dengan
+Kalkulasi galat sangat penting untuk menentukan seberapa besar akurasi yang dimiliki model prediksi pada jurnal ini. Fungsi estimasi galat yang digunakan adalah \emph{Mean Square Error (MSE)}. Persamaan MSE didefinisikan dengan
 
 \begin{equation}
     \operatorname{MSE}=\frac{1}{n}\sum_{i=1}^n(Y_i-\hat{Y_i})^2,

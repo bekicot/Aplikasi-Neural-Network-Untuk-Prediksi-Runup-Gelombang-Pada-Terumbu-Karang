@@ -25,7 +25,7 @@ $^1$siswanto@students.telkomuniversity.ac.id, $^2$adytia@telkomuniversity.ac.id
 {\bf \parindent0pt \noindent\rule{\textwidth}{1pt}
 Abstrak
 
-Prediksi \emph{runup} gelombang dapat dijadikan sebagai acuan bagi masyarakat yang berada di sekitar pesisiran pantai untuk melakukan mitigasi. Ketika gelombang mencapai ketinggian tertentu dapat membahayakan nyawa manusia dan menyebabkan kerusakan atau kerugian bagi manusia. Dengan adanya terumbu karang yang berada di pinggiran pantai energi dari gelombang teredam, sehingga . Dalam penelitian ini akan dilakukan prediksi tinggi \emph{runup} gelombang di atas terumbu karang dengan menggunakan metode pembelajaran mesin \emph{Multi Layer Perceptron (MLP)} dengan q \emph{hidden layer}, 4 jumlah neuron. Data yang digunakan adalah data dari hasil eksperimen yang dilakukan oleh Demirbilek pada tahun 2007 yang dilakukan pada laboratorium dinamika untuk meneliti redaman gelombang oleh terumbu karang. Berdasarkan hasil ujicoba, pada data training mendapatkan \emph{Mean Squared Error (MSE)} sebesar 0.0186 sedangkan untuk data testing dihasilkan MSE sebesar 0.0213.\\
+Prediksi \emph{runup} gelombang dapat dijadikan sebagai acuan bagi masyarakat yang berada di sekitar pesisiran pantai untuk melakukan mitigasi. Ketika gelombang mencapai ketinggian tertentu dapat membahayakan nyawa manusia dan menyebabkan kerusakan atau kerugian bagi manusia. Dengan adanya terumbu karang yang berada di pinggiran pantai energi dari gelombang teredam . Dalam jurnal ini akan dilakukan prediksi tinggi \emph{runup} gelombang di atas terumbu karang dengan menggunakan metode pembelajaran mesin \emph{Multi Layer Perceptron (MLP)} dengan 5 \emph{hidden layer}, 120 hidden layer jumlah neuron, dan 120 jumlah \emph{lookback}. Data yang digunakan adalah data dari hasil eksperimen yang dilakukan oleh Demirbilek pada tahun 2007 yang dilakukan pada laboratorium dinamika untuk meneliti redaman gelombang oleh terumbu karang. Berdasarkan hasil ujicoba dengan konfigrasi model terbaik berdasarkan optimasi \emph{hyperparameter}, pada data testing mendapatkan \emph{Mean Squared Error (MSE)} sebesar 0.113 sedangkan untuk data training dihasilkan MSE sebesar 0.024.\\
 
 Kata kunci : Mitigasi, \emph{Runup}, \emph{Artificial Neural Network}, \emph{Multilayer perceptron}, Percobaan guam.
 
@@ -34,7 +34,7 @@ Kata kunci : Mitigasi, \emph{Runup}, \emph{Artificial Neural Network}, \emph{Mul
 \noindent\rule{\textwidth}{1pt}
 Abstract
 
-Fringing reef is a nearshore ecosystem that is consist of variety of coral. Beside a nearshore ecosystem, fringing reef is also has a function to slowing down waves. The methods for predicting runup height using machine learning is new and has room for improvements. The widely used methods for predicting runup height is divided by 2, a classic apporach, by experiment and observation, and then finding the mathematic models. The other methods is by using machine learning. This paper is using machine learning to predict runup height. The data used in this paper is the laboratorium data from University of Michigan. The method used in this paper is $Multi Layer Perceptron(MLP)$ with 4 hidden neuron.
+Runup prediction can be used by nearshore population to do disaster mitigation. When the nearshore waves reached certain height, it may endanger human lives, and causes severe damage to buildings. The existence of fringing reef can reduce the wave energy comming from the sea. This paper is using artificial neural network to predict runup height, with 5 hidden layer, 120 neurons each layer, and 120 lookback . The data used in this paper is the laboratorium data from University of Michigan. Based on the hyperparameter optimization, the optimal model configuration has $MSE=0.113$ on testing data, and $MSE=0.024$ on training data.
 
  \bigskip
 Keywords: Mitigation, Runup, Artificial Neural Network, Multilayer perceptron, Guam experiment
@@ -54,98 +54,68 @@ Keywords: Mitigation, Runup, Artificial Neural Network, Multilayer perceptron, G
 \input{Metodologi}
 
 \section{Evaluasi}
-
-Bagian ini berisi dua sub-bagian yaitu Hasil Pengujian dan Analisis Hasil Pengujian. Pengujian dan analisis yang dilakukan selaras dengan tujuan TA sebagaimana dinyatakan dalam Pendahuluan.
-
 \subsection{Hasil Pengujian}
-\begin{table}[h]
-  \begin{center}
-    \begin{tabular}{lrrrr}
-      \toprule
-      {} &        Wave1; &        Wave2; &        Wave3; &        Wave9; \\
-      \midrule
-      count &  18000.000000 &  18000.000000 &  18000.000000 &  18000.000000 \\
-      mean  &     -0.187642 &     -0.099445 &     -0.056901 &      0.787389 \\
-      std   &      2.052794 &      1.940509 &      1.953062 &      0.818523 \\
-      min   &     -8.662451 &     -8.224868 &     -7.996433 &     -1.365062 \\
-      max   &      9.107983 &      7.837847 &      7.996613 &      4.829746 \\
-      \bottomrule
-    \end{tabular}
-  \end{center}
+Sebagian dari hasil prediksi pada data testing dengan model yang optimal (berdasarkan percobaan) bisa dilihat pada tabel berikut:
 
-  \caption{Deskripsi data pada "test-18.dat" yang dihasilkan oleh applikasi pandas \cite{mckinney-proc-scipy-2010}}.
-  \label{Tab:deskripsi_data}
+\begin{table}[h]
+  \caption{Tabel Hasil Prediksi}
+  \begin{center}
+    \input{./tables/hasil_prediksi_10.pgf}
+  \end{center}
+  \label{tab:hasilPengujianLengkap10}
 \end{table}
 
-Sistem diuji terhadap data percobaan nomor 18. Data tersebut berada dalam file dengan nama "test-18.dat". Pada data tersebut sensor 1 memiliki nama kolom "Wave1", sensor 2 memiliki nama kolom "Wave2", dan sensor 3 memiliki nama kolom "Wave3". Untuk target prediksi digunakan kolom "Wave9". Masing-masing data memiliki 18000 sampel dapat dilihat pada tabel.\ref{Tab:deskripsi_data}.
-
-Dari hasil pengujian didapat nilai MSE sebesar $0.0186$ untuk data training dan MSE $0.0220$ untuk data testing. Perkembangan nilai $MSE$ pada data training bisa di lihat secara lengkap di gambar.\ref{fig:perkembangan_nilai_mse} dan tabel.\ref{Tab:perkembangan_mse} (pada lampiran).
-
-\begin{figure}
-  \begin{center}
-    % \include{plots/test-18-4-neuron-45-epoch-sgd-16000.pgf}
-    \resizebox{\linewidth}{!}{\input{plots/test-18-4-neuron-45-epoch-sgd-16000.pgf}}
-  \end{center}
-  \caption{Perkembangan nilai $MSE$ pada training.}
-  \label{fig:perkembangan_nilai_mse}
-\end{figure}
-
-Untuk data testing, digunakan sampel 1000 data terakhir, yakni data r 17000 hingga data nomor 18000. Hasil testing mendapatkan nilai $MSE$ "0.0213". Plot hasil prediksi bisa dilihat di gambar.10
-
-\begin{figure}[h]
-  \begin{center}
-    % \resizebox{{1\linewidth}}{}
-  \end{center}
-  \label{fig:hasil}
-\end{figure}
+\FloatBarrier
+\noindent Hasil prediksi pada data testing hingga data ke 50 terlampir pada Table \ref{tab:hasilPengujianLengkap}. Untuk melihat hasil benchmark setiap konfigurasi model, bisa dilihat pada Tabel \ref{tab:hypertunningTest}, Tabel \ref{tab:hypertunningTrain}, dan Tabel \ref{tab:hypertunningVal}.
 
 \subsection{Analisis Hasil Pengujian}
-Model diuji pada data testing, dengan besaran 15 persen dari total data. Dari running prediksi pada data testing, sistem menunjukan overfitting pada pada epoch ke 300.
-% Pada tahun 2002 Marcel Zijlema\cite{Zijlema_2012} melakukan pemodelan terhadap transformasi gelombang dengan menggunakan swash \cite{zijlema}. Hasil dari pemodelan Zijlema dapat di gambar "Hasil dari model SWASH" \ref{fig:percobaan_zijlema}.
 
-% \begin{figure}
-%   \begin{center}
-%     \includegraphics[scale=0.7]{images/model-zijlema.png}
-%   \end{center}
-%   \caption{Hasil dari model Zijlema. Perbandingan observasi dan prediksi. Biru adalah observasi dan merah adalah prediksi.}
-%   \label{fig:percobaan_zijlema}
-% \end{figure}
-% \FloatBarrier
+Sistem diuji terhadap data percobaan nomor 18 (dengan nama file "test-18.dat"). Pengujian dilakukan pada sensor 1 (Wave 1) sebagai prediktor. Data tersebut dirata-ratakan dengan metode moving average pada setiap 8 data. Untuk target prediksi digunakan kolom "Wave9" (Sensor 9).
 
-% Bila dibandingkan dengan hasil pengujian yang sama dengan model yang dibuat pada TA ini, hasil pemodelan Zijlema \cite{Zijlema_2012} jauh lebih baik. Hal ini dikarenakan pada model $MLP$ yang dipakai di TA ini tidak menggunakan parameter lain seperti nilai sensor pada $T - 1$ (waktu sebelumnya). Sedangkan feature penting untuk mencari perubahan bentuk dari waktu ke waktu (rates of change). Dimana nilai saat ini, dipengaruhi oleh nilai sebelumnya. Ini adalah kelemahan dari \emph{feedforward} $MLP$. \emph{Feedforward} $MLP$ tidak mengingat hasil sebelumnya untuk digunakan dalam komputasi output.
+Proses pertama yang dilakukan adalah proses optimasi \emph{hyperparameter}. Metode yang digunakan adalah grid search. Batasan-batasan untuk pencarian \emph{hyperparameter} optimal yang dilakukan pada jurnal ini ada pada Tabel \ref{tab:batasanParameter}.
 
-\begin{figure}
-  \begin{center}
-    \includegraphics[scale=0.27]{plots/test-18-perbandingan.png}
-  \end{center}
-  \caption{Hasil dari prediksi MLP. Merah adalah hasil prediksi dan biru adalah observasi}
-  \label{fig:perbandingan}
-\end{figure}
+Metrik yang digunakan pada optimasi \emph{hyperparameter} adalah $MSE$ dengan input menggunakan data testing, yang memiliki jumlah 15 persen dari total data. Dari proses tersebut diraih model optimal, denhan konfigurasi sebagai berikut:
 \FloatBarrier
-
-\section{Kesimpulan}
-Proses optimasi hyperparameter pada prediksi runup gelombang sangat penting untuk membangun model pada TA ini. Pada proses itu menghasilkan output model yang optimal dari parameter-parameter yang sudah ditentukan sebelumnya. Model yang optimal pada proses optimasi hyperparameter (dengan batasan-batasan yang sudah ditentukan) adalah model dengan konfigurasi:
-
 \begin{table}[h]
-  \caption*{Tabel konfigurasi ANN}
+  \caption{Tabel Konfigurasi}
+  \label{tab:modelOptimal}
   \begin{center}
     \begin{tabular}{lrrrr}
       \toprule
       Parameter &        Interval Nilai \\
       \midrule
       Hidden Layer            & 5    \\
-      Neuron per Layer        & 3    \\
-      Prediktor               & 1    \\
-      Epoch                   & 100, 500, 1000  \\
+      Neuron per Layer        & 120    \\
+      Prediktor               & 120    \\
+      Epoch                   & 800  \\
       Model Prediktor         & Time Series \\
-      LookBack (Time Series)  & 10 Detik \\
+      LookBack (Time Series)  & 15 Detik \\
       % Stationary?
-
       \bottomrule
     \end{tabular}
   \end{center}
-  {tab:modelOptimal}
 \end{table}
+\FloatBarrier
+\noindent Model pada Tabel \ref{tab:modelOptimal} memiliki nilai $MSE$ pada data testing sebesar $0.01130502743837540$, sedangkan pada data training memiliki nilai $MSE$ sebesar $0.024987277789757800$ pada epoch ke 800.
+\FloatBarrier
+\begin{figure}[h]
+  \includegraphics[scale=0.34]{./images/Hypertuning_Timeseries_Par_avg5_0,1I_9O_5H_120N_lookback120_test.png}
+  \caption{Plot perbandingan observasi dan prediksi pada data testing. Hijau adalah observasi dan biru adalah prediksi. Prediktor yang digunakan adalah sensor 1 (Wave1), dan targetnya adalah sensor 9 (Wave 9)}
+  \label{fig:perbandinganTestTerbaik}
+\end{figure}
+
+\begin{figure}[h]
+  \includegraphics[scale=0.34]{./images/Hypertuning_Timeseries_Par_avg5_0,1I_9O_5H_120N_lookback120_train.png}
+  \caption{Plot perbandingan observasi dan prediksi pada data training. Hijau adalah observasi dan biru adalah prediksi. Prediktor yang digunakan adalah sensor 1 (Wave1), dan targetnya adalah sensor 9 (Wave 9)}
+  \label{fig:perbandinganTrainTerbaik}
+\end{figure}
+\FloatBarrier
+Perbandingan nilai observasi dan nilai prediksi untuk data training dapat dilihat di Gambar \ref{fig:perbandinganTestTerbaik}. Bila dibandingkan dengan Gambar \ref{fig:perbandinganTrainTerbaik}, dapat dilihat terjadi overfitting. Rasio perbedaan $MSE$ pada training dan testing adalah $1:2.2$.
+
+Merujuk pada Tabel \ref{tab:hypertunningTest}, dapat dilihat bahwa $80\%$ dari $10$ model dengan nilai $MSE$ terkecil adalah model dengan jumlah \emph{hidden layer} 5. Sedangkan untuk \emph{hyperparameter} \emph{lookback}, dari $10$ model dengan nilai $MSE$ terkecil, terdapat 4 model dengan nilai \emph{lookback} 120.
+
+\section{Kesimpulan}
+Proses optimasi \emph{hyperparameter} pada prediksi \emph{runup} gelombang sangat penting untuk membangun model pada jurnal ini. Pada proses itu menghasilkan konfigurasi model yang optimal dari parameter-parameter yang sudah ditentukan sebelumnya. Model yang optimal pada percobaan di jurnal ini adalah model dengan 5 \emph{hidden layer}, 120 \emph{neuron}, dan 120 \emph{lookback}. Model tersebut memiliki nilai $MSE$ sebesar $0.011305$. Karena terdapat rasio $1:2.2$ pada data testing, model tersebut dapat dikatakan \emph{overfitting}. Meskipun nilai $MSE$ yang dihasilkan merupakan nilai $MSE$ yang terbaik pada data testing dibandingkan konfigurasi parameter lainnya.
 
 % hasil dari penelitian ini masih 
 % Hasil dari pemodel machine learning dalam penelitian ini masih belum mengalahkan pemodelan numerik dari sisi akurasi. Namun demikian, masih tersedia ruang untuk pengembangan yang sangat besar. Mengingat waktu komputasi proses prediksi machine learning lebih cepat dari pada metode lainnya.  
@@ -159,67 +129,42 @@ Proses optimasi hyperparameter pada prediksi runup gelombang sangat penting untu
 \pagebreak
 \section*{Lampiran}
 
-\begin{figure}
+\begin{figure}[h]
   \includepdf{plots/sensor-1-9-test18.pdf}
   \label{fig:plots_semua_sensor_test18}
   \caption{Plot sensor 1 hingga sensor 10.}
 \end{figure}
+\pagebreak
 
-\begin{table}
+\begin{table}[h]
+  \caption{Tabel Hasil Dari Optimasi \emph{HyperParameter} Untuk Data Testing}
   \begin{center}
-    \begin{tabular}{lrr}
-      \toprule
-      epoch &  val\_loss &      loss \\
-      \midrule
-      1  &  1.351153 &  1.612585 \\
-      2  &  1.074336 &  1.271676 \\
-      3  &  0.833380 &  1.006217 \\
-      4  &  0.623319 &  0.773660 \\
-      5  &  0.444484 &  0.571795 \\
-      6  &  0.299844 &  0.402605 \\
-      7  &  0.191346 &  0.269063 \\
-      8  &  0.116986 &  0.171560 \\
-      9  &  0.070712 &  0.106245 \\
-      10  &  0.044566 &  0.066046 \\
-      11 &  0.031083 &  0.043108 \\
-      12 &  0.024793 &  0.030821 \\
-      13 &  0.022173 &  0.024564 \\
-      14 &  0.021282 &  0.021482 \\
-      15 &  0.021124 &  0.020005 \\
-      16 &  0.021233 &  0.019311 \\
-      17 &  0.021408 &  0.018988 \\
-      18 &  0.021575 &  0.018838 \\
-      19 &  0.021705 &  0.018768 \\
-      20 &  0.021799 &  0.018735 \\
-      21 &  0.021869 &  0.018718 \\
-      22 &  0.021913 &  0.018709 \\
-      23 &  0.021950 &  0.018703 \\
-      24 &  0.021977 &  0.018699 \\
-      25 &  0.021993 &  0.018695 \\
-      26 &  0.022000 &  0.018692 \\
-      27 &  0.022003 &  0.018689 \\
-      28 &  0.022007 &  0.018686 \\
-      29 &  0.022008 &  0.018683 \\
-      30 &  0.022007 &  0.018681 \\
-      31 &  0.022004 &  0.018678 \\
-      32 &  0.022002 &  0.018675 \\
-      33 &  0.021998 &  0.018672 \\
-      34 &  0.021997 &  0.018670 \\
-      35 &  0.021995 &  0.018667 \\
-      36 &  0.021990 &  0.018664 \\
-      37 &  0.021989 &  0.018661 \\
-      38 &  0.021986 &  0.018658 \\
-      39 &  0.021987 &  0.018655 \\
-      40 &  0.021985 &  0.018653 \\
-      41 &  0.021980 &  0.018650 \\
-      42 &  0.021980 &  0.018647 \\
-      43 &  0.021981 &  0.018644 \\
-      44 &  0.021976 &  0.018641 \\
-      45 &  0.021977 &  0.018639 \\
-      \bottomrule
-      \end{tabular}
-      
+    \input{tables/hyperparameter_tuning_test.pgf}
   \end{center}
-  \caption{Perkembangan MSE}
-  \label{Tab:perkembangan_mse}
+  \label{tab:hypertunningTest}
 \end{table}
+\pagebreak
+
+\begin{table}[h]
+  \caption{Tabel Hasil Prediksi}
+  \begin{center}
+    \input{./tables/hasil_prediksi.pgf}
+  \end{center}
+  \label{tab:hasilPengujianLengkap}
+\end{table}
+\pagebreak
+\begin{sidewaystable}
+  \caption{Tabel Hasil Dari \emph{HyperParameter} Tunning Untuk Data Training}
+  \begin{center}
+    \scalebox{.8}{\input{tables/hyperparameter_tuning_train.pgf}}
+  \end{center}
+  \label{tab:hypertunningTrain}
+\end{sidewaystable}
+\pagebreak
+\begin{sidewaystable}
+  \caption{Tabel Hasil Dari HyperParameter Tunning Untuk Data Validasi}
+  \begin{center}
+    \scalebox{.8}{\input{tables/hyperparameter_tuning_val.pgf}}
+  \end{center}
+  \label{tab:hypertunningVal}
+\end{sidewaystable}
